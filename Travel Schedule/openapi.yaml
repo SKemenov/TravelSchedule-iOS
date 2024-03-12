@@ -19,7 +19,7 @@ paths:
       - name: apikey
         in: query
         description: API key
-        required: true
+        required: false
         schema:
           type: string
       - name: lat

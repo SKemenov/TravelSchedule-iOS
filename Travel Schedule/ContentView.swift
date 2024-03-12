@@ -9,39 +9,47 @@ import SwiftUI
 import OpenAPIURLSession
 
 struct ContentView: View {
-    var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-        }
-        .padding()
-        .onAppear {
-            stations()
-        }
-    }
-    func stations() {
-        let serverURL: URL
+    let serverURL: URL
+    let client: Client
+
+    init() {
         do {
             serverURL = try Servers.server1()
         } catch {
             preconditionFailure("Cannot obtain server URL")
         }
-
-        let client = Client(
+        client = Client(
             serverURL: serverURL,
-            transport: URLSessionTransport()
+            transport: URLSessionTransport(),
+            middlewares: [AuthenticationMiddleware(authorizationHeaderFieldValue: Resources.apiKey)]
         )
+    }
 
-        let service = NearestStationsService(
-            client: client,
-            apikey: Resources.apikey
-        )
+    var body: some View {
+        VStack {
+            Button("getNearestStations") {
+                nearestStations()
+            }
+            .padding()
+        }
+        .padding()
 
+    }
+    
+}
+
+private extension ContentView {
+    func nearestStations() {
+        let service = NearestStationsService(client: client)
         Task{
-            let stations = try await service.getNearestStations(lat: 59.864177, lng: 30.319163, distance: 50)
-            print(stations)
+            do {
+                let response = try await service.getNearestStations(lat: 59.864177, lng: 30.319163, distance: 50)
+                guard let stations = response.stations,
+                      let limit = response.pagination?.limit else { return }
+                print(stations, "\n pagination.limit:", limit, "\n stations.count:",stations.count)
+            } catch {
+                print(error.localizedDescription)
+            }
         }
     }
 }
