@@ -9,7 +9,7 @@ import Foundation
 import OpenAPIRuntime
 import OpenAPIURLSession
 
-typealias Copyright = Components.Schemas.Copyright
+typealias Copyright = Components.Schemas.CopyrightObject
 
 protocol CopyrightServiceProtocol {
     func getCopyright() async throws -> Copyright

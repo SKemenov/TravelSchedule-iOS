@@ -84,7 +84,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Copyright'
+                $ref: '#/components/schemas/CopyrightObject'
         '400':
           description: Bad request
           content:
@@ -153,6 +153,11 @@ components:
           type: string
         touch_url:
           type: string
+    CopyrightObject:
+      type: object
+      properties:
+        copyright:
+          $ref: '#/components/schemas/Copyright'
     Copyright:
       type: object
       properties:
