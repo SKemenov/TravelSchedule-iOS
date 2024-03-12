@@ -39,6 +39,10 @@ struct ContentView: View {
                 schedules()
             }
             .padding()
+            Button("getSearches") {
+                Searches()
+            }
+            .padding()
         }
         .padding()
 
@@ -84,6 +88,22 @@ private extension ContentView {
                       let total = response.pagination?.total,
                       let limit = response.pagination?.limit else { return }
                 print(response, "\n pagination.total:", total, "\n pagination.limit:", limit, "\n schedules.count:",schedules.count)
+            } catch {
+                print(error.localizedDescription)
+            }
+        }
+    }
+
+    func Searches() {
+        let service = SearchService(client: client)
+        Task{
+            do {
+                let response = try await service.getSearches(from: "s2006004", to: "s9600213")
+                guard let segments = response.segments,
+                      let intervalSegments = response.interval_segments,
+                      let total = response.pagination?.total,
+                      let limit = response.pagination?.limit else { return }
+                print(response, "\n pagination.total:", total, "\n pagination.limit:", limit, "\n segments.count:",segments.count, "\n intervalSegments.count:",intervalSegments.count)
             } catch {
                 print(error.localizedDescription)
             }
