@@ -31,6 +31,10 @@ struct ContentView: View {
                 nearestStations()
             }
             .padding()
+            Button("getCopyright") {
+                copyright()
+            }
+            .padding()
         }
         .padding()
 
@@ -47,6 +51,19 @@ private extension ContentView {
                 guard let stations = response.stations,
                       let limit = response.pagination?.limit else { return }
                 print(stations, "\n pagination.limit:", limit, "\n stations.count:",stations.count)
+            } catch {
+                print(error.localizedDescription)
+            }
+        }
+    }
+
+    func copyright() {
+        let service = CopyrightService(client: client)
+        Task{
+            do {
+                let response = try await service.getCopyright()
+//                guard let response else { return }
+                print(response)
             } catch {
                 print(error.localizedDescription)
             }

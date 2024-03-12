@@ -6,13 +6,13 @@ info:
 servers:
 - url: https://api.rasp.yandex.net
 tags:
-- name: Список ближайших станций
-  description: Список ближайших станций
+- name: yTravel
+  description: Yandex.Travel Schedules
 paths:
   /v3.0/nearest_stations/:
     get:
       tags:
-      - getNearestStations
+      - yTravel
       summary: Список ближайших станций
       operationId: getNearestStations
       parameters:
@@ -53,12 +53,50 @@ paths:
         schema:
           type: string
       responses:
-        "200":
+        '200':
           description: success
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/Stations'
+  /v3.0/copyright/:
+    get:
+      tags:
+      - yTravel
+      summary: Копирайт Яндекс Расписаний
+      operationId: getCopyright
+      parameters:
+      - name: apikey
+        in: query
+        description: API key
+        required: false
+        schema:
+          type: string
+      - name: format
+        in: query
+        description: json или xml
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Copyright'
+        '400':
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '404':
+          description: Not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
 components:
   schemas:
     Stations:
@@ -114,4 +152,34 @@ components:
         desktop_url:
           type: string
         touch_url:
+          type: string
+    Copyright:
+      type: object
+      properties:
+        text:
+          type: string
+        url:
+          type: string
+        logo_vm:
+          type: string
+        logo_vd:
+          type: string
+        logo_hy:
+          type: string
+        logo_hd:
+          type: string
+        logo_vy:
+          type: string
+        logo_hm:
+          type: string
+    Error:
+      type: object
+      properties:
+        request:
+          type: string
+        text:
+          type: string
+        error_code:
+          type: string
+        http_code:
           type: string
