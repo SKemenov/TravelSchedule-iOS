@@ -97,6 +97,124 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error'
+  /v3.0/schedule/:
+    get:
+      tags:
+        - yTravel
+      summary: Расписание рейсов по станции
+      operationId: getSchedule
+      parameters:
+        - name: apikey
+          in: query
+          description: API key
+          required: false
+          schema:
+            type: string
+        - name: station
+          in: query
+          description: код станции
+          required: true
+          schema:
+            type: string
+        - name: format
+          in: query
+          description: json или xml
+          required: false
+          schema:
+            type: string
+        - name: lang
+          in: query
+          description: lang
+          required: false
+          schema:
+            type: string
+        - name: date
+          in: query
+          description: Дата (формат YYYY-MM-DD)
+          required: false
+          schema:
+            type: string
+        - name: transport_types
+          in: query
+          description: Тип транспортного средства.
+          required: false
+          schema:
+            type: string
+            enum:
+              - plane
+              - train
+              - suburban
+              - bus
+              - water
+              - helicopter
+        - name: direction
+          in: query
+          description: Код направления
+          required: false
+          schema:
+            type: string
+        - name: event
+          in: query
+          description: departure или arrival
+          required: false
+          schema:
+            type: string
+            enum:
+              - departure
+              - arrival
+        - name: system
+          in: query
+          description: Система кодирования для параметра station
+          required: false
+          schema:
+            type: string
+            enum:
+              - yandex
+              - iata
+              - sirena
+              - express
+              - esr
+        - name: show_systems
+          in: query
+          description: Коды в ответе
+          required: false
+          schema:
+            type: string
+            enum:
+              - yandex
+              - esr
+              - all
+        - name: result_timezone
+          in: query
+          description: Часовой пояс
+          required: false
+          schema:
+            type: string
+        - name: limit
+          in: query
+          description: Значение по умолчанию — 100.
+          required: false
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Schedules'
+        '400':
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '404':
+          description: Not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
 components:
   schemas:
     Stations:
@@ -187,4 +305,132 @@ components:
         error_code:
           type: string
         http_code:
+          type: string
+    Schedules:
+      type: object
+      properties:
+        date:
+          type: string
+        pagination:
+          $ref: '#/components/schemas/Pagination'
+        station:
+            $ref: '#/components/schemas/StationForSchedule'
+        schedule:
+          type: array
+          items:
+            $ref: '#/components/schemas/StationSchedule'
+        schedule_direction:
+          $ref: '#/components/schemas/ScheduleDirection'
+        directions:
+          $ref: '#/components/schemas/Directions'
+    StationSchedule:
+      type: object
+      properties:
+        except_days:
+          type: string
+        arrival:
+          type: string
+        thread:
+          $ref: '#/components/schemas/Thread'
+        is_fuzzy:
+          type: boolean
+        days:
+          type: string
+        stops:
+          type: string
+        departure:
+          type: string
+        terminal:
+          type: string
+        platform:
+          type: string
+    ScheduleDirection:
+      type: object
+      properties:
+        code:
+          type: string
+        title:
+          type: string
+    Thread:
+      type: object
+      properties:
+        uid:
+          type: string
+        title:
+          type: string
+        number:
+          type: string
+        short_title:
+          type: string
+        carrier:
+          $ref: '#/components/schemas/Carrier'
+        transport_type:
+          type: string
+        vehicle:
+          type: string
+        transport_subtype:
+          $ref: '#/components/schemas/TransportSubtype'
+        express_type:
+          type: string
+    TransportSubtype:
+      type: object
+      properties:
+        color:
+          type: string
+        code:
+          type: string
+        title:
+          type: string
+    Carrier:
+      type: object
+      properties:
+        code:
+          type: number
+        codes:
+          $ref: '#/components/schemas/CarrierCodes'
+        title:
+          type: string
+    Directions:
+      type: object
+      properties:
+        code:
+          type: string
+        title:
+          type: string
+    CarrierCodes:
+      type: object
+      properties:
+        icao:
+          type: string
+        sirena:
+          type: string
+        iata:
+          type: string
+    StationForSchedule:
+      type: object
+      properties:
+        code:
+          type: string
+        station_type:
+          type: string
+        station_type_name:
+          type: string
+        title:
+          type: string
+        popular_title:
+          type: string
+        short_title:
+          type: string
+        codes:
+          $ref: '#/components/schemas/StationForScheduleCodes'
+        transport_type:
+          type: string
+        type:
+          type: string
+    StationForScheduleCodes:
+      type: object
+      properties:
+        yandex:
+          type: string
+        esr:
           type: string

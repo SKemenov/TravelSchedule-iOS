@@ -35,6 +35,10 @@ struct ContentView: View {
                 copyright()
             }
             .padding()
+            Button("getSchedules") {
+                schedules()
+            }
+            .padding()
         }
         .padding()
 
@@ -49,8 +53,9 @@ private extension ContentView {
             do {
                 let response = try await service.getNearestStations(lat: 59.864177, lng: 30.319163, distance: 50)
                 guard let stations = response.stations,
+                      let total = response.pagination?.total,
                       let limit = response.pagination?.limit else { return }
-                print(stations, "\n pagination.limit:", limit, "\n stations.count:",stations.count)
+                print(stations, "\n pagination.total:", total, "\n pagination.limit:", limit, "\n stations.count:",stations.count)
             } catch {
                 print(error.localizedDescription)
             }
@@ -64,6 +69,21 @@ private extension ContentView {
                 let response = try await service.getCopyright()
 //                guard let response else { return }
                 print(response)
+            } catch {
+                print(error.localizedDescription)
+            }
+        }
+    }
+
+    func schedules() {
+        let service = SchedulesService(client: client)
+        Task{
+            do {
+                let response = try await service.getSchedules(station: "s9600213", date: nil)
+                guard let schedules = response.schedule,
+                      let total = response.pagination?.total,
+                      let limit = response.pagination?.limit else { return }
+                print(response, "\n pagination.total:", total, "\n pagination.limit:", limit, "\n schedules.count:",schedules.count)
             } catch {
                 print(error.localizedDescription)
             }

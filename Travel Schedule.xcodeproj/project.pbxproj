@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E909C8442BA1098C00D67B65 /* SchedulesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E909C8432BA1098C00D67B65 /* SchedulesService.swift */; };
 		E93E20F82B9D7DF100B43DA5 /* Travel_ScheduleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93E20F72B9D7DF100B43DA5 /* Travel_ScheduleApp.swift */; };
 		E93E20FA2B9D7DF100B43DA5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93E20F92B9D7DF100B43DA5 /* ContentView.swift */; };
 		E93E20FC2B9D7DF200B43DA5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E93E20FB2B9D7DF200B43DA5 /* Assets.xcassets */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E909C8432BA1098C00D67B65 /* SchedulesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchedulesService.swift; sourceTree = "<group>"; };
 		E93E20F42B9D7DF100B43DA5 /* Travel Schedule.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Travel Schedule.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E93E20F72B9D7DF100B43DA5 /* Travel_ScheduleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Travel_ScheduleApp.swift; sourceTree = "<group>"; };
 		E93E20F92B9D7DF100B43DA5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 				E98962DB2BA0EAD5005A84BA /* AuthenticationClientMiddleware.swift */,
 				E9F4908A2B9DB76E006FD055 /* NearestStationsService.swift */,
 				E98962E02BA0EE54005A84BA /* CopyrightService.swift */,
+				E909C8432BA1098C00D67B65 /* SchedulesService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -192,6 +195,7 @@
 				E98962DC2BA0EAD5005A84BA /* AuthenticationClientMiddleware.swift in Sources */,
 				E9F4908B2B9DB76E006FD055 /* NearestStationsService.swift in Sources */,
 				E93E20F82B9D7DF100B43DA5 /* Travel_ScheduleApp.swift in Sources */,
+				E909C8442BA1098C00D67B65 /* SchedulesService.swift in Sources */,
 				E98962E12BA0EE54005A84BA /* CopyrightService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
