@@ -341,6 +341,84 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error'
+  /v3.0/thread/:
+    get:
+      tags:
+        - yTravel
+      summary: Список станций следования
+      operationId: getThread
+      parameters:
+        - name: apikey
+          in: query
+          description: API key
+          required: false
+          schema:
+            type: string
+        - name: uid
+          in: query
+          description: Идентификатор нитки.
+          required: true
+          schema:
+            type: string
+        - name: from
+          in: query
+          description: Код станции отправления.
+          required: false
+          schema:
+            type: string
+        - name: to
+          in: query
+          description: Код станции прибытия.
+          required: false
+          schema:
+            type: string
+        - name: format
+          in: query
+          description: json или xml
+          required: false
+          schema:
+            type: string
+        - name: lang
+          in: query
+          description: lang
+          required: false
+          schema:
+            type: string
+        - name: date
+          in: query
+          description: Дата (формат YYYY-MM-DD)
+          required: false
+          schema:
+            type: string
+        - name: show_systems
+          in: query
+          description: коды в ответе.
+          required: false
+          schema:
+            type: string
+            enum:
+              - yandex
+              - esr
+              - all
+      responses:
+        '200':
+          description: success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ThreadObject'
+        '400':
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '404':
+          description: Not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
 components:
   schemas:
     Stations:
@@ -753,4 +831,109 @@ components:
         short_title:
           type: string
         title:
+          type: string
+    ThreadObject:
+      type: object
+      properties:
+        except_days:
+          type: string
+        arrival_date:
+          type: string
+        from:
+          type: string
+        uid:
+          type: string
+        title:
+          type: string
+        interval:
+          $ref: '#/components/schemas/Interval'
+        departure_date:
+          type: string
+        start_time:
+          type: string
+        number:
+          type: string
+        short_title:
+          type: string
+        days:
+          type: string
+        to:
+          type: string
+        carrier:
+          $ref: '#/components/schemas/CarrierForThread'
+        transport_type:
+          type: string
+        stops:
+          type: array
+          items:
+            $ref: '#/components/schemas/Stop'
+        vehicle:
+          type: string
+        start_date:
+          type: string
+        transport_subtype:
+          $ref: '#/components/schemas/TransportSubtype'
+        express_type:
+          type: string
+    Stop:
+      type: object
+      properties:
+        arrival:
+          type: string
+        departure:
+          type: string
+        duration:
+          type: number
+        stop_time:
+          type: number
+        station:
+          $ref: '#/components/schemas/StationForStops'
+        terminal:
+          type: string
+        platform:
+          type: string
+    StationForStops:
+      type: object
+      properties:
+        codes:
+          $ref: '#/components/schemas/StationForStopsCodes'
+        title:
+          type: string
+        station_type:
+          type: string
+        station_type_name:
+          type: string
+        popular_title:
+          type: string
+        short_title:
+          type: string
+        code:
+          type: string
+        type:
+          type: string
+    StationForStopsCodes:
+      type: object
+      properties:
+        express:
+          type: string
+        yandex:
+          type: string
+        esr:
+          type: string
+    CarrierForThread:
+      type: object
+      properties:
+        code:
+          type: number
+        codes:
+          $ref: '#/components/schemas/CarrierForThreadCodes'
+          type: string
+    CarrierForThreadCodes:
+      type: object
+      properties:
+        icao:
+          type: string
+        sirena:
+          type: string
+        iata:
           type: string
