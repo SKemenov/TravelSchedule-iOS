@@ -47,6 +47,10 @@ struct ContentView: View {
                 Threads()
             }
             .padding()
+            Button("getNearestSettlement") {
+                nearestSettlement()
+            }
+            .padding()
         }
         .padding()
 
@@ -118,6 +122,18 @@ private extension ContentView {
         Task{
             do {
                 let response = try await service.getThread(uid: "UJ-615_240316_c1764_12")
+                print(response)
+            } catch {
+                print(error.localizedDescription)
+            }
+        }
+    }
+
+    func nearestSettlement() {
+        let service = NearestSettlementService(client: client)
+        Task{
+            do {
+                let response = try await service.getNearestSettlement(lat: 59.864177, lng: 30.319163, distance: 50)
                 print(response)
             } catch {
                 print(error.localizedDescription)

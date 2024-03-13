@@ -419,6 +419,68 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error'
+  /v3.0/nearest_settlement/:
+    get:
+      tags:
+        - yTravel
+      summary: Ближайший город
+      operationId: getNearestSettlement
+      parameters:
+        - name: apikey
+          in: query
+          description: API key
+          required: false
+          schema:
+            type: string
+        - name: lat
+          in: query
+          description: широта
+          required: true
+          schema:
+            type: number
+        - name: lng
+          in: query
+          description: долгота
+          required: true
+          schema:
+            type: number
+        - name: distance
+          in: query
+          description: радиус охвата
+          required: true
+          schema:
+            type: integer
+        - name: lang
+          in: query
+          description: lang
+          required: false
+          schema:
+            type: string
+        - name: format
+          in: query
+          description: json или xml
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Settlement'
+        '400':
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '404':
+          description: Not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
 components:
   schemas:
     Stations:
@@ -936,4 +998,23 @@ components:
         sirena:
           type: string
         iata:
+          type: string
+    Settlement:
+      type: object
+      properties:
+       distance:
+          type: number
+       code:
+          type: string
+       title:
+          type: string
+       popular_title:
+          type: string
+       short_title:
+          type: string
+       lat:
+          type: number
+       lng:
+          type: number
+       type:
           type: string

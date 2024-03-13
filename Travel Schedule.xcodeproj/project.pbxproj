@@ -10,6 +10,7 @@
 		E909C8442BA1098C00D67B65 /* SchedulesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E909C8432BA1098C00D67B65 /* SchedulesService.swift */; };
 		E909C8472BA1186A00D67B65 /* SearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E909C8462BA1186A00D67B65 /* SearchService.swift */; };
 		E909C84A2BA1734300D67B65 /* ThreadService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E909C8492BA1734300D67B65 /* ThreadService.swift */; };
+		E909C84D2BA1795F00D67B65 /* NearestSettlementService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E909C84C2BA1795F00D67B65 /* NearestSettlementService.swift */; };
 		E93E20F82B9D7DF100B43DA5 /* Travel_ScheduleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93E20F72B9D7DF100B43DA5 /* Travel_ScheduleApp.swift */; };
 		E93E20FA2B9D7DF100B43DA5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93E20F92B9D7DF100B43DA5 /* ContentView.swift */; };
 		E93E20FC2B9D7DF200B43DA5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E93E20FB2B9D7DF200B43DA5 /* Assets.xcassets */; };
@@ -28,6 +29,7 @@
 		E909C8432BA1098C00D67B65 /* SchedulesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchedulesService.swift; sourceTree = "<group>"; };
 		E909C8462BA1186A00D67B65 /* SearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchService.swift; sourceTree = "<group>"; };
 		E909C8492BA1734300D67B65 /* ThreadService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadService.swift; sourceTree = "<group>"; };
+		E909C84C2BA1795F00D67B65 /* NearestSettlementService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearestSettlementService.swift; sourceTree = "<group>"; };
 		E93E20F42B9D7DF100B43DA5 /* Travel Schedule.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Travel Schedule.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E93E20F72B9D7DF100B43DA5 /* Travel_ScheduleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Travel_ScheduleApp.swift; sourceTree = "<group>"; };
 		E93E20F92B9D7DF100B43DA5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 				E909C8432BA1098C00D67B65 /* SchedulesService.swift */,
 				E909C8462BA1186A00D67B65 /* SearchService.swift */,
 				E909C8492BA1734300D67B65 /* ThreadService.swift */,
+				E909C84C2BA1795F00D67B65 /* NearestSettlementService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -204,6 +207,7 @@
 				E909C84A2BA1734300D67B65 /* ThreadService.swift in Sources */,
 				E909C8472BA1186A00D67B65 /* SearchService.swift in Sources */,
 				E909C8442BA1098C00D67B65 /* SchedulesService.swift in Sources */,
+				E909C84D2BA1795F00D67B65 /* NearestSettlementService.swift in Sources */,
 				E98962E12BA0EE54005A84BA /* CopyrightService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
