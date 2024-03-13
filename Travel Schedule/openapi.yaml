@@ -543,7 +543,52 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error'
-
+  /v3.0/stations_list/:
+    get:
+      tags:
+        - yTravel
+      summary: Список всех доступных станций
+      operationId: getStationsList
+      parameters:
+        - name: apikey
+          in: query
+          description: API key
+          required: false
+          schema:
+            type: string
+        - name: format
+          in: query
+          description: json или xml
+          required: false
+          schema:
+            type: string
+        - name: lang
+          in: query
+          description: lang
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/StationsList'
+            text/html:
+              schema: {}
+        '400':
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '404':
+          description: Not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
 components:
   schemas:
     Stations:
@@ -1110,4 +1155,80 @@ components:
         logo:
           type: string
         email:
+          type: string
+
+    StationsList:
+      type: object
+      properties:
+        countries:
+          type: array
+          items:
+            $ref: '#/components/schemas/Country'
+        country:
+            $ref: '#/components/schemas/Country'
+    Country:
+      type: object
+      properties:
+        title:
+          type: string
+        codes:
+          $ref: '#/components/schemas/SettlementsStationsCodes'
+        regions:
+          type: array
+          items:
+            $ref: '#/components/schemas/Region'
+    Region:
+      type: object
+      properties:
+        title:
+          type: string
+        codes:
+          $ref: '#/components/schemas/SettlementsStationsCodes'
+        settlements:
+          type: array
+          items:
+            $ref: '#/components/schemas/Settlements'
+    Settlements:
+      type: object
+      properties:
+        title:
+          type: string
+        codes:
+          $ref: '#/components/schemas/SettlementsStationsCodes'
+        stations:
+          $ref: '#/components/schemas/SettlementsStations'
+    SettlementsStations:
+      type: object
+      properties:
+        direction:
+          type: string
+        codes:
+          $ref: '#/components/schemas/CarrierObject'
+        station_type:
+          type: string
+        title:
+          type: string
+        longitude:
+          oneOf:
+            - type: number
+            - type: string
+          nullable: true
+        transport_type:
+          type: string
+        latitude:
+          oneOf:
+            - type: number
+            - type: string
+          nullable: true
+    SettlementsStationsCodes:
+      type: object
+      properties:
+        esr_code:
+          type: string
+        yandex_code:
+          type: string
+    StationsListCodes:
+      type: object
+      properties:
+        yandex_code:
           type: string

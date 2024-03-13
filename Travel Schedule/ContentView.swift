@@ -55,8 +55,12 @@ struct ContentView: View {
                 Carriers()
             }
             .padding()
+            Button("getStationsList") {
+                StationsList()
+            }
+            .padding()
         }
-        .padding()
+//        .padding()
 
     }
     
@@ -151,6 +155,34 @@ private extension ContentView {
             do {
                 let response = try await service.getCarriers(code: "SU", system: .iata)
                 print(response)
+            } catch {
+                print(error.localizedDescription)
+            }
+        }
+    }
+    func StationsList() {
+        let service = StationsListService(client: client)
+        Task{
+            do {
+                let response = try await service.getStationsList()
+                print("I have response ", response)
+                let data = try await Data(collecting: response, upTo: 1024*1024*40)
+                print("I have data ", data)
+                let stations = try JSONDecoder().decode(Components.Schemas.StationsList.self, from: data)
+                guard let countries = stations.countries else { return }
+                print(countries.count)
+//                print(stations)
+            } catch let DecodingError.dataCorrupted(context) {
+                print(context)
+            } catch let DecodingError.keyNotFound(key, context) {
+                print("Key '\(key)' not found:", context.debugDescription)
+                print("codingPath:", context.codingPath)
+            } catch let DecodingError.valueNotFound(value, context) {
+                print("Value '\(value)' not found:", context.debugDescription)
+                print("codingPath:", context.codingPath)
+            } catch let DecodingError.typeMismatch(type, context)  {
+                print("Type '\(type)' mismatch:", context.debugDescription)
+                print("codingPath:", context.codingPath)
             } catch {
                 print(error.localizedDescription)
             }
