@@ -60,10 +60,7 @@ struct ContentView: View {
             }
             .padding()
         }
-//        .padding()
-
     }
-    
 }
 
 private extension ContentView {
@@ -75,7 +72,12 @@ private extension ContentView {
                 guard let stations = response.stations,
                       let total = response.pagination?.total,
                       let limit = response.pagination?.limit else { return }
-                print(stations, "\n pagination.total:", total, "\n pagination.limit:", limit, "\n stations.count:",stations.count)
+                print(
+                    stations,
+                    "\n pagination.total:", total,
+                    "\n pagination.limit:", limit,
+                    "\n stations.count:", stations.count
+                )
             } catch {
                 print(error.localizedDescription)
             }
@@ -87,7 +89,6 @@ private extension ContentView {
         Task{
             do {
                 let response = try await service.getCopyright()
-//                guard let response else { return }
                 print(response)
             } catch {
                 print(error.localizedDescription)
@@ -103,7 +104,12 @@ private extension ContentView {
                 guard let schedules = response.schedule,
                       let total = response.pagination?.total,
                       let limit = response.pagination?.limit else { return }
-                print(response, "\n pagination.total:", total, "\n pagination.limit:", limit, "\n schedules.count:",schedules.count)
+                print(
+                    response,
+                    "\n pagination.total:", total,
+                    "\n pagination.limit:", limit,
+                    "\n schedules.count:", schedules.count
+                )
             } catch {
                 print(error.localizedDescription)
             }
@@ -119,12 +125,19 @@ private extension ContentView {
                       let intervalSegments = response.interval_segments,
                       let total = response.pagination?.total,
                       let limit = response.pagination?.limit else { return }
-                print(response, "\n pagination.total:", total, "\n pagination.limit:", limit, "\n segments.count:",segments.count, "\n intervalSegments.count:",intervalSegments.count)
+                print(
+                    response,
+                    "\n pagination.total:", total,
+                    "\n pagination.limit:", limit,
+                    "\n segments.count:", segments.count,
+                    "\n intervalSegments.count:", intervalSegments.count
+                )
             } catch {
                 print(error.localizedDescription)
             }
         }
     }
+    
     func Threads() {
         let service = ThreadService(client: client)
         Task{
@@ -160,6 +173,7 @@ private extension ContentView {
             }
         }
     }
+
     func StationsList() {
         let service = StationsListService(client: client)
         Task{
