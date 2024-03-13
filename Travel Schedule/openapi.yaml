@@ -481,6 +481,69 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error'
+  /v3.0/carrier/:
+    get:
+      tags:
+        - yTravel
+      summary: Информация о перевозчике
+      operationId: getCarrier
+      parameters:
+        - name: apikey
+          in: query
+          description: API key
+          required: false
+          schema:
+            type: string
+        - name: code
+          in: query
+          description: код перевозчика
+          required: true
+          schema:
+            type: string
+        - name: format
+          in: query
+          description: json или xml
+          required: false
+          schema:
+            type: string
+        - name: lang
+          in: query
+          description: lang
+          required: false
+          schema:
+            type: string
+        - name: system
+          in: query
+          description: текущая система кодирования
+          required: false
+          schema:
+            type: string
+            enum:
+              - yandex
+              - iata
+              - sirena
+              - express
+              - esr
+      responses:
+        '200':
+          description: success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Carriers'
+        '400':
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '404':
+          description: Not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
 components:
   schemas:
     Stations:
@@ -1017,4 +1080,34 @@ components:
        lng:
           type: number
        type:
+          type: string
+    Carriers:
+      type: object
+      properties:
+        carriers:
+          type: array
+          items:
+            $ref: '#/components/schemas/CarrierObject'
+        carrier:
+          $ref: '#/components/schemas/CarrierObject'
+    CarrierObject:
+      type: object
+      properties:
+        code:
+          type: number
+        contacts:
+          type: string
+        url:
+          type: string
+        title:
+          type: string
+        phone:
+          type: string
+        codes:
+          $ref: '#/components/schemas/CarrierCodes'
+        address:
+          type: string
+        logo:
+          type: string
+        email:
           type: string

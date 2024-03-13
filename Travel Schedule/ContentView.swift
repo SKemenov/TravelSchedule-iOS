@@ -51,6 +51,10 @@ struct ContentView: View {
                 nearestSettlement()
             }
             .padding()
+            Button("getCarriers") {
+                Carriers()
+            }
+            .padding()
         }
         .padding()
 
@@ -134,6 +138,18 @@ private extension ContentView {
         Task{
             do {
                 let response = try await service.getNearestSettlement(lat: 59.864177, lng: 30.319163, distance: 50)
+                print(response)
+            } catch {
+                print(error.localizedDescription)
+            }
+        }
+    }
+
+    func Carriers() {
+        let service = CarriersService(client: client)
+        Task{
+            do {
+                let response = try await service.getCarriers(code: "SU", system: .iata)
                 print(response)
             } catch {
                 print(error.localizedDescription)
