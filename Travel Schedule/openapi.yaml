@@ -957,6 +957,7 @@ components:
           type: integer
         whole:
           type: integer
+
     CarrierForSearch:
       type: object
       properties:
@@ -968,6 +969,7 @@ components:
           type: string
         logo_svg:
           type: string
+          nullable: true
         title:
           type: string
         phone:
@@ -1097,7 +1099,6 @@ components:
           type: number
         codes:
           $ref: '#/components/schemas/CarrierForThreadCodes'
-          type: string
     CarrierForThreadCodes:
       type: object
       properties:
@@ -1132,30 +1133,9 @@ components:
         carriers:
           type: array
           items:
-            $ref: '#/components/schemas/CarrierObject'
+            $ref: '#/components/schemas/CarrierForSearch'
         carrier:
-          $ref: '#/components/schemas/CarrierObject'
-    CarrierObject:
-      type: object
-      properties:
-        code:
-          type: number
-        contacts:
-          type: string
-        url:
-          type: string
-        title:
-          type: string
-        phone:
-          type: string
-        codes:
-          $ref: '#/components/schemas/CarrierCodes'
-        address:
-          type: string
-        logo:
-          type: string
-        email:
-          type: string
+          $ref: '#/components/schemas/CarrierForSearch'
 
     StationsList:
       type: object
@@ -1164,30 +1144,31 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/Country'
-        country:
-            $ref: '#/components/schemas/Country'
+
     Country:
       type: object
       properties:
-        title:
-          type: string
-        codes:
-          $ref: '#/components/schemas/SettlementsStationsCodes'
         regions:
           type: array
           items:
             $ref: '#/components/schemas/Region'
+        codes:
+          $ref: '#/components/schemas/SettlementsStationsCodes'
+        title:
+          type: string
+
     Region:
       type: object
       properties:
-        title:
-          type: string
-        codes:
-          $ref: '#/components/schemas/SettlementsStationsCodes'
         settlements:
           type: array
           items:
             $ref: '#/components/schemas/Settlements'
+        codes:
+          $ref: '#/components/schemas/SettlementsStationsCodes'
+        title:
+          type: string
+
     Settlements:
       type: object
       properties:
@@ -1196,39 +1177,40 @@ components:
         codes:
           $ref: '#/components/schemas/SettlementsStationsCodes'
         stations:
-          $ref: '#/components/schemas/SettlementsStations'
+          type: array
+          items:
+            $ref: '#/components/schemas/SettlementsStations'
+
     SettlementsStations:
       type: object
       properties:
         direction:
           type: string
         codes:
-          $ref: '#/components/schemas/CarrierObject'
+          $ref: '#/components/schemas/CarrierForSearch'
         station_type:
           type: string
         title:
+          type: string
+        transport_type:
           type: string
         longitude:
           oneOf:
             - type: number
             - type: string
           nullable: true
-        transport_type:
-          type: string
         latitude:
           oneOf:
             - type: number
             - type: string
           nullable: true
+
     SettlementsStationsCodes:
       type: object
       properties:
         esr_code:
           type: string
+          nullable: true
         yandex_code:
           type: string
-    StationsListCodes:
-      type: object
-      properties:
-        yandex_code:
-          type: string
+          nullable: true

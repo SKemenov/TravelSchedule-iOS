@@ -12,8 +12,7 @@ import OpenAPIURLSession
 typealias StationsList = Components.Schemas.StationsList
 
 protocol StationsListServiceProtocol {
-    func getStationsList() async throws -> HTTPBody
-//    func getStationsList() async throws -> StationsList
+    func getStationsList() async throws -> StationsList
 }
 
 final class StationsListService: StationsListServiceProtocol {
@@ -23,9 +22,11 @@ final class StationsListService: StationsListServiceProtocol {
         self.client = client
     }
 
-    func getStationsList() async throws -> HTTPBody {
-//    func getStationsList() async throws -> StationsList {
+    func getStationsList() async throws -> StationsList {
         let response = try await client.getStationsList(.init())
-        return try response.ok.body.html
+        let httpBody = try response.ok.body.html
+        let data = try await Data(collecting: httpBody, upTo: Resources.maxJsonSize)
+        let stationList = try JSONDecoder().decode(StationsList.self, from: data)
+        return stationList
     }
 }
