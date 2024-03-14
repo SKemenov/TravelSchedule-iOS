@@ -181,6 +181,10 @@ private extension ContentView {
                 let stations = try await service.getStationsList()
                 guard let countries = stations.countries else { return }
                 print("Total countries at the list:", countries.count)
+
+                var totalStations = 0
+                countries.forEach { $0.regions?.forEach { $0.settlements?.forEach{ $0.stations?.forEach { _ in totalStations += 1 } } } }
+                print("Total stations: \(totalStations)")
             } catch {
                 print(error.localizedDescription)
             }
