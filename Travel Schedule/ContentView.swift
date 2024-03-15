@@ -28,35 +28,35 @@ struct ContentView: View {
     var body: some View {
         VStack {
             Button("getNearestStations") {
-                nearestStations()
+                getNearestStations()
             }
             .padding()
             Button("getCopyright") {
-                copyright()
+                getCopyright()
             }
             .padding()
             Button("getSchedules") {
-                schedules()
+                getSchedules()
             }
             .padding()
             Button("getSearches") {
-                Searches()
+                getSearches()
             }
             .padding()
             Button("getThreads") {
-                Threads()
+                getThreads()
             }
             .padding()
             Button("getNearestSettlement") {
-                nearestSettlement()
+                getNearestSettlement()
             }
             .padding()
             Button("getCarriers") {
-                Carriers()
+                getCarriers()
             }
             .padding()
             Button("getStationsList") {
-                StationsList()
+                getStationsList()
             }
             .padding()
         }
@@ -64,19 +64,23 @@ struct ContentView: View {
 }
 
 private extension ContentView {
-    func nearestStations() {
+    func getNearestStations() {
         let service = NearestStationsService(client: client)
-        Task{
+        Task {
             do {
                 let response = try await service.getNearestStations(lat: 59.864177, lng: 30.319163, distance: 50)
-                guard let stations = response.stations,
-                      let total = response.pagination?.total,
-                      let limit = response.pagination?.limit else { return }
+                guard
+                    let stations = response.stations,
+                    let total = response.pagination?.total,
+                    let limit = response.pagination?.limit else { return }
                 print(
                     stations,
-                    "\n pagination.total:", total,
-                    "\n pagination.limit:", limit,
-                    "\n stations.count:", stations.count
+                    "\n pagination.total:",
+                    total,
+                    "\n pagination.limit:",
+                    limit,
+                    "\n stations.count:",
+                    stations.count
                 )
             } catch {
                 print(error.localizedDescription)
@@ -84,9 +88,9 @@ private extension ContentView {
         }
     }
 
-    func copyright() {
+    func getCopyright() {
         let service = CopyrightService(client: client)
-        Task{
+        Task {
             do {
                 let response = try await service.getCopyright()
                 print(response)
@@ -96,19 +100,23 @@ private extension ContentView {
         }
     }
 
-    func schedules() {
+    func getSchedules() {
         let service = SchedulesService(client: client)
-        Task{
+        Task {
             do {
                 let response = try await service.getSchedules(station: "s9600213", date: nil)
-                guard let schedules = response.schedule,
-                      let total = response.pagination?.total,
-                      let limit = response.pagination?.limit else { return }
+                guard
+                    let schedules = response.schedule,
+                    let total = response.pagination?.total,
+                    let limit = response.pagination?.limit else { return }
                 print(
                     response,
-                    "\n pagination.total:", total,
-                    "\n pagination.limit:", limit,
-                    "\n schedules.count:", schedules.count
+                    "\n pagination.total:",
+                    total,
+                    "\n pagination.limit:",
+                    limit,
+                    "\n schedules.count:",
+                    schedules.count
                 )
             } catch {
                 print(error.localizedDescription)
@@ -116,31 +124,36 @@ private extension ContentView {
         }
     }
 
-    func Searches() {
+    func getSearches() {
         let service = SearchService(client: client)
-        Task{
+        Task {
             do {
                 let response = try await service.getSearches(from: "s9623561", to: "s9600213")
-                guard let segments = response.segments,
-                      let intervalSegments = response.interval_segments,
-                      let total = response.pagination?.total,
-                      let limit = response.pagination?.limit else { return }
+                guard
+                    let segments = response.segments,
+                    let intervalSegments = response.interval_segments,
+                    let total = response.pagination?.total,
+                    let limit = response.pagination?.limit else { return }
                 print(
                     response,
-                    "\n pagination.total:", total,
-                    "\n pagination.limit:", limit,
-                    "\n segments.count:", segments.count,
-                    "\n intervalSegments.count:", intervalSegments.count
+                    "\n pagination.total:",
+                    total,
+                    "\n pagination.limit:",
+                    limit,
+                    "\n segments.count:",
+                    segments.count,
+                    "\n intervalSegments.count:",
+                    intervalSegments.count
                 )
             } catch {
                 print(error.localizedDescription)
             }
         }
     }
-    
-    func Threads() {
+
+    func getThreads() {
         let service = ThreadService(client: client)
-        Task{
+        Task {
             do {
                 let response = try await service.getThread(uid: "UJ-615_240316_c1764_12")
                 print(response)
@@ -150,9 +163,9 @@ private extension ContentView {
         }
     }
 
-    func nearestSettlement() {
+    func getNearestSettlement() {
         let service = NearestSettlementService(client: client)
-        Task{
+        Task {
             do {
                 let response = try await service.getNearestSettlement(lat: 59.864177, lng: 30.319163, distance: 50)
                 print(response)
@@ -162,9 +175,9 @@ private extension ContentView {
         }
     }
 
-    func Carriers() {
+    func getCarriers() {
         let service = CarriersService(client: client)
-        Task{
+        Task {
             do {
                 let response = try await service.getCarriers(code: "SU", system: .iata)
                 print(response)
@@ -174,16 +187,22 @@ private extension ContentView {
         }
     }
 
-    func StationsList() {
+    func getStationsList() {
         let service = StationsListService(client: client)
-        Task{
+        Task {
             do {
                 let stations = try await service.getStationsList()
                 guard let countries = stations.countries else { return }
                 print("Total countries at the list:", countries.count)
 
                 var totalStations = 0
-                countries.forEach { $0.regions?.forEach { $0.settlements?.forEach{ $0.stations?.forEach { _ in totalStations += 1 } } } }
+                countries.forEach {
+                    $0.regions?.forEach {
+                        $0.settlements?.forEach {
+                            $0.stations?.forEach { _ in totalStations += 1 }
+                        }
+                    }
+                }
                 print("Total stations: \(totalStations)")
             } catch {
                 print(error.localizedDescription)

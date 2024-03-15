@@ -11,7 +11,6 @@ import HTTPTypes
 
 /// A client middleware that injects a value into the `Authorization` header field of the request.
 struct AuthenticationMiddleware {
-
     /// The value for the `Authorization` header field.
     private let value: String
 
