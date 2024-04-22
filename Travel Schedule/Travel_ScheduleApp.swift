@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct Travel_ScheduleApp: App {
+    @State private var schedule = Schedule.sampleData
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            RootTabView(schedule: $schedule)
         }
     }
 }
