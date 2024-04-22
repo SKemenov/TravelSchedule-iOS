@@ -21,6 +21,7 @@
 		E936A6242BD62EDA00CB08F7 /* Font+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E936A6232BD62EDA00CB08F7 /* Font+Extensions.swift */; };
 		E936A6262BD62EFC00CB08F7 /* Image+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E936A6252BD62EFC00CB08F7 /* Image+Extensions.swift */; };
 		E936A6282BD62F2D00CB08F7 /* ErrorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E936A6272BD62F2D00CB08F7 /* ErrorType.swift */; };
+		E936A62A2BD62FA300CB08F7 /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = E936A6292BD62FA300CB08F7 /* Story.swift */; };
 		E93E20F82B9D7DF100B43DA5 /* Travel_ScheduleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93E20F72B9D7DF100B43DA5 /* Travel_ScheduleApp.swift */; };
 		E93E20FC2B9D7DF200B43DA5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E93E20FB2B9D7DF200B43DA5 /* Assets.xcassets */; };
 		E93E20FF2B9D7DF200B43DA5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E93E20FE2B9D7DF200B43DA5 /* Preview Assets.xcassets */; };
@@ -59,6 +60,7 @@
 		E936A6232BD62EDA00CB08F7 /* Font+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+Extensions.swift"; sourceTree = "<group>"; };
 		E936A6252BD62EFC00CB08F7 /* Image+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+Extensions.swift"; sourceTree = "<group>"; };
 		E936A6272BD62F2D00CB08F7 /* ErrorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorType.swift; sourceTree = "<group>"; };
+		E936A6292BD62FA300CB08F7 /* Story.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Story.swift; sourceTree = "<group>"; };
 		E93E20F42B9D7DF100B43DA5 /* Travel Schedule.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Travel Schedule.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E93E20F72B9D7DF100B43DA5 /* Travel_ScheduleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Travel_ScheduleApp.swift; sourceTree = "<group>"; };
 		E93E20FB2B9D7DF200B43DA5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -332,6 +334,7 @@
 				E936A61D2BD5C3A100CB08F7 /* Screens.swift in Sources */,
 				E9A49C3C2BD2B5D200017734 /* CityView.swift in Sources */,
 				E98962E12BA0EE54005A84BA /* CopyrightService.swift in Sources */,
+				E936A62A2BD62FA300CB08F7 /* Story.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
