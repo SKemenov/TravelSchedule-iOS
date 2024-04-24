@@ -12,11 +12,12 @@ struct RootTabView: View {
     @Binding var darkMode: Bool
     @State var navPath: [ViewsRouter] = []
     @State var direction: Int = .departure
+    @State var stories: [Story] = Story.sampleData
 
     var body: some View {
         NavigationStack(path: $navPath) {
             TabView {
-                MainSearchView(schedule: $schedule, navPath: $navPath, direction: $direction)
+                SearchTabView(stories: $stories, schedule: $schedule, navPath: $navPath, direction: $direction)
                     .tabItem {
                         Image.iconTabSearch
                     }
@@ -38,15 +39,6 @@ struct RootTabView: View {
                 case .routeView:
                     RoutesListView(schedule: $schedule)
                         .toolbar(.hidden, for: .tabBar)
-                    //                case .agreementView:
-                    //                    AgreementView()
-                    //                        .toolbar(.hidden, for: .tabBar)
-                    //                case .filterView:
-                    //                    FilterView(filter: $schedule.filter, navPath: $navPath)
-                    //                        .toolbar(.hidden, for: .tabBar)
-                    //                case .carrierView:
-                    //                    AgreementView()
-                    //                        .toolbar(.hidden, for: .tabBar)
                 }
             }
         }
