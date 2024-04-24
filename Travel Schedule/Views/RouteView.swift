@@ -8,24 +8,36 @@
 import SwiftUI
 
 struct RouteView: View {
-    @Binding var schedule: Schedule
+    @State var route: Route
+    @State var carrier: Carrier
+    //    {
+    //        Carrier.sampleData.first { $0.id == schedule.routes[index].carrierID } ?? Carrier.emptyData
+    //    }
 
     var body: some View {
         VStack(spacing: 24) {
             HStack {
-                Text(schedule.destinations[.departure].cityTitle)
-                Text("-")
-                Text(schedule.destinations[.departure].stationTitle)
+                Text(carrier.logoName)
+                HStack {
+                    VStack(alignment: .leading) {
+                        Text(carrier.title)
+                        Text(route.isDirect ? "" : "С пересадкой в \(route.connectionStation)")
+                    }
+                    Spacer()
+                    Text(route.date)
+                }
             }
             HStack {
-                Text(schedule.destinations[.arrival].cityTitle)
-                Text("-")
-                Text(schedule.destinations[.arrival].stationTitle)
+                Text(route.departureTime)
+                Spacer()
+                Text("\(route.durationTime) часов")
+                Spacer()
+                Text(route.arrivalTime)
             }
         }
     }
 }
 
 #Preview {
-    RouteView(schedule: .constant(Schedule.sampleData))
+    RouteView(route: Schedule.sampleData.routes[0], carrier: Carrier.sampleData[0])
 }
