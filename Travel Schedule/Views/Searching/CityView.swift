@@ -17,6 +17,7 @@ struct CityView: View {
             ForEach($schedule.cities) { $city in
                 NavigationLink(value: ViewsRouter.stationView) {
                     RowSearchView(rowString: city.title)
+                        .listRowSeparator(.hidden)
                 }
                     .simultaneousGesture(TapGesture().onEnded {
                         schedule.destinations[direction].cityTitle = city.title

@@ -53,6 +53,7 @@ struct RoutesListView: View {
                             } label: {
                                 RouteView(route: route, carrier: carrier)
                             }
+                            .listRowSeparator(.hidden)
                         }
                     }
                 }

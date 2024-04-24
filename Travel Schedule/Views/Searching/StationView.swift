@@ -21,6 +21,7 @@ struct StationView: View {
                 } label: {
                     RowSearchView(rowString: station.title)
                 }
+                .listRowSeparator(.hidden)
             }
         }
         .listStyle(.plain)

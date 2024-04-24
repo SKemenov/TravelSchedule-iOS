@@ -165,19 +165,13 @@
 		E9A49C222BD29D2700017734 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				E9A49C342BD2A38900017734 /* SettingsView.swift */,
 				E9A49C242BD29D8100017734 /* RootTabView.swift */,
-				E9A49C262BD29EA000017734 /* MainSearchView.swift */,
-				E9A49C3B2BD2B5D200017734 /* CityView.swift */,
-				E9A49C3F2BD2B83800017734 /* StationView.swift */,
-				E9A49C422BD2CC0300017734 /* RouteView.swift */,
-				E936A6142BD5BB7700CB08F7 /* RowSearchView.swift */,
-				E936A6192BD5C16F00CB08F7 /* AgreementView.swift */,
+				E9E30FA02BD98A3C0061546C /* Settings */,
+				E9E30F9E2BD98A250061546C /* Searching */,
+				E9E30FA32BD98A510061546C /* Routes */,
+				E9E30F9B2BD989E40061546C /* Elements */,
 				E936A62E2BD78A8C00CB08F7 /* ErrorView.swift */,
 				E936A6312BD78B0400CB08F7 /* StoriesListView.swift */,
-				E936A6342BD78BC900CB08F7 /* RoutesListView.swift */,
-				E9DCFF372BD8E3DB00C20F64 /* FilterView.swift */,
-				E9DCFF3A2BD8E40200C20F64 /* CarrierView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -205,6 +199,44 @@
 				E936A6272BD62F2D00CB08F7 /* ErrorType.swift */,
 			);
 			path = Enums;
+			sourceTree = "<group>";
+		};
+		E9E30F9B2BD989E40061546C /* Elements */ = {
+			isa = PBXGroup;
+			children = (
+				E936A6142BD5BB7700CB08F7 /* RowSearchView.swift */,
+				E9A49C422BD2CC0300017734 /* RouteView.swift */,
+			);
+			path = Elements;
+			sourceTree = "<group>";
+		};
+		E9E30F9E2BD98A250061546C /* Searching */ = {
+			isa = PBXGroup;
+			children = (
+				E9A49C262BD29EA000017734 /* MainSearchView.swift */,
+				E9A49C3B2BD2B5D200017734 /* CityView.swift */,
+				E9A49C3F2BD2B83800017734 /* StationView.swift */,
+			);
+			path = Searching;
+			sourceTree = "<group>";
+		};
+		E9E30FA02BD98A3C0061546C /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				E9A49C342BD2A38900017734 /* SettingsView.swift */,
+				E936A6192BD5C16F00CB08F7 /* AgreementView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		E9E30FA32BD98A510061546C /* Routes */ = {
+			isa = PBXGroup;
+			children = (
+				E936A6342BD78BC900CB08F7 /* RoutesListView.swift */,
+				E9DCFF372BD8E3DB00C20F64 /* FilterView.swift */,
+				E9DCFF3A2BD8E40200C20F64 /* CarrierView.swift */,
+			);
+			path = Routes;
 			sourceTree = "<group>";
 		};
 		E9F490902BA0407D006FD055 /* Services */ = {

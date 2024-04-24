@@ -25,5 +25,7 @@ struct SettingsView: View {
 }
 
 #Preview {
-    SettingsView(darkMode: .constant(false))
+    NavigationStack {
+        SettingsView(darkMode: .constant(false))
+    }
 }
