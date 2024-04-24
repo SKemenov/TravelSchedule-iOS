@@ -8,10 +8,15 @@
 import SwiftUI
 
 struct SettingsView: View {
+    @Binding var darkMode: Bool
+
     var body: some View {
         VStack {
-            Text("Switch is here")
-            NavigationLink(value: Screens.agreementView) {
+            Toggle("Switch is here", isOn: $darkMode)
+            // NavigationLink(value: ViewsRouter.agreementView) {
+            NavigationLink {
+                AgreementView()
+            } label: {
                 RowSearchView(rowString: "User Agreement")
             }
             Spacer()
@@ -20,5 +25,5 @@ struct SettingsView: View {
 }
 
 #Preview {
-    SettingsView()
+    SettingsView(darkMode: .constant(false))
 }
