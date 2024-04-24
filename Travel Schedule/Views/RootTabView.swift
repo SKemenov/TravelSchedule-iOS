@@ -9,7 +9,8 @@ import SwiftUI
 
 struct RootTabView: View {
     @Binding var schedule: Schedule
-    @State var navPath: [Screens] = []
+    @Binding var darkMode: Bool
+    @State var navPath: [ViewsRouter] = []
     @State var direction: Int = .departure
 
     var body: some View {
@@ -17,16 +18,16 @@ struct RootTabView: View {
             TabView {
                 MainSearchView(schedule: $schedule, navPath: $navPath, direction: $direction)
                     .tabItem {
-                        Label("Schedule", systemImage: "calendar")
+                        Image.iconTabSearch
                     }
-                SettingsView()
+                SettingsView(darkMode: $darkMode)
                     .tabItem {
-                        Label("Settings", systemImage: "gear")
+                        Image.iconTabSettings
                     }
             }
-            .accentColor(.black)
+            .accentColor(.ypBlackDuo)
             .toolbar(.visible, for: .tabBar)
-            .navigationDestination(for: Screens.self) { pathValue in
+            .navigationDestination(for: ViewsRouter.self) { pathValue in
                 switch pathValue {
                 case .cityView:
                     CityView(schedule: $schedule, navPath: $navPath, direction: $direction)
@@ -35,11 +36,17 @@ struct RootTabView: View {
                     StationView(schedule: $schedule, navPath: $navPath, direction: $direction)
                         .toolbar(.hidden, for: .tabBar)
                 case .routeView:
-                    RouteView(schedule: $schedule)
+                    RoutesListView(schedule: $schedule)
                         .toolbar(.hidden, for: .tabBar)
-                case .agreementView:
-                    AgreementView()
-                        .toolbar(.hidden, for: .tabBar)
+                    //                case .agreementView:
+                    //                    AgreementView()
+                    //                        .toolbar(.hidden, for: .tabBar)
+                    //                case .filterView:
+                    //                    FilterView(filter: $schedule.filter, navPath: $navPath)
+                    //                        .toolbar(.hidden, for: .tabBar)
+                    //                case .carrierView:
+                    //                    AgreementView()
+                    //                        .toolbar(.hidden, for: .tabBar)
                 }
             }
         }
@@ -47,5 +54,5 @@ struct RootTabView: View {
 }
 
 #Preview {
-    RootTabView(schedule: .constant(Schedule.sampleData))
+    RootTabView(schedule: .constant(Schedule.sampleData), darkMode: .constant(false))
 }
