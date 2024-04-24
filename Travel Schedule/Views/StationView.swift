@@ -9,7 +9,7 @@ import SwiftUI
 
 struct StationView: View {
     @Binding var schedule: Schedule
-    @Binding var navPath: [Screens]
+    @Binding var navPath: [ViewsRouter]
     @Binding var direction: Int
 
     var body: some View {
@@ -17,15 +17,6 @@ struct StationView: View {
             ForEach($schedule.stations) { $station in
                 Button {
                     schedule.destinations[direction].stationTitle = station.title
-                    print(
-                        #fileID,
-                        "direction code",
-                        direction,
-                        "City",
-                        schedule.destinations[direction].cityTitle,
-                        "Station",
-                        schedule.destinations[direction].stationTitle
-                    )
                     navPath.removeAll()
                 } label: {
                     RowSearchView(rowString: station.title)
