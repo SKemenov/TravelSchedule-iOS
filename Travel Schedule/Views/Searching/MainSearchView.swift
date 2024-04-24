@@ -60,9 +60,3 @@ struct MainSearchView: View {
         MainSearchView(schedule: .constant(Schedule.sampleData), navPath: .constant([]), direction: .constant(0))
     }
 }
-
-
-extension Int {
-    static let departure = 0
-    static let arrival = 1
-}
