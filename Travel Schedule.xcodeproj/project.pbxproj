@@ -14,6 +14,7 @@
 		E909C8502BA1826400D67B65 /* CarriersService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E909C84F2BA1826400D67B65 /* CarriersService.swift */; };
 		E909C8532BA18EAB00D67B65 /* StationsListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E909C8522BA18EAB00D67B65 /* StationsListService.swift */; };
 		E9163A8E2BD29A2C0007D9CF /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9163A8D2BD29A2C0007D9CF /* NetworkService.swift */; };
+		E91BC4C22BD85410003FF64D /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91BC4C12BD85410003FF64D /* Filter.swift */; };
 		E936A6152BD5BB7700CB08F7 /* RowSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E936A6142BD5BB7700CB08F7 /* RowSearchView.swift */; };
 		E936A61A2BD5C16F00CB08F7 /* AgreementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E936A6192BD5C16F00CB08F7 /* AgreementView.swift */; };
 		E936A61D2BD5C3A100CB08F7 /* ViewsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E936A61C2BD5C3A100CB08F7 /* ViewsRouter.swift */; };
@@ -55,6 +56,7 @@
 		E909C84F2BA1826400D67B65 /* CarriersService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarriersService.swift; sourceTree = "<group>"; };
 		E909C8522BA18EAB00D67B65 /* StationsListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationsListService.swift; sourceTree = "<group>"; };
 		E9163A8D2BD29A2C0007D9CF /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		E91BC4C12BD85410003FF64D /* Filter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
 		E936A6142BD5BB7700CB08F7 /* RowSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowSearchView.swift; sourceTree = "<group>"; };
 		E936A6192BD5C16F00CB08F7 /* AgreementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgreementView.swift; sourceTree = "<group>"; };
 		E936A61C2BD5C3A100CB08F7 /* ViewsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewsRouter.swift; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 				E936A6292BD62FA300CB08F7 /* Story.swift */,
 				E936A6372BD78C4300CB08F7 /* Route.swift */,
 				E936A63A2BD78FE700CB08F7 /* Carrier.swift */,
+				E91BC4C12BD85410003FF64D /* Filter.swift */,
 				E9DCFF462BD982C700C20F64 /* Enums */,
 			);
 			path = Models;
@@ -341,6 +344,7 @@
 				E936A6222BD62EA400CB08F7 /* CGFloat+Extensions.swift in Sources */,
 				E909C8442BA1098C00D67B65 /* SchedulesService.swift in Sources */,
 				E909C84D2BA1795F00D67B65 /* NearestSettlementService.swift in Sources */,
+				E91BC4C22BD85410003FF64D /* Filter.swift in Sources */,
 				E909C8532BA18EAB00D67B65 /* StationsListService.swift in Sources */,
 				E9163A8E2BD29A2C0007D9CF /* NetworkService.swift in Sources */,
 				E9A49C332BD2A21C00017734 /* Schedule.swift in Sources */,
