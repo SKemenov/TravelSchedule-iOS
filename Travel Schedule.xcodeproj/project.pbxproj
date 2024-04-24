@@ -24,6 +24,7 @@
 		E936A6282BD62F2D00CB08F7 /* ErrorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E936A6272BD62F2D00CB08F7 /* ErrorType.swift */; };
 		E936A62A2BD62FA300CB08F7 /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = E936A6292BD62FA300CB08F7 /* Story.swift */; };
 		E936A62F2BD78A8C00CB08F7 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E936A62E2BD78A8C00CB08F7 /* ErrorView.swift */; };
+		E936A6322BD78B0400CB08F7 /* StoriesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E936A6312BD78B0400CB08F7 /* StoriesListView.swift */; };
 		E936A6352BD78BC900CB08F7 /* RoutesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E936A6342BD78BC900CB08F7 /* RoutesListView.swift */; };
 		E936A6382BD78C4300CB08F7 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = E936A6372BD78C4300CB08F7 /* Route.swift */; };
 		E936A63B2BD78FE700CB08F7 /* Carrier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E936A63A2BD78FE700CB08F7 /* Carrier.swift */; };
@@ -70,6 +71,7 @@
 		E936A6272BD62F2D00CB08F7 /* ErrorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorType.swift; sourceTree = "<group>"; };
 		E936A6292BD62FA300CB08F7 /* Story.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Story.swift; sourceTree = "<group>"; };
 		E936A62E2BD78A8C00CB08F7 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		E936A6312BD78B0400CB08F7 /* StoriesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesListView.swift; sourceTree = "<group>"; };
 		E936A6342BD78BC900CB08F7 /* RoutesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutesListView.swift; sourceTree = "<group>"; };
 		E936A6372BD78C4300CB08F7 /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
 		E936A63A2BD78FE700CB08F7 /* Carrier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Carrier.swift; sourceTree = "<group>"; };
@@ -172,6 +174,7 @@
 				E936A6142BD5BB7700CB08F7 /* RowSearchView.swift */,
 				E936A6192BD5C16F00CB08F7 /* AgreementView.swift */,
 				E936A62E2BD78A8C00CB08F7 /* ErrorView.swift */,
+				E936A6312BD78B0400CB08F7 /* StoriesListView.swift */,
 				E936A6342BD78BC900CB08F7 /* RoutesListView.swift */,
 				E9DCFF372BD8E3DB00C20F64 /* FilterView.swift */,
 				E9DCFF3A2BD8E40200C20F64 /* CarrierView.swift */,
@@ -353,6 +356,7 @@
 				E909C8472BA1186A00D67B65 /* SearchService.swift in Sources */,
 				E936A6352BD78BC900CB08F7 /* RoutesListView.swift in Sources */,
 				E9A49C2F2BD2A1CC00017734 /* City.swift in Sources */,
+				E936A6322BD78B0400CB08F7 /* StoriesListView.swift in Sources */,
 				E9A49C312BD2A1F700017734 /* Station.swift in Sources */,
 				E9A49C272BD29EA000017734 /* MainSearchView.swift in Sources */,
 				E936A6222BD62EA400CB08F7 /* CGFloat+Extensions.swift in Sources */,
