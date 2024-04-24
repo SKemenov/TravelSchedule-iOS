@@ -20,8 +20,8 @@ enum ErrorType: Int, CaseIterable {
 
     var imageName: String {
         switch self {
-        case .serverError: return "ServerError"
-        case .connectionError: return "NoInternet"
+        case .serverError: return "serverError"
+        case .connectionError: return "noInternet"
         }
     }
 }
