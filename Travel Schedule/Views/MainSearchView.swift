@@ -9,7 +9,7 @@ import SwiftUI
 
 struct MainSearchView: View {
     @Binding var schedule: Schedule
-    @Binding var navPath: [Screens]
+    @Binding var navPath: [ViewsRouter]
     @Binding var direction: Int
     private let dummyDirection = ["Departure", "Arrival"]
 
@@ -20,7 +20,7 @@ struct MainSearchView: View {
                     let destinationLabel = schedule.destinations[item].cityTitle.isEmpty
                     ? dummyDirection[item]
                     : schedule.destinations[item].cityTitle + " (" + schedule.destinations[item].stationTitle + ")"
-                    NavigationLink(value: Screens.cityView) {
+                    NavigationLink(value: ViewsRouter.cityView) {
                         HStack {
                             Text(destinationLabel)
                             Spacer()
@@ -30,7 +30,7 @@ struct MainSearchView: View {
                     }
                     .simultaneousGesture(TapGesture().onEnded {
                         direction = item
-                        print(#fileID, "direction code", direction)
+                        // print(#fileID, "direction code", direction)
                     })
                 }
             }
@@ -39,15 +39,14 @@ struct MainSearchView: View {
 
             VStack {
                 Button {
-                    let swap = schedule.destinations[.departure]
-                    print(swap)
-                    schedule.destinations[.departure] = schedule.destinations[.arrival]
-                    schedule.destinations[.arrival] = swap
+                    (schedule.destinations[.departure], schedule.destinations[.arrival]) = (
+                        schedule.destinations[.arrival], schedule.destinations[.departure]
+                    )
                 } label: {
                     Label("Reverse", systemImage: "person.3")
                 }
 
-                NavigationLink(value: Screens.routeView) {
+                NavigationLink(value: ViewsRouter.routeView) {
                     Label("Search", systemImage: "pencil")
                 }
                 Spacer()
