@@ -34,6 +34,8 @@
 		E96F720A2BD9930800EE294E /* Bundle+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96F72092BD9930800EE294E /* Bundle+Extensions.swift */; };
 		E96F720D2BD9939100EE294E /* Int+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96F720C2BD9939100EE294E /* Int+Extensions.swift */; };
 		E96F72102BD995EA00EE294E /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96F720F2BD995EA00EE294E /* SearchBarView.swift */; };
+		E96F72152BD99BA000EE294E /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96F72142BD99BA000EE294E /* View+Extensions.swift */; };
+		E96F72192BD99DCA00EE294E /* SetRowElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96F72182BD99DCA00EE294E /* SetRowElement.swift */; };
 		E98962DC2BA0EAD5005A84BA /* AuthenticationClientMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98962DB2BA0EAD5005A84BA /* AuthenticationClientMiddleware.swift */; };
 		E98962E12BA0EE54005A84BA /* CopyrightService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98962E02BA0EE54005A84BA /* CopyrightService.swift */; };
 		E9A49C252BD29D8100017734 /* RootTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A49C242BD29D8100017734 /* RootTabView.swift */; };
@@ -85,6 +87,8 @@
 		E96F72092BD9930800EE294E /* Bundle+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extensions.swift"; sourceTree = "<group>"; };
 		E96F720C2BD9939100EE294E /* Int+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extensions.swift"; sourceTree = "<group>"; };
 		E96F720F2BD995EA00EE294E /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
+		E96F72142BD99BA000EE294E /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
+		E96F72182BD99DCA00EE294E /* SetRowElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetRowElement.swift; sourceTree = "<group>"; };
 		E98962DB2BA0EAD5005A84BA /* AuthenticationClientMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationClientMiddleware.swift; sourceTree = "<group>"; };
 		E98962E02BA0EE54005A84BA /* CopyrightService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyrightService.swift; sourceTree = "<group>"; };
 		E9A49C242BD29D8100017734 /* RootTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabView.swift; sourceTree = "<group>"; };
@@ -126,6 +130,7 @@
 				E936A6252BD62EFC00CB08F7 /* Image+Extensions.swift */,
 				E96F72092BD9930800EE294E /* Bundle+Extensions.swift */,
 				E96F720C2BD9939100EE294E /* Int+Extensions.swift */,
+				E96F72142BD99BA000EE294E /* View+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -170,6 +175,14 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		E96F72172BD99D9F00EE294E /* ViewModifier */ = {
+			isa = PBXGroup;
+			children = (
+				E96F72182BD99DCA00EE294E /* SetRowElement.swift */,
+			);
+			path = ViewModifier;
+			sourceTree = "<group>";
+		};
 		E9A49C222BD29D2700017734 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -195,6 +208,7 @@
 				E936A6372BD78C4300CB08F7 /* Route.swift */,
 				E936A63A2BD78FE700CB08F7 /* Carrier.swift */,
 				E91BC4C12BD85410003FF64D /* Filter.swift */,
+				E96F72172BD99D9F00EE294E /* ViewModifier */,
 				E9DCFF462BD982C700C20F64 /* Enums */,
 			);
 			path = Models;
@@ -387,7 +401,9 @@
 				E9F4908E2B9DBADB006FD055 /* Resources.swift in Sources */,
 				E98962DC2BA0EAD5005A84BA /* AuthenticationClientMiddleware.swift in Sources */,
 				E936A63B2BD78FE700CB08F7 /* Carrier.swift in Sources */,
+				E96F72192BD99DCA00EE294E /* SetRowElement.swift in Sources */,
 				E936A6282BD62F2D00CB08F7 /* ErrorType.swift in Sources */,
+				E96F72152BD99BA000EE294E /* View+Extensions.swift in Sources */,
 				E936A62F2BD78A8C00CB08F7 /* ErrorView.swift in Sources */,
 				E9A49C402BD2B83800017734 /* StationView.swift in Sources */,
 				E9A49C352BD2A38900017734 /* SettingsView.swift in Sources */,
