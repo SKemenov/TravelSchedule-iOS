@@ -1,3 +1,5 @@
+# MARK: - OpenAPI config
+
 openapi: 3.0.3
 info:
   title: API.Rasp.Yandex.Net
@@ -8,8 +10,10 @@ servers:
 tags:
 - name: yTravel
   description: Yandex.Travel Schedules
-paths:
 
+# MARK: - Paths
+
+paths:
   /v3.0/nearest_stations/:
     get:
       tags:
@@ -234,7 +238,7 @@ paths:
 # components
 components:
 
-# responses
+# MARK: - Responses
   responses:
     400BadRequest:
       description: Bad request
@@ -250,7 +254,7 @@ components:
           schema:
             $ref: '#/components/schemas/Error'
 
-# parameters
+# MARK: - Parameters
   parameters:
     apikeyParam:
       name: apikey
@@ -426,7 +430,7 @@ components:
       schema:
         type: string
 
-# schemas
+# MARK: - Schemas
   schemas:
     Stations:
       type: object
