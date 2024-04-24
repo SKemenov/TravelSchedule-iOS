@@ -22,6 +22,7 @@
 		E936A6262BD62EFC00CB08F7 /* Image+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E936A6252BD62EFC00CB08F7 /* Image+Extensions.swift */; };
 		E936A6282BD62F2D00CB08F7 /* ErrorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E936A6272BD62F2D00CB08F7 /* ErrorType.swift */; };
 		E936A62A2BD62FA300CB08F7 /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = E936A6292BD62FA300CB08F7 /* Story.swift */; };
+		E936A6382BD78C4300CB08F7 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = E936A6372BD78C4300CB08F7 /* Route.swift */; };
 		E936A63B2BD78FE700CB08F7 /* Carrier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E936A63A2BD78FE700CB08F7 /* Carrier.swift */; };
 		E93E20F82B9D7DF100B43DA5 /* Travel_ScheduleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93E20F72B9D7DF100B43DA5 /* Travel_ScheduleApp.swift */; };
 		E93E20FC2B9D7DF200B43DA5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E93E20FB2B9D7DF200B43DA5 /* Assets.xcassets */; };
@@ -62,6 +63,7 @@
 		E936A6252BD62EFC00CB08F7 /* Image+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+Extensions.swift"; sourceTree = "<group>"; };
 		E936A6272BD62F2D00CB08F7 /* ErrorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorType.swift; sourceTree = "<group>"; };
 		E936A6292BD62FA300CB08F7 /* Story.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Story.swift; sourceTree = "<group>"; };
+		E936A6372BD78C4300CB08F7 /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
 		E936A63A2BD78FE700CB08F7 /* Carrier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Carrier.swift; sourceTree = "<group>"; };
 		E93E20F42B9D7DF100B43DA5 /* Travel Schedule.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Travel Schedule.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E93E20F72B9D7DF100B43DA5 /* Travel_ScheduleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Travel_ScheduleApp.swift; sourceTree = "<group>"; };
@@ -171,6 +173,7 @@
 				E9A49C302BD2A1F700017734 /* Station.swift */,
 				E9A49C322BD2A21C00017734 /* Schedule.swift */,
 				E936A6292BD62FA300CB08F7 /* Story.swift */,
+				E936A6372BD78C4300CB08F7 /* Route.swift */,
 				E936A63A2BD78FE700CB08F7 /* Carrier.swift */,
 				E9DCFF462BD982C700C20F64 /* Enums */,
 			);
@@ -319,6 +322,7 @@
 				E9A49C252BD29D8100017734 /* RootTabView.swift in Sources */,
 				E9A49C432BD2CC0300017734 /* RouteView.swift in Sources */,
 				E909C8502BA1826400D67B65 /* CarriersService.swift in Sources */,
+				E936A6382BD78C4300CB08F7 /* Route.swift in Sources */,
 				E936A6262BD62EFC00CB08F7 /* Image+Extensions.swift in Sources */,
 				E9F4908E2B9DBADB006FD055 /* Resources.swift in Sources */,
 				E98962DC2BA0EAD5005A84BA /* AuthenticationClientMiddleware.swift in Sources */,
