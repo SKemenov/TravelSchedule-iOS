@@ -8,8 +8,6 @@
 import SwiftUI
 
 extension Image {
-    // static let iconTabSearch = Image(systemName: "arrow.up.message.fill")
-    // static let iconTabSettings = Image(systemName: "gearshape.fill")
     static let iconTabSearch = Image("schedule").renderingMode(.template)
     static let iconTabSettings = Image("settings").renderingMode(.template)
 

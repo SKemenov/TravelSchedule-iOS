@@ -33,7 +33,6 @@ struct MainSearchView: View {
                             Text(destinationLabel)
                                 .foregroundStyle(schedule.destinations[item].cityTitle.isEmpty ? .ypGray : .ypBlack)
                             Spacer()
-                            // Image(systemName: "chevron.forward")
                         }
                         .padding(14)
                         .frame(maxWidth: .infinity, maxHeight: 48)
@@ -45,7 +44,6 @@ struct MainSearchView: View {
             }
             .background(.ypWhite)
             .clipShape(RoundedRectangle(cornerRadius: 20))
-            // .listStyle(.plain)
 
             ZStack {
                 Circle()
@@ -82,7 +80,6 @@ struct MainSearchView: View {
             }
         }
         Spacer()
-        // .navigationTitle("")
     }
 }
 

@@ -10,6 +10,9 @@ import SwiftUI
 struct SearchBarView: View {
     @Binding var searchText: String
 
+    // swiftlint:disable:next attributes
+    @Environment(\.colorScheme) var colorScheme
+
     var placeholder = "Введите запрос"
 
     var body: some View {
@@ -40,12 +43,12 @@ struct SearchBarView: View {
                         .resizable()
                         .frame(width: .iconSize, height: .iconSize)
                         .padding(.horizontal, 8)
-                        .foregroundColor(.ypGray)
+                        .foregroundColor(colorScheme == .light ? .ypGray : .ypLightGray)
                 }
             }
         }
         .frame(height: 36)
-        .background(.ypLightGray)
+        .background(colorScheme == .light ? .ypLightGray : .ypGray)
         .cornerRadius(10)
         .padding(.horizontal, 16)
     }

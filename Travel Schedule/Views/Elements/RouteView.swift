@@ -23,7 +23,7 @@ struct RouteView: View {
                     VStack(alignment: .leading) {
                         Text(carrier.title)
                             .font(.regMedium)
-                            .foregroundStyle(.ypBlackDuo)
+                            .foregroundStyle(.ypBlack)
                         if !route.isDirect {
                             Text("С пересадкой в \(route.connectionStation)")
                                 .font(.regSmall)
@@ -33,7 +33,7 @@ struct RouteView: View {
                     Spacer()
                     Text(route.date)
                         .font(.regSmall)
-                        .foregroundStyle(.ypBlackDuo)
+                        .foregroundStyle(.ypBlack)
                 }
             }
             .padding(.top, 14)
@@ -60,12 +60,12 @@ struct RouteView: View {
                     .frame(height: 1)
                     .foregroundStyle(.ypGray)
             )
-            .foregroundStyle(.ypBlackDuo)
+            .foregroundStyle(.ypBlack)
             .padding(14)
-            .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, maxHeight: 48)
+            .frame(maxWidth: .infinity, maxHeight: 48)
         }
         .background(.ypLightGray)
-        .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, maxHeight: 104)
+        .frame(maxWidth: .infinity, maxHeight: 104)
         .clipShape(RoundedRectangle(cornerRadius: 24))
     }
 }

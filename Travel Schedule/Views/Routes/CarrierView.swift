@@ -18,6 +18,8 @@ struct CarrierView: View {
                 .resizable()
                 .scaledToFit()
                 .frame(maxWidth: .infinity, maxHeight: 104)
+                .background(.ypWhite)
+                .clipShape(RoundedRectangle(cornerRadius: 24))
             Text("ОАО «\(carrier.title)»")
                 .font(.boldMedium)
                 .frame(maxWidth: .infinity, maxHeight: 29, alignment: .leading)
@@ -27,7 +29,7 @@ struct CarrierView: View {
                     .font(.regMedium)
                     .foregroundStyle(.ypBlackDuo)
                 Button {
-                    guard let url = URL(string: "mailto:"+carrier.email) else { return }
+                    guard let url = URL(string: "mailto:" + carrier.email) else { return }
                     openURL(url)
                 } label: {
                     Text("\(carrier.email)")
@@ -41,7 +43,7 @@ struct CarrierView: View {
                     .font(.regMedium)
                     .foregroundStyle(.ypBlackDuo)
                 Button {
-                    guard let url = URL(string: "tel:"+carrier.phone) else { return }
+                    guard let url = URL(string: "tel:" + carrier.phone) else { return }
                     openURL(url)
                 } label: {
                     Text("\(carrier.phone)")

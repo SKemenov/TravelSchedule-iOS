@@ -15,7 +15,6 @@ struct Schedule: Hashable, Identifiable {
     var destinations: [Destination]
     var routes: [Route]
     var carriers: [Carrier]
-    // var filter: Filter
 }
 
 // MARK: - Mock data
@@ -25,7 +24,6 @@ extension Schedule {
         stations: Station.sampleData,
         destinations: Destination.emptyDestination,
         routes: Route.sampleData,
-        carriers: Carrier.sampleData // ,
-        // filter: Filter.fullSearch
+        carriers: Carrier.sampleData
     )
 }

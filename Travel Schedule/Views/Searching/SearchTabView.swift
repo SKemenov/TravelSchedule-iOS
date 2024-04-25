@@ -19,7 +19,6 @@ struct SearchTabView: View {
             MainSearchView(schedule: $schedule, navPath: $navPath, direction: $direction)
             Spacer()
         }
-//        .toolbar(.visible, for: .tabBar)
     }
 }
 

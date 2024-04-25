@@ -11,7 +11,4 @@ enum ViewsRouter {
     case cityView
     case stationView
     case routeView
-//    case agreementView
-//    case filterView
-//    case carrierView
 }
