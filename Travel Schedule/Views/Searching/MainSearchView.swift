@@ -25,9 +25,10 @@ struct MainSearchView: View {
         HStack(alignment: .center, spacing: 16) {
             VStack(alignment: .leading, spacing: 0) {
                 ForEach(0 ..< 2) { item in
-                    let destinationLabel = schedule.destinations[item].cityTitle.isEmpty
-                    ? dummyDirection[item]
-                    : schedule.destinations[item].cityTitle + " (" + schedule.destinations[item].stationTitle + ")"
+                    let isCityEmpty = schedule.destinations[item].cityTitle.isEmpty
+                    let isStationEmpty = schedule.destinations[item].stationTitle.isEmpty
+                    let destinationLabel = isCityEmpty ? dummyDirection[item] : schedule.destinations[item].cityTitle
+                    + (isStationEmpty ? "" : " (" + schedule.destinations[item].stationTitle + ")")
                     NavigationLink(value: ViewsRouter.cityView) {
                         HStack {
                             Text(destinationLabel)

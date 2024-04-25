@@ -21,7 +21,7 @@ struct SearchBarView: View {
                 .resizable()
                 .frame(width: .iconSize, height: .iconSize)
                 .padding(.horizontal, 8)
-                .foregroundColor(searchText.isEmpty ? .ypGray : .ypBlackDuo)
+                .foregroundColor(searchText.isEmpty ? (colorScheme == .light ? .ypGray : .ypLightGray) : .ypBlackDuo)
 
             TextField(placeholder, text: $searchText)
                 .font(.regMedium)
