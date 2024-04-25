@@ -39,39 +39,49 @@ struct RoutesListView: View {
     }
 
     var body: some View {
-        VStack {
-            Text(departure) + Text(Image.iconArrow) + Text(arrival)
-            List {
-                if filteredRoutes.isEmpty {
-                    Text("Вариантов нет")
-                } else {
+        VStack(spacing: 0) {
+            (Text(departure) + Text(Image.iconArrow).baselineOffset(-1) + Text(arrival))
+                .font(.boldMedium)
+
+            if filteredRoutes.isEmpty {
+                SearchNothingView(notification: "Вариантов нет")
+            } else {
+                ScrollView(.vertical) {
                     ForEach(filteredRoutes) { route in
                         if let carrier = schedule.carriers.first(where: { $0.id == route.carrierID }) {
-                            // NavigationLink(value: ViewsRouter.carrierView) {
                             NavigationLink {
                                 CarrierView(carrier: carrier)
                             } label: {
                                 RouteView(route: route, carrier: carrier)
                             }
-                            .listRowSeparator(.hidden)
                         }
                     }
                 }
+                .padding(.vertical, 16)
             }
-            .listStyle(.plain)
-        }
-        .navigationBarTitleDisplayMode(.inline)
-        .overlay(alignment: .bottom) {
-            //            NavigationLink(value: ViewsRouter.filterView) {
+
+            Spacer()
+
             NavigationLink {
                 FilterView(filter: $currentFilter)
             } label: {
-                Text(currentFilter == Filter.fullSearch ? "Уточнить время" : "Уточнить время *")
+                HStack(alignment: .center, spacing: 4) {
+                    Text("Уточнить время")
+                        .font(.boldSmall)
+                    Image(systemName: "circle.fill")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 8, height: 8)
+                        .foregroundColor(currentFilter == Filter.fullSearch ? .clear : .ypRed)
+                }
+                .frame(maxWidth: .infinity, maxHeight: 60)
+                .background(.ypBlue)
+                .foregroundStyle(.ypWhite)
+                .clipShape(RoundedRectangle(cornerRadius: 16))
             }
         }
-//        .onAppear {
-//            currentFilter = schedule.filter
-//        }
+        .padding(.horizontal, 16)
+        .setCustomNavigationBar()
     }
 }
 
