@@ -12,20 +12,41 @@ struct CityView: View {
     @Binding var navPath: [ViewsRouter]
     @Binding var direction: Int
 
+    @State private var searchString = String()
+
+    private var searchingResults: [City] {
+        searchString.isEmpty
+            ? schedule.cities
+            : schedule.cities.filter { $0.title.lowercased().contains(searchString.lowercased()) }
+    }
+
     var body: some View {
-        VStack {
-            ForEach($schedule.cities) { $city in
-                NavigationLink(value: ViewsRouter.stationView) {
-                    RowSearchView(rowString: city.title)
-                        .listRowSeparator(.hidden)
+        VStack(spacing: 0) {
+            SearchBarView(searchText: $searchString)
+            if searchingResults.isEmpty {
+                SearchNothingView(notification: "Город не найден")
+            } else {
+                ScrollView(.vertical) {
+                    ForEach(searchingResults) { city in
+                        NavigationLink(value: ViewsRouter.stationView) {
+                            RowSearchView(rowString: city.title)
+                        }
+                        .simultaneousGesture(TapGesture().onEnded {
+                            schedule.destinations[direction].cityTitle = city.title
+                        })
+                        .setRowElement()
+                        .padding(.vertical, 16)
+                    }
                 }
-                    .simultaneousGesture(TapGesture().onEnded {
-                        schedule.destinations[direction].cityTitle = city.title
-                        // print(#fileID, "direction code", direction, "City", schedule.destinations[direction].cityTitle)
-                    })
+                .padding(.vertical, 16)
             }
+            Spacer()
         }
-        .listStyle(.plain)
+        .setCustomNavigationBar(title: "Выбор города")
+        .foregroundStyle(.ypBlackDuo)
+        .onAppear {
+            searchString = String()
+        }
     }
 }
 
