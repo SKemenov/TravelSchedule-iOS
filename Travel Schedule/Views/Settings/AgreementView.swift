@@ -7,12 +7,24 @@
 
 import SwiftUI
 
+
 struct AgreementView: View {
+    @State private var isPresentWebView = false
+
     var body: some View {
-        Text("User Agreement here!")
+        // Text("User Agreement here!")
+        if let url = URL(string: "https://yandex.ru/legal/practicum_offer") {
+            WebView(url: url)
+                .ignoresSafeArea()
+                .setCustomNavigationBar(title: "Пользовательское соглашение")
+        } else {
+            ErrorView(errorType: .connectionError)
+        }
     }
 }
 
 #Preview {
-    AgreementView()
+    NavigationStack {
+        AgreementView()
+    }
 }
