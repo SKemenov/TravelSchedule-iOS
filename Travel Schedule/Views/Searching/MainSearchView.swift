@@ -13,9 +13,17 @@ struct MainSearchView: View {
     @Binding var direction: Int
     private let dummyDirection = ["Departure", "Arrival"]
 
+    private var isDepartureReady: Bool {
+        !schedule.destinations[.departure].cityTitle.isEmpty && !schedule.destinations[.departure].stationTitle.isEmpty
+    }
+
+    private var isArrivalReady: Bool {
+        !schedule.destinations[.arrival].cityTitle.isEmpty && !schedule.destinations[.arrival].stationTitle.isEmpty
+    }
+
     var body: some View {
-        VStack(spacing: 0) {
-            VStack {
+        HStack(alignment: .center, spacing: 16) {
+            VStack(alignment: .leading, spacing: 0) {
                 ForEach(0 ..< 2) { item in
                     let destinationLabel = schedule.destinations[item].cityTitle.isEmpty
                     ? dummyDirection[item]
@@ -23,35 +31,58 @@ struct MainSearchView: View {
                     NavigationLink(value: ViewsRouter.cityView) {
                         HStack {
                             Text(destinationLabel)
+                                .foregroundStyle(schedule.destinations[item].cityTitle.isEmpty ? .ypGray : .ypBlack)
                             Spacer()
-                            Image(systemName: "chevron.forward")
+                            // Image(systemName: "chevron.forward")
                         }
-                        .padding()
+                        .padding(14)
+                        .frame(maxWidth: .infinity, maxHeight: 48)
                     }
                     .simultaneousGesture(TapGesture().onEnded {
                         direction = item
-                        // print(#fileID, "direction code", direction)
                     })
                 }
             }
-            .listStyle(.plain)
+            .background(.ypWhite)
+            .clipShape(RoundedRectangle(cornerRadius: 20))
+            // .listStyle(.plain)
 
-
-            VStack {
+            ZStack {
+                Circle()
+                    .foregroundColor(.ypWhite)
+                    .frame(width: 36)
                 Button {
-                    (schedule.destinations[.departure], schedule.destinations[.arrival]) = (
+                    (
+                        schedule.destinations[.departure], schedule.destinations[.arrival]
+                    ) = (
                         schedule.destinations[.arrival], schedule.destinations[.departure]
                     )
                 } label: {
-                    Label("Reverse", systemImage: "person.3")
+                    Image.iconSearchSwap
+                        .foregroundColor(.ypBlue)
                 }
-
-                NavigationLink(value: ViewsRouter.routeView) {
-                    Label("Search", systemImage: "pencil")
-                }
-                Spacer()
             }
         }
+        .padding(16)
+        .background(.ypBlue)
+        .clipShape(RoundedRectangle(cornerRadius: 20))
+        .frame(height: 128)
+        .padding(.top, 20)
+        .padding(.horizontal, 16)
+
+        if isDepartureReady && isArrivalReady {
+            NavigationLink(value: ViewsRouter.routeView) {
+                Text("Найти")
+                    .font(.boldSmall)
+                    .foregroundStyle(.ypWhite)
+                    .frame(width: 150, height: 60)
+                    .background(.ypBlue)
+                    .clipShape(RoundedRectangle(cornerRadius: 16))
+                    .padding(16)
+            }
+        }
+        Spacer()
+        // .navigationTitle("")
     }
 }
 
