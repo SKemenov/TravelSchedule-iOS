@@ -13,19 +13,17 @@ struct SettingsView: View {
     var body: some View {
         VStack(spacing: 0) {
             Toggle("Тёмная тема", isOn: $darkMode)
-                .font(.regMedium)
-                .padding(.horizontal, 16)
-                .frame(maxWidth: .infinity, maxHeight: 60)
+                .setRowElement()
                 .tint(.ypBlue)
             NavigationLink {
                 AgreementView()
             } label: {
                 RowSearchView(rowString: "Пользовательское соглашение")
             }
-            .font(.regMedium)
-            .padding(16)
-            .frame(maxWidth: .infinity, maxHeight: 60)
+            .setRowElement()
+
             Spacer()
+
             VStack(alignment: .center, spacing: 16) {
                 Text("Приложение использует API «Яндекс.Расписания»")
                 Text("Версия \(Bundle.main.appVersionLong).\(Bundle.main.appBuild)")
