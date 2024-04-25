@@ -9,37 +9,67 @@ import SwiftUI
 
 struct FilterView: View {
     @Binding var filter: Filter
-    // @Binding var navPath: [ViewsRouter]
-    // @State var initialFilter = Filter()
+
     @State var currentFilter = Filter()
+
     // swiftlint:disable:next attributes
     @Environment(\.presentationMode) var presentationMode
 
     var body: some View {
-        VStack(alignment: .leading) {
+        VStack(alignment: .leading, spacing: 0) {
             Text("Время отправления")
+                .font(.boldMedium)
+                .padding(16)
+
             Toggle("Утро 06:00 - 12:00", isOn: $currentFilter.isMorning)
-                .toggleStyle(.automatic)
+                .setRowElement()
+                .toggleStyle(CheckboxToggleStyle())
+
             Toggle("День 12:00 - 18:00", isOn: $currentFilter.isAfternoon)
+                .setRowElement()
+                .toggleStyle(CheckboxToggleStyle())
+
             Toggle("Вечер 18:00 - 00:00", isOn: $currentFilter.isEvening)
+                .setRowElement()
+                .toggleStyle(CheckboxToggleStyle())
+
             Toggle("Ночь 00:00 - 06:00", isOn: $currentFilter.isAtNight)
+                .setRowElement()
+                .toggleStyle(CheckboxToggleStyle())
 
             Text("Показывать варианты с пересадками")
-            Toggle("yes / no", isOn: $currentFilter.isWithTransfers)
+                .font(.boldMedium)
+                .padding(16)
+
+            VStack(spacing: 0) {
+                Toggle("Да", isOn: $currentFilter.isWithTransfers)
+                    .setRowElement()
+                .toggleStyle(RadioButtonToggleStyle())
+
+                Toggle("Нет", isOn: $currentFilter.isWithTransfers.not)
+                    .setRowElement()
+                    .toggleStyle(RadioButtonToggleStyle())
+            }
+
             Spacer()
+
             if currentFilter != filter {
                 Button {
                     filter = currentFilter
-                    // navPath.removeLast()
                     self.presentationMode.wrappedValue.dismiss()
                 } label: {
                     Text("Применить")
+                        .font(.boldSmall)
                 }
+                .frame(maxWidth: .infinity, maxHeight: 60)
+                .background(.ypBlue)
+                .foregroundStyle(.ypWhite)
+                .clipShape(RoundedRectangle(cornerRadius: 16))
+                .padding(.horizontal, 16)
             }
         }
-        .navigationBarTitleDisplayMode(.inline)
+        .setCustomNavigationBar()
         .onAppear {
-            // self.initialFilter = self.filter[.initial]
             currentFilter = filter
         }
     }
@@ -48,5 +78,14 @@ struct FilterView: View {
 #Preview {
     NavigationStack {
         FilterView(filter: .constant(Filter.fullSearch))
+    }
+}
+
+extension Binding where Value == Bool {
+    var not: Binding<Value> {
+        Binding<Value>(
+            get: { !self.wrappedValue },
+            set: { self.wrappedValue = !$0 }
+        )
     }
 }
