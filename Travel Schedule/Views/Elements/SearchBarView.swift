@@ -36,7 +36,7 @@ struct SearchBarView: View {
                         for: nil
                     )
                 } label: {
-                    Image.iconSearCancel
+                    Image.iconSearchCancel
                         .resizable()
                         .frame(width: .iconSize, height: .iconSize)
                         .padding(.horizontal, 8)
