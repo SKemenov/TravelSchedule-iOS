@@ -12,26 +12,50 @@ struct StationView: View {
     @Binding var navPath: [ViewsRouter]
     @Binding var direction: Int
 
+    @State private var searchString = String()
+
+    private var searchingResults: [Station] {
+        searchString.isEmpty
+            ? schedule.stations
+            : schedule.stations.filter { $0.title.lowercased().contains(searchString.lowercased()) }
+    }
+
     var body: some View {
-        VStack {
-            ForEach($schedule.stations) { $station in
-                Button {
-                    schedule.destinations[direction].stationTitle = station.title
-                    navPath.removeAll()
-                } label: {
-                    RowSearchView(rowString: station.title)
+        VStack(spacing: 0) {
+            SearchBarView(searchText: $searchString)
+            if searchingResults.isEmpty {
+                SearchNothingView(notification: "Станция не найдена")
+            } else {
+                ScrollView(.vertical) {
+                    ForEach(searchingResults) { station in
+                        Button {
+                            schedule.destinations[direction].stationTitle = station.title
+                            navPath.removeAll()
+                        } label: {
+                            RowSearchView(rowString: station.title)
+                        }
+                        .setRowElement()
+                        .padding(.vertical, 16)
+                    }
                 }
-                .listRowSeparator(.hidden)
+                .padding(.vertical, 16)
             }
+            Spacer()
         }
-        .listStyle(.plain)
+        .setCustomNavigationBar(title: "Выбор станции")
+        .foregroundStyle(.ypBlackDuo)
+        .onAppear {
+            searchString = String()
+        }
     }
 }
 
 #Preview {
-    StationView(
-        schedule: .constant(Schedule.sampleData),
-        navPath: .constant([]),
-        direction: .constant(.departure)
-    )
+    NavigationStack {
+        StationView(
+            schedule: .constant(Schedule.sampleData),
+            navPath: .constant([]),
+            direction: .constant(.departure)
+        )
+    }
 }
