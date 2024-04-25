@@ -10,31 +10,63 @@ import SwiftUI
 struct RouteView: View {
     @State var route: Route
     @State var carrier: Carrier
-    //    {
-    //        Carrier.sampleData.first { $0.id == schedule.routes[index].carrierID } ?? Carrier.emptyData
-    //    }
 
     var body: some View {
-        VStack(spacing: 24) {
-            HStack {
-                Text(carrier.logoName)
-                HStack {
+        VStack(spacing: 0) {
+            HStack(spacing: 8) {
+                Image(carrier.logoName)
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 38, height: 38)
+                    .padding(.leading, 14)
+                HStack(spacing: 0) {
                     VStack(alignment: .leading) {
                         Text(carrier.title)
-                        Text(route.isDirect ? "" : "С пересадкой в \(route.connectionStation)")
+                            .font(.regMedium)
+                            .foregroundStyle(.ypBlackDuo)
+                        if !route.isDirect {
+                            Text("С пересадкой в \(route.connectionStation)")
+                                .font(.regSmall)
+                                .foregroundStyle(.ypRed)
+                        }
                     }
                     Spacer()
                     Text(route.date)
+                        .font(.regSmall)
+                        .foregroundStyle(.ypBlackDuo)
                 }
             }
-            HStack {
+            .padding(.top, 14)
+            .padding(.trailing, 7)
+
+            HStack(spacing: 0) {
                 Text(route.departureTime)
+                    .font(.regMedium)
+                    .padding(.trailing, 4)
+                    .background(.ypLightGray)
                 Spacer()
                 Text("\(route.durationTime) часов")
+                    .font(.regSmall)
+                    .padding(.horizontal, 5)
+                    .background(.ypLightGray)
                 Spacer()
                 Text(route.arrivalTime)
+                    .font(.regMedium)
+                    .padding(.leading, 4)
+                    .background(.ypLightGray)
             }
+            .background(
+                Rectangle()
+                    .frame(height: 1)
+                    .foregroundStyle(.ypGray)
+            )
+            .foregroundStyle(.ypBlackDuo)
+            .padding(14)
+            .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, maxHeight: 48)
         }
+        .background(.ypLightGray)
+        .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, maxHeight: 104)
+        .clipShape(RoundedRectangle(cornerRadius: 24))
     }
 }
 
