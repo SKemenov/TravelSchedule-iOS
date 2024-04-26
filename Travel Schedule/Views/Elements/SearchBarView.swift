@@ -20,8 +20,8 @@ struct SearchBarView: View {
             Image.iconSearching
                 .resizable()
                 .frame(width: .iconSize, height: .iconSize)
-                .foregroundColor(searchText.isEmpty ? (colorScheme == .light ? .ypGray : .ypLightGray) : .ypBlackDuo)
                 .padding(.horizontal, .spacerS)
+                .foregroundColor(searchText.isEmpty ? .ypGray : .ypBlackDuo)
 
             TextField(placeholder, text: $searchText)
                 .font(.regMedium)
@@ -42,13 +42,13 @@ struct SearchBarView: View {
                     Image.iconSearchCancel
                         .resizable()
                         .frame(width: .iconSize, height: .iconSize)
-                        .foregroundColor(colorScheme == .light ? .ypGray : .ypLightGray)
                         .padding(.horizontal, .spacerS)
+                        .foregroundColor(.ypGray)
                 }
             }
         }
         .frame(height: 36)
-        .background(colorScheme == .light ? .ypLightGray : .ypGray)
+        .background(colorScheme == .light ? .ypLightGray : .ypDarkGray)
         .cornerRadius(10)
         .padding(.horizontal, .spacerL)
     }
