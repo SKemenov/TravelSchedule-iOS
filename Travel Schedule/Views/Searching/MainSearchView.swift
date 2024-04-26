@@ -11,7 +11,7 @@ struct MainSearchView: View {
     @Binding var schedule: Schedule
     @Binding var navPath: [ViewsRouter]
     @Binding var direction: Int
-    private let dummyDirection = ["Departure", "Arrival"]
+    private let dummyDirection = ["Откуда", "Куда"]
 
     private var isDepartureReady: Bool {
         !schedule.destinations[.departure].cityTitle.isEmpty && !schedule.destinations[.departure].stationTitle.isEmpty
