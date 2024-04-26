@@ -23,7 +23,7 @@ struct CarrierView: View {
             Text("ОАО «\(carrier.title)»")
                 .font(.boldMedium)
                 .frame(maxWidth: .infinity, maxHeight: 29, alignment: .leading)
-                .padding(.vertical, 16)
+                .padding(.vertical, .spacerL)
             VStack(alignment: .leading, spacing: 0) {
                 Text("E-mail")
                     .font(.regMedium)
@@ -54,7 +54,7 @@ struct CarrierView: View {
             .frame(height: 60)
             Spacer()
         }
-        .padding(.horizontal, 16)
+        .padding(.horizontal, .spacerL)
         .setCustomNavigationBar(title: "ИНформация о перевозчике")
     }
 }

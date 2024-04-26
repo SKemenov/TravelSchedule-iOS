@@ -19,7 +19,7 @@ struct FilterView: View {
         VStack(alignment: .leading, spacing: 0) {
             Text("Время отправления")
                 .font(.boldMedium)
-                .padding(16)
+                .padding(.spacerL)
 
             Toggle("Утро 06:00 - 12:00", isOn: $currentFilter.isMorning)
                 .setRowElement()
@@ -39,7 +39,7 @@ struct FilterView: View {
 
             Text("Показывать варианты с пересадками")
                 .font(.boldMedium)
-                .padding(16)
+                .padding(.spacerL)
 
             VStack(spacing: 0) {
                 Toggle("Да", isOn: $currentFilter.isWithTransfers)
@@ -65,7 +65,7 @@ struct FilterView: View {
                 .background(.ypBlue)
                 .foregroundStyle(.ypWhite)
                 .clipShape(RoundedRectangle(cornerRadius: 16))
-                .padding(.horizontal, 16)
+                .padding(.horizontal, .spacerL)
             }
         }
         .setCustomNavigationBar()

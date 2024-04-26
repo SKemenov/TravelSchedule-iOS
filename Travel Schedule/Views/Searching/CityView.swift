@@ -35,10 +35,10 @@ struct CityView: View {
                             schedule.destinations[direction].cityTitle = city.title
                         })
                         .setRowElement()
-                        .padding(.vertical, 16)
+                        .padding(.vertical, .spacerL)
                     }
                 }
-                .padding(.vertical, 16)
+                .padding(.vertical, .spacerL)
             }
             Spacer()
         }

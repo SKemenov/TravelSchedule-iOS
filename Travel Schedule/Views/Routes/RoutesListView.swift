@@ -57,7 +57,7 @@ struct RoutesListView: View {
                         }
                     }
                 }
-                .padding(.vertical, 16)
+                .padding(.vertical, .spacerL)
             }
 
             Spacer()
@@ -80,7 +80,7 @@ struct RoutesListView: View {
                 .clipShape(RoundedRectangle(cornerRadius: 16))
             }
         }
-        .padding(.horizontal, 16)
+        .padding(.horizontal, .spacerL)
         .setCustomNavigationBar()
     }
 }

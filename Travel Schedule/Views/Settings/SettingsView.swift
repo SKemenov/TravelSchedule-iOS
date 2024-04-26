@@ -31,7 +31,7 @@ struct SettingsView: View {
             .font(.regSmall)
             .frame(minHeight: 44)
         }
-        .padding(.vertical, 24)
+        .padding(.vertical, .spacerXXL)
         .foregroundColor(.ypBlackDuo)
     }
 }

@@ -35,7 +35,7 @@ struct MainSearchView: View {
                                 .foregroundStyle(schedule.destinations[item].cityTitle.isEmpty ? .ypGray : .ypBlack)
                             Spacer()
                         }
-                        .padding(14)
+                        .padding(.spacerL)
                         .frame(maxWidth: .infinity, maxHeight: 48)
                     }
                     .simultaneousGesture(TapGesture().onEnded {
@@ -62,12 +62,12 @@ struct MainSearchView: View {
                 }
             }
         }
-        .padding(16)
+        .padding(.spacerL)
         .background(.ypBlue)
         .clipShape(RoundedRectangle(cornerRadius: 20))
         .frame(height: 128)
-        .padding(.top, 20)
-        .padding(.horizontal, 16)
+        .padding(.top, .spacerXL)
+        .padding(.horizontal, .spacerL)
 
         if isDepartureReady && isArrivalReady {
             NavigationLink(value: ViewsRouter.routeView) {
@@ -77,7 +77,7 @@ struct MainSearchView: View {
                     .frame(width: 150, height: 60)
                     .background(.ypBlue)
                     .clipShape(RoundedRectangle(cornerRadius: 16))
-                    .padding(16)
+                    .padding(.spacerL)
             }
         }
         Spacer()

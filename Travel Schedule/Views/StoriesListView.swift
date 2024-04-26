@@ -27,8 +27,8 @@ struct StoriesListView: View {
                     .frame(width: 92, height: 140)
                 }
             }
-            .padding(.horizontal, 16)
-            .padding(.vertical, 24)
+            .padding(.horizontal, .spacerL)
+            .padding(.vertical, .spacerXXL)
         }
         .frame(height: 188)
     }
