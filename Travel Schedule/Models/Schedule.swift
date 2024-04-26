@@ -9,12 +9,12 @@ import Foundation
 
 // MARK: - Struct
 struct Schedule: Hashable, Identifiable {
-    var id = UUID()
-    var cities: [City]
-    var stations: [Station]
+    let id = UUID()
+    let cities: [City]
+    let stations: [Station]
     var destinations: [Destination]
-    var routes: [Route]
-    var carriers: [Carrier]
+    let routes: [Route]
+    let carriers: [Carrier]
 }
 
 // MARK: - Mock data

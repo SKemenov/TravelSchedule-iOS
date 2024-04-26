@@ -9,7 +9,7 @@ import Foundation
 
 // MARK: - Struct
 struct Destination: Hashable, Identifiable {
-    var id = UUID()
+    let id = UUID()
     var cityTitle: String = ""
     var stationTitle: String = ""
 }

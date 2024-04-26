@@ -9,8 +9,8 @@ import Foundation
 
 // MARK: - Struct
 struct Station: Hashable, Identifiable {
-    var id = UUID()
-    var title: String
+    let id = UUID()
+    let title: String
 }
 
 // MARK: - Mock data

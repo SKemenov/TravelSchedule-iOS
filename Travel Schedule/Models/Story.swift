@@ -8,7 +8,7 @@
 import Foundation
 
 struct Story: Hashable, Identifiable {
-    var id = UUID()
+    let id = UUID()
     let previewImageName: String
     let pageImageNames: [String]
     let title: String

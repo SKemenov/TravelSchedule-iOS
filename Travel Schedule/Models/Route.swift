@@ -8,16 +8,16 @@
 import Foundation
 
 struct Route: Hashable, Identifiable {
-    var id = UUID()
-    var date: String
-    var departureTime: String
-    var arrivalTime: String
-    var durationTime: String
-    var connectionStation: String
+    let id = UUID()
+    let date: String
+    let departureTime: String
+    let arrivalTime: String
+    let durationTime: String
+    let connectionStation: String
     var isDirect: Bool {
         connectionStation.isEmpty
     }
-    var carrierID: UUID
+    let carrierID: UUID
 }
 
 extension Route {
