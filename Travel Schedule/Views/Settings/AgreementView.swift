@@ -12,14 +12,17 @@ struct AgreementView: View {
     @State private var isPresentWebView = false
 
     var body: some View {
-        if let url = URL(string: "https://yandex.ru/legal/practicum_offer") {
-            WebView(url: url)
-                .ignoresSafeArea()
-                .background(.ypWhiteDuo)
-                .foregroundStyle(.ypBlackDuo)
-                .setCustomNavigationBar(title: "Пользовательское соглашение")
-        } else {
-            ErrorView(errorType: .connectionError)
+        VStack {
+            switch Bool.random() {
+            case true:
+                if let url = URL(string: "https://yandex.ru/legal/practicum_offer") {
+                    WebView(url: url)
+                        .ignoresSafeArea(.all, edges: .bottom)
+                        .setCustomNavigationBar(title: "Пользовательское соглашение")
+                }
+            case false:
+                ErrorView(errorType: Bool.random() ? .connectionError : .serverError)
+            }
         }
     }
 }
