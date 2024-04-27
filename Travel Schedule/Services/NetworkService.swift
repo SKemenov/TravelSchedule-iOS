@@ -1,14 +1,15 @@
 //
-//  ContentView.swift
+//  NetworkService.swift
 //  Travel Schedule
 //
-//  Created by Sergey Kemenov on 10.03.2024.
+//  Created by Sergey Kemenov on 19.04.2024.
 //
 
-import SwiftUI
+import Foundation
 import OpenAPIURLSession
 
-struct ContentView: View {
+
+final class NetworkService {
     let serverURL: URL
     let client: Client
 
@@ -24,46 +25,9 @@ struct ContentView: View {
             middlewares: [AuthenticationMiddleware(authorizationHeaderFieldValue: Resources.apiKey)]
         )
     }
-
-    var body: some View {
-        VStack {
-            Button("getNearestStations") {
-                getNearestStations()
-            }
-            .padding()
-            Button("getCopyright") {
-                getCopyright()
-            }
-            .padding()
-            Button("getSchedules") {
-                getSchedules()
-            }
-            .padding()
-            Button("getSearches") {
-                getSearches()
-            }
-            .padding()
-            Button("getThreads") {
-                getThreads()
-            }
-            .padding()
-            Button("getNearestSettlement") {
-                getNearestSettlement()
-            }
-            .padding()
-            Button("getCarriers") {
-                getCarriers()
-            }
-            .padding()
-            Button("getStationsList") {
-                getStationsList()
-            }
-            .padding()
-        }
-    }
 }
 
-private extension ContentView {
+extension NetworkService {
     func getNearestStations() {
         let service = NearestStationsService(client: client)
         Task {
@@ -209,8 +173,4 @@ private extension ContentView {
             }
         }
     }
-}
-
-#Preview {
-    ContentView()
 }
