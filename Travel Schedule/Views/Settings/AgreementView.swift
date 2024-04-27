@@ -10,12 +10,16 @@ import SwiftUI
 
 struct AgreementView: View {
     @State private var isPresentWebView = false
+    private let urlString = Bool.random()
+        ? "https://developer.apple.com/documentation/technologies"
+        : "https://yandex.ru/legal/practicum_offer"
+
 
     var body: some View {
         VStack {
             switch Bool.random() {
             case true:
-                if let url = URL(string: "https://yandex.ru/legal/practicum_offer") {
+                if let url = URL(string: urlString) {
                     WebView(url: url)
                         .ignoresSafeArea(.all, edges: .bottom)
                         .setCustomNavigationBar(title: "Пользовательское соглашение")

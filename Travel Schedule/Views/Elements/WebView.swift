@@ -16,7 +16,22 @@ struct WebView: UIViewRepresentable {
     }
 
     func updateUIView(_ webView: WKWebView, context: Context) {
+        let lightDarkCSS = ":root { color-scheme: light dark; }"
         let request = URLRequest(url: url)
+        guard let base64 = lightDarkCSS.data(using: .utf8)?.base64EncodedString() else { return }
         webView.load(request)
+
+        let script = """
+            javascript:(function() {
+                var parent = document.getElementsByTagName('head').item(0);
+                var style = document.createElement('style');
+                style.type = 'text/css';
+                style.innerHTML = window.atob('\(base64)');
+                parent.appendChild(style);
+            })()
+        """
+
+        let cssScript = WKUserScript(source: script, injectionTime: .atDocumentEnd, forMainFrameOnly: false)
+        webView.configuration.userContentController.addUserScript(cssScript)
     }
 }
