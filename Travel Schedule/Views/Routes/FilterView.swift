@@ -23,19 +23,19 @@ struct FilterView: View {
 
             Toggle("Утро 06:00 - 12:00", isOn: $currentFilter.isMorning)
                 .setRowElement()
-                .toggleStyle(CheckboxToggleStyle())
+                .toggleStyle(.checkBox)
 
             Toggle("День 12:00 - 18:00", isOn: $currentFilter.isAfternoon)
                 .setRowElement()
-                .toggleStyle(CheckboxToggleStyle())
+                .toggleStyle(.checkBox)
 
             Toggle("Вечер 18:00 - 00:00", isOn: $currentFilter.isEvening)
                 .setRowElement()
-                .toggleStyle(CheckboxToggleStyle())
+                .toggleStyle(.checkBox)
 
             Toggle("Ночь 00:00 - 06:00", isOn: $currentFilter.isAtNight)
                 .setRowElement()
-                .toggleStyle(CheckboxToggleStyle())
+                .toggleStyle(.checkBox)
 
             Text("Показывать варианты с пересадками")
                 .font(.boldMedium)
@@ -48,7 +48,7 @@ struct FilterView: View {
 
                 Toggle("Нет", isOn: $currentFilter.isWithTransfers.not)
                     .setRowElement()
-                    .toggleStyle(RadioButtonToggleStyle())
+                    .toggleStyle(.radioButton)
             }
 
             Spacer()

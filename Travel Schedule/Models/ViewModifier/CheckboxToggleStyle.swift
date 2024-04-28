@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CheckboxToggleStyle: ToggleStyle {
-    func makeBody(configuration: Self.Configuration) -> some View {
+    func makeBody(configuration: Configuration) -> some View {
         HStack(spacing: 0) {
             configuration.label
             Spacer()
@@ -18,4 +18,8 @@ struct CheckboxToggleStyle: ToggleStyle {
                 .onTapGesture { configuration.isOn.toggle() }
         }
     }
+}
+
+extension ToggleStyle where Self == CheckboxToggleStyle {
+    static var checkBox: Self { Self() }
 }
