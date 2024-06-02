@@ -59,6 +59,7 @@
 		E9DCFF382BD8E3DB00C20F64 /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DCFF372BD8E3DB00C20F64 /* FilterView.swift */; };
 		E9DCFF3B2BD8E40200C20F64 /* CarrierView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DCFF3A2BD8E40200C20F64 /* CarrierView.swift */; };
 		E9EC1BF82C0CB5D400FC85ED /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EC1BF72C0CB5D400FC85ED /* AppColors.swift */; };
+		E9EC1BFA2C0CB9F200FC85ED /* AppFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EC1BF92C0CB9F200FC85ED /* AppFonts.swift */; };
 		E9F4907F2B9DA536006FD055 /* OpenAPIRuntime in Frameworks */ = {isa = PBXBuildFile; productRef = E9F4907E2B9DA536006FD055 /* OpenAPIRuntime */; };
 		E9F490822B9DA583006FD055 /* OpenAPIURLSession in Frameworks */ = {isa = PBXBuildFile; productRef = E9F490812B9DA583006FD055 /* OpenAPIURLSession */; };
 		E9F490862B9DB495006FD055 /* openapi.yaml in Resources */ = {isa = PBXBuildFile; fileRef = E9F490852B9DB495006FD055 /* openapi.yaml */; };
@@ -122,6 +123,7 @@
 		E9DCFF372BD8E3DB00C20F64 /* FilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterView.swift; sourceTree = "<group>"; };
 		E9DCFF3A2BD8E40200C20F64 /* CarrierView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarrierView.swift; sourceTree = "<group>"; };
 		E9EC1BF72C0CB5D400FC85ED /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
+		E9EC1BF92C0CB9F200FC85ED /* AppFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFonts.swift; sourceTree = "<group>"; };
 		E9F490852B9DB495006FD055 /* openapi.yaml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = openapi.yaml; sourceTree = "<group>"; };
 		E9F490872B9DB4F6006FD055 /* openapi-generator-config.yaml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = "openapi-generator-config.yaml"; sourceTree = "<group>"; };
 		E9F4908A2B9DB76E006FD055 /* NearestStationsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearestStationsService.swift; sourceTree = "<group>"; };
@@ -313,6 +315,7 @@
 				E9F4908D2B9DBADB006FD055 /* Resources.swift */,
 				E9396E5A2BDA2FE2003D69DA /* LaunchScreen.storyboard */,
 				E9EC1BF72C0CB5D400FC85ED /* AppColors.swift */,
+				E9EC1BF92C0CB9F200FC85ED /* AppFonts.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -470,6 +473,7 @@
 				E9A49C3C2BD2B5D200017734 /* CityView.swift in Sources */,
 				E98962E12BA0EE54005A84BA /* CopyrightService.swift in Sources */,
 				E936A62A2BD62FA300CB08F7 /* Story.swift in Sources */,
+				E9EC1BFA2C0CB9F200FC85ED /* AppFonts.swift in Sources */,
 				E96F721E2BD9A56C00EE294E /* SearchNothingView.swift in Sources */,
 				E96F72302BD9D60100EE294E /* CheckboxToggleStyle.swift in Sources */,
 				E9DCFF382BD8E3DB00C20F64 /* FilterView.swift in Sources */,
