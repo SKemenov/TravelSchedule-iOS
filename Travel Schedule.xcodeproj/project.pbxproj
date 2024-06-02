@@ -58,6 +58,7 @@
 		E9A49C432BD2CC0300017734 /* RouteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A49C422BD2CC0300017734 /* RouteView.swift */; };
 		E9DCFF382BD8E3DB00C20F64 /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DCFF372BD8E3DB00C20F64 /* FilterView.swift */; };
 		E9DCFF3B2BD8E40200C20F64 /* CarrierView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DCFF3A2BD8E40200C20F64 /* CarrierView.swift */; };
+		E9EC1BF82C0CB5D400FC85ED /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EC1BF72C0CB5D400FC85ED /* AppColors.swift */; };
 		E9F4907F2B9DA536006FD055 /* OpenAPIRuntime in Frameworks */ = {isa = PBXBuildFile; productRef = E9F4907E2B9DA536006FD055 /* OpenAPIRuntime */; };
 		E9F490822B9DA583006FD055 /* OpenAPIURLSession in Frameworks */ = {isa = PBXBuildFile; productRef = E9F490812B9DA583006FD055 /* OpenAPIURLSession */; };
 		E9F490862B9DB495006FD055 /* openapi.yaml in Resources */ = {isa = PBXBuildFile; fileRef = E9F490852B9DB495006FD055 /* openapi.yaml */; };
@@ -120,6 +121,7 @@
 		E9A49C422BD2CC0300017734 /* RouteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteView.swift; sourceTree = "<group>"; };
 		E9DCFF372BD8E3DB00C20F64 /* FilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterView.swift; sourceTree = "<group>"; };
 		E9DCFF3A2BD8E40200C20F64 /* CarrierView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarrierView.swift; sourceTree = "<group>"; };
+		E9EC1BF72C0CB5D400FC85ED /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
 		E9F490852B9DB495006FD055 /* openapi.yaml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = openapi.yaml; sourceTree = "<group>"; };
 		E9F490872B9DB4F6006FD055 /* openapi-generator-config.yaml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = "openapi-generator-config.yaml"; sourceTree = "<group>"; };
 		E9F4908A2B9DB76E006FD055 /* NearestStationsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearestStationsService.swift; sourceTree = "<group>"; };
@@ -310,6 +312,7 @@
 				E93E20FB2B9D7DF200B43DA5 /* Assets.xcassets */,
 				E9F4908D2B9DBADB006FD055 /* Resources.swift */,
 				E9396E5A2BDA2FE2003D69DA /* LaunchScreen.storyboard */,
+				E9EC1BF72C0CB5D400FC85ED /* AppColors.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -449,6 +452,7 @@
 				E936A6322BD78B0400CB08F7 /* StoriesListView.swift in Sources */,
 				E9396E602BDA3477003D69DA /* WebView.swift in Sources */,
 				E9A49C312BD2A1F700017734 /* Station.swift in Sources */,
+				E9EC1BF82C0CB5D400FC85ED /* AppColors.swift in Sources */,
 				E9A49C272BD29EA000017734 /* MainSearchView.swift in Sources */,
 				E936A6222BD62EA400CB08F7 /* CGFloat+Extensions.swift in Sources */,
 				E909C8442BA1098C00D67B65 /* SchedulesService.swift in Sources */,
