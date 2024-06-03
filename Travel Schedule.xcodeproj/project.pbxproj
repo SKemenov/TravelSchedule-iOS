@@ -54,6 +54,7 @@
 		E98962DC2BA0EAD5005A84BA /* AuthenticationClientMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98962DB2BA0EAD5005A84BA /* AuthenticationClientMiddleware.swift */; };
 		E98962E12BA0EE54005A84BA /* CopyrightService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98962E02BA0EE54005A84BA /* CopyrightService.swift */; };
 		E9950E0F2C0DE6F500EDC6D0 /* RouteCarrierView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9950E0E2C0DE6F500EDC6D0 /* RouteCarrierView.swift */; };
+		E99D97452C0E384B0096E31D /* SetCustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99D97442C0E384B0096E31D /* SetCustomButton.swift */; };
 		E9A49C252BD29D8100017734 /* RootTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A49C242BD29D8100017734 /* RootTabView.swift */; };
 		E9A49C272BD29EA000017734 /* MainSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A49C262BD29EA000017734 /* MainSearchView.swift */; };
 		E9A49C2A2BD2A04800017734 /* Destination.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A49C292BD2A04800017734 /* Destination.swift */; };
@@ -132,6 +133,7 @@
 		E98962DB2BA0EAD5005A84BA /* AuthenticationClientMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationClientMiddleware.swift; sourceTree = "<group>"; };
 		E98962E02BA0EE54005A84BA /* CopyrightService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyrightService.swift; sourceTree = "<group>"; };
 		E9950E0E2C0DE6F500EDC6D0 /* RouteCarrierView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteCarrierView.swift; sourceTree = "<group>"; };
+		E99D97442C0E384B0096E31D /* SetCustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetCustomButton.swift; sourceTree = "<group>"; };
 		E9A49C242BD29D8100017734 /* RootTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabView.swift; sourceTree = "<group>"; };
 		E9A49C262BD29EA000017734 /* MainSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSearchView.swift; sourceTree = "<group>"; };
 		E9A49C292BD2A04800017734 /* Destination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Destination.swift; sourceTree = "<group>"; };
@@ -233,6 +235,7 @@
 				E96F72272BD9BFAB00EE294E /* SetCustomNavBackButton.swift */,
 				E96F722F2BD9D60100EE294E /* CheckboxToggleStyle.swift */,
 				E9396E622BDA393F003D69DA /* RadioButtonToggleStyle.swift */,
+				E99D97442C0E384B0096E31D /* SetCustomButton.swift */,
 			);
 			path = ViewModifier;
 			sourceTree = "<group>";
@@ -503,6 +506,7 @@
 				E936A6322BD78B0400CB08F7 /* StoriesListView.swift in Sources */,
 				E98608302C0E24BC00B75782 /* MarkerView.swift in Sources */,
 				E9396E602BDA3477003D69DA /* WebView.swift in Sources */,
+				E99D97452C0E384B0096E31D /* SetCustomButton.swift in Sources */,
 				E9A49C312BD2A1F700017734 /* Station.swift in Sources */,
 				E9950E0F2C0DE6F500EDC6D0 /* RouteCarrierView.swift in Sources */,
 				E98703732C0E3690006495B8 /* FilterConnectionSectionView.swift in Sources */,
