@@ -31,6 +31,7 @@
 		E9396E5B2BDA2FE2003D69DA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9396E5A2BDA2FE2003D69DA /* LaunchScreen.storyboard */; };
 		E9396E602BDA3477003D69DA /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9396E5F2BDA3477003D69DA /* WebView.swift */; };
 		E9396E632BDA393F003D69DA /* RadioButtonToggleStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9396E622BDA393F003D69DA /* RadioButtonToggleStyle.swift */; };
+		E93E1C4D2C0DE8600063FA56 /* RouteTimeDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93E1C4C2C0DE8600063FA56 /* RouteTimeDetailsView.swift */; };
 		E93E20F82B9D7DF100B43DA5 /* Travel_ScheduleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93E20F72B9D7DF100B43DA5 /* Travel_ScheduleApp.swift */; };
 		E93E20FC2B9D7DF200B43DA5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E93E20FB2B9D7DF200B43DA5 /* Assets.xcassets */; };
 		E93E20FF2B9D7DF200B43DA5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E93E20FE2B9D7DF200B43DA5 /* Preview Assets.xcassets */; };
@@ -100,6 +101,7 @@
 		E9396E5D2BDA309B003D69DA /* Travel-Schedule-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Travel-Schedule-Info.plist"; sourceTree = SOURCE_ROOT; };
 		E9396E5F2BDA3477003D69DA /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		E9396E622BDA393F003D69DA /* RadioButtonToggleStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioButtonToggleStyle.swift; sourceTree = "<group>"; };
+		E93E1C4C2C0DE8600063FA56 /* RouteTimeDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteTimeDetailsView.swift; sourceTree = "<group>"; };
 		E93E20F42B9D7DF100B43DA5 /* Travel Schedule.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Travel Schedule.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E93E20F72B9D7DF100B43DA5 /* Travel_ScheduleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Travel_ScheduleApp.swift; sourceTree = "<group>"; };
 		E93E20FB2B9D7DF200B43DA5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -267,6 +269,7 @@
 				E96F720F2BD995EA00EE294E /* SearchBarView.swift */,
 				E936A6142BD5BB7700CB08F7 /* RowSearchView.swift */,
 				E9A49C422BD2CC0300017734 /* RouteView.swift */,
+				E93E1C4C2C0DE8600063FA56 /* RouteTimeDetailsView.swift */,
 				E9F9EBC42C0DE7A900A7AECB /* RouteTimeView.swift */,
 				E96F721D2BD9A56C00EE294E /* SearchNothingView.swift */,
 				E9396E5F2BDA3477003D69DA /* WebView.swift */,
@@ -463,6 +466,7 @@
 				E96F72152BD99BA000EE294E /* View+Extensions.swift in Sources */,
 				E936A62F2BD78A8C00CB08F7 /* ErrorView.swift in Sources */,
 				E9A49C402BD2B83800017734 /* StationView.swift in Sources */,
+				E93E1C4D2C0DE8600063FA56 /* RouteTimeDetailsView.swift in Sources */,
 				E9A49C352BD2A38900017734 /* SettingsView.swift in Sources */,
 				E96F72252BD9BF2700EE294E /* SetCustomNavigationBar.swift in Sources */,
 				E9F4908B2B9DB76E006FD055 /* NearestStationsService.swift in Sources */,
