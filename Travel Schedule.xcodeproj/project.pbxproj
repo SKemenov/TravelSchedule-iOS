@@ -71,6 +71,7 @@
 		E9F490882B9DB4F6006FD055 /* openapi-generator-config.yaml in Resources */ = {isa = PBXBuildFile; fileRef = E9F490872B9DB4F6006FD055 /* openapi-generator-config.yaml */; };
 		E9F4908B2B9DB76E006FD055 /* NearestStationsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F4908A2B9DB76E006FD055 /* NearestStationsService.swift */; };
 		E9F4908E2B9DBADB006FD055 /* Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F4908D2B9DBADB006FD055 /* Resources.swift */; };
+		E9F9EBC52C0DE7A900A7AECB /* RouteTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F9EBC42C0DE7A900A7AECB /* RouteTimeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -138,6 +139,7 @@
 		E9F490872B9DB4F6006FD055 /* openapi-generator-config.yaml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = "openapi-generator-config.yaml"; sourceTree = "<group>"; };
 		E9F4908A2B9DB76E006FD055 /* NearestStationsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearestStationsService.swift; sourceTree = "<group>"; };
 		E9F4908D2B9DBADB006FD055 /* Resources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resources.swift; sourceTree = "<group>"; };
+		E9F9EBC42C0DE7A900A7AECB /* RouteTimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteTimeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -265,6 +267,7 @@
 				E96F720F2BD995EA00EE294E /* SearchBarView.swift */,
 				E936A6142BD5BB7700CB08F7 /* RowSearchView.swift */,
 				E9A49C422BD2CC0300017734 /* RouteView.swift */,
+				E9F9EBC42C0DE7A900A7AECB /* RouteTimeView.swift */,
 				E96F721D2BD9A56C00EE294E /* SearchNothingView.swift */,
 				E9396E5F2BDA3477003D69DA /* WebView.swift */,
 				E9EC1C172C0DC7B600FC85ED /* SearchButtonView.swift */,
@@ -469,6 +472,7 @@
 				E909C84A2BA1734300D67B65 /* ThreadService.swift in Sources */,
 				E909C8472BA1186A00D67B65 /* SearchService.swift in Sources */,
 				E936A6352BD78BC900CB08F7 /* RoutesListView.swift in Sources */,
+				E9F9EBC52C0DE7A900A7AECB /* RouteTimeView.swift in Sources */,
 				E9A49C2F2BD2A1CC00017734 /* City.swift in Sources */,
 				E936A6322BD78B0400CB08F7 /* StoriesListView.swift in Sources */,
 				E9396E602BDA3477003D69DA /* WebView.swift in Sources */,
