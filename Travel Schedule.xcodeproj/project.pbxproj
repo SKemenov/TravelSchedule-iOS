@@ -48,6 +48,7 @@
 		E96F722B2BD9CBC900EE294E /* SearchTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96F722A2BD9CBC900EE294E /* SearchTabView.swift */; };
 		E96F72302BD9D60100EE294E /* CheckboxToggleStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96F722F2BD9D60100EE294E /* CheckboxToggleStyle.swift */; };
 		E973DC892C0E1B6A003D5D31 /* CarrierContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E973DC882C0E1B6A003D5D31 /* CarrierContactView.swift */; };
+		E979C04C2C0E34A400A7B75E /* FilterTimeSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E979C04B2C0E34A400A7B75E /* FilterTimeSectionView.swift */; };
 		E98608302C0E24BC00B75782 /* MarkerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E986082F2C0E24BC00B75782 /* MarkerView.swift */; };
 		E98962DC2BA0EAD5005A84BA /* AuthenticationClientMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98962DB2BA0EAD5005A84BA /* AuthenticationClientMiddleware.swift */; };
 		E98962E12BA0EE54005A84BA /* CopyrightService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98962E02BA0EE54005A84BA /* CopyrightService.swift */; };
@@ -124,6 +125,7 @@
 		E96F722A2BD9CBC900EE294E /* SearchTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTabView.swift; sourceTree = "<group>"; };
 		E96F722F2BD9D60100EE294E /* CheckboxToggleStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckboxToggleStyle.swift; sourceTree = "<group>"; };
 		E973DC882C0E1B6A003D5D31 /* CarrierContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarrierContactView.swift; sourceTree = "<group>"; };
+		E979C04B2C0E34A400A7B75E /* FilterTimeSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterTimeSectionView.swift; sourceTree = "<group>"; };
 		E986082F2C0E24BC00B75782 /* MarkerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkerView.swift; sourceTree = "<group>"; };
 		E98962DB2BA0EAD5005A84BA /* AuthenticationClientMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationClientMiddleware.swift; sourceTree = "<group>"; };
 		E98962E02BA0EE54005A84BA /* CopyrightService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyrightService.swift; sourceTree = "<group>"; };
@@ -290,6 +292,7 @@
 				E986082F2C0E24BC00B75782 /* MarkerView.swift */,
 				E9B4EE212C0E265B00E275C8 /* ButtonTitleView.swift */,
 				E911F5582C0E2A5C003409F2 /* CheckboxView.swift */,
+				E979C04B2C0E34A400A7B75E /* FilterTimeSectionView.swift */,
 			);
 			path = Elements;
 			sourceTree = "<group>";
@@ -524,6 +527,7 @@
 				E96F721E2BD9A56C00EE294E /* SearchResultEmptyView.swift in Sources */,
 				E9B4EE222C0E265B00E275C8 /* ButtonTitleView.swift in Sources */,
 				E96F72302BD9D60100EE294E /* CheckboxToggleStyle.swift in Sources */,
+				E979C04C2C0E34A400A7B75E /* FilterTimeSectionView.swift in Sources */,
 				E9DCFF382BD8E3DB00C20F64 /* FilterView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
