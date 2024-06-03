@@ -7,17 +7,17 @@
 
 import SwiftUI
 
-struct SearchNothingView: View {
-    @State var notification: String
+struct SearchResultEmptyView: View {
+    let notification: String
 
     var body: some View {
         Spacer()
         Text(notification)
-            .font(.boldMedium)
+            .font(AppFonts.Bold.medium)
         Spacer()
     }
 }
 
 #Preview {
-    SearchNothingView(notification: "Nothing is here")
+    SearchResultEmptyView(notification: "Nothing is here")
 }
