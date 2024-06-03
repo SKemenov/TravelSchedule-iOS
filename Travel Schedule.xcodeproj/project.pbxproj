@@ -13,6 +13,7 @@
 		E909C84D2BA1795F00D67B65 /* NearestSettlementService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E909C84C2BA1795F00D67B65 /* NearestSettlementService.swift */; };
 		E909C8502BA1826400D67B65 /* CarriersService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E909C84F2BA1826400D67B65 /* CarriersService.swift */; };
 		E909C8532BA18EAB00D67B65 /* StationsListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E909C8522BA18EAB00D67B65 /* StationsListService.swift */; };
+		E911F5592C0E2A5C003409F2 /* CheckboxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E911F5582C0E2A5C003409F2 /* CheckboxView.swift */; };
 		E9163A8E2BD29A2C0007D9CF /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9163A8D2BD29A2C0007D9CF /* NetworkService.swift */; };
 		E91BC4C22BD85410003FF64D /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91BC4C12BD85410003FF64D /* Filter.swift */; };
 		E924B51E2C0E04D9004130CB /* AppImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = E924B51D2C0E04D9004130CB /* AppImages.swift */; };
@@ -86,6 +87,7 @@
 		E909C84C2BA1795F00D67B65 /* NearestSettlementService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearestSettlementService.swift; sourceTree = "<group>"; };
 		E909C84F2BA1826400D67B65 /* CarriersService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarriersService.swift; sourceTree = "<group>"; };
 		E909C8522BA18EAB00D67B65 /* StationsListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationsListService.swift; sourceTree = "<group>"; };
+		E911F5582C0E2A5C003409F2 /* CheckboxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckboxView.swift; sourceTree = "<group>"; };
 		E9163A8D2BD29A2C0007D9CF /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		E91BC4C12BD85410003FF64D /* Filter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
 		E924B51D2C0E04D9004130CB /* AppImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppImages.swift; sourceTree = "<group>"; };
@@ -287,6 +289,7 @@
 				E973DC882C0E1B6A003D5D31 /* CarrierContactView.swift */,
 				E986082F2C0E24BC00B75782 /* MarkerView.swift */,
 				E9B4EE212C0E265B00E275C8 /* ButtonTitleView.swift */,
+				E911F5582C0E2A5C003409F2 /* CheckboxView.swift */,
 			);
 			path = Elements;
 			sourceTree = "<group>";
@@ -505,6 +508,7 @@
 				E909C8532BA18EAB00D67B65 /* StationsListService.swift in Sources */,
 				E9163A8E2BD29A2C0007D9CF /* NetworkService.swift in Sources */,
 				E96F720D2BD9939100EE294E /* Int+Extensions.swift in Sources */,
+				E911F5592C0E2A5C003409F2 /* CheckboxView.swift in Sources */,
 				E9A49C332BD2A21C00017734 /* Schedule.swift in Sources */,
 				E936A61A2BD5C16F00CB08F7 /* AgreementView.swift in Sources */,
 				E9EC1C1B2C0DC91C00FC85ED /* SwapButtonView.swift in Sources */,
