@@ -61,6 +61,7 @@
 		E9A49C3C2BD2B5D200017734 /* CityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A49C3B2BD2B5D200017734 /* CityView.swift */; };
 		E9A49C402BD2B83800017734 /* StationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A49C3F2BD2B83800017734 /* StationView.swift */; };
 		E9A49C432BD2CC0300017734 /* RouteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A49C422BD2CC0300017734 /* RouteView.swift */; };
+		E9B4EE222C0E265B00E275C8 /* ButtonTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B4EE212C0E265B00E275C8 /* ButtonTitleView.swift */; };
 		E9DCFF382BD8E3DB00C20F64 /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DCFF372BD8E3DB00C20F64 /* FilterView.swift */; };
 		E9DCFF3B2BD8E40200C20F64 /* CarrierView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DCFF3A2BD8E40200C20F64 /* CarrierView.swift */; };
 		E9EC1BF82C0CB5D400FC85ED /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EC1BF72C0CB5D400FC85ED /* AppColors.swift */; };
@@ -135,6 +136,7 @@
 		E9A49C3B2BD2B5D200017734 /* CityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityView.swift; sourceTree = "<group>"; };
 		E9A49C3F2BD2B83800017734 /* StationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationView.swift; sourceTree = "<group>"; };
 		E9A49C422BD2CC0300017734 /* RouteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteView.swift; sourceTree = "<group>"; };
+		E9B4EE212C0E265B00E275C8 /* ButtonTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonTitleView.swift; sourceTree = "<group>"; };
 		E9DCFF372BD8E3DB00C20F64 /* FilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterView.swift; sourceTree = "<group>"; };
 		E9DCFF3A2BD8E40200C20F64 /* CarrierView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarrierView.swift; sourceTree = "<group>"; };
 		E9EC1BF72C0CB5D400FC85ED /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
@@ -284,6 +286,7 @@
 				E9EC1C1A2C0DC91C00FC85ED /* SwapButtonView.swift */,
 				E973DC882C0E1B6A003D5D31 /* CarrierContactView.swift */,
 				E986082F2C0E24BC00B75782 /* MarkerView.swift */,
+				E9B4EE212C0E265B00E275C8 /* ButtonTitleView.swift */,
 			);
 			path = Elements;
 			sourceTree = "<group>";
@@ -515,6 +518,7 @@
 				E936A62A2BD62FA300CB08F7 /* Story.swift in Sources */,
 				E9EC1BFA2C0CB9F200FC85ED /* AppFonts.swift in Sources */,
 				E96F721E2BD9A56C00EE294E /* SearchResultEmptyView.swift in Sources */,
+				E9B4EE222C0E265B00E275C8 /* ButtonTitleView.swift in Sources */,
 				E96F72302BD9D60100EE294E /* CheckboxToggleStyle.swift in Sources */,
 				E9DCFF382BD8E3DB00C20F64 /* FilterView.swift in Sources */,
 			);
