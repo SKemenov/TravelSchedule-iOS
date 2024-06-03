@@ -63,6 +63,7 @@
 		E9EC1C0E2C0CFECA00FC85ED /* AppSizes.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EC1C0D2C0CFECA00FC85ED /* AppSizes.swift */; };
 		E9EC1C182C0DC7B600FC85ED /* SearchButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EC1C172C0DC7B600FC85ED /* SearchButtonView.swift */; };
 		E9EC1C1B2C0DC91C00FC85ED /* SwapButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EC1C1A2C0DC91C00FC85ED /* SwapButtonView.swift */; };
+		E9EC1C1E2C0DE3A300FC85ED /* DestinationsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EC1C1D2C0DE3A300FC85ED /* DestinationsListView.swift */; };
 		E9F4907F2B9DA536006FD055 /* OpenAPIRuntime in Frameworks */ = {isa = PBXBuildFile; productRef = E9F4907E2B9DA536006FD055 /* OpenAPIRuntime */; };
 		E9F490822B9DA583006FD055 /* OpenAPIURLSession in Frameworks */ = {isa = PBXBuildFile; productRef = E9F490812B9DA583006FD055 /* OpenAPIURLSession */; };
 		E9F490862B9DB495006FD055 /* openapi.yaml in Resources */ = {isa = PBXBuildFile; fileRef = E9F490852B9DB495006FD055 /* openapi.yaml */; };
@@ -130,6 +131,7 @@
 		E9EC1C0D2C0CFECA00FC85ED /* AppSizes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSizes.swift; sourceTree = "<group>"; };
 		E9EC1C172C0DC7B600FC85ED /* SearchButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchButtonView.swift; sourceTree = "<group>"; };
 		E9EC1C1A2C0DC91C00FC85ED /* SwapButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwapButtonView.swift; sourceTree = "<group>"; };
+		E9EC1C1D2C0DE3A300FC85ED /* DestinationsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationsListView.swift; sourceTree = "<group>"; };
 		E9F490852B9DB495006FD055 /* openapi.yaml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = openapi.yaml; sourceTree = "<group>"; };
 		E9F490872B9DB4F6006FD055 /* openapi-generator-config.yaml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = "openapi-generator-config.yaml"; sourceTree = "<group>"; };
 		E9F4908A2B9DB76E006FD055 /* NearestStationsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearestStationsService.swift; sourceTree = "<group>"; };
@@ -276,6 +278,7 @@
 				E9A49C262BD29EA000017734 /* MainSearchView.swift */,
 				E9A49C3B2BD2B5D200017734 /* CityView.swift */,
 				E9A49C3F2BD2B83800017734 /* StationView.swift */,
+				E9EC1C1D2C0DE3A300FC85ED /* DestinationsListView.swift */,
 			);
 			path = Searching;
 			sourceTree = "<group>";
@@ -443,6 +446,7 @@
 				E936A6382BD78C4300CB08F7 /* Route.swift in Sources */,
 				E936A6262BD62EFC00CB08F7 /* Image+Extensions.swift in Sources */,
 				E9F4908E2B9DBADB006FD055 /* Resources.swift in Sources */,
+				E9EC1C1E2C0DE3A300FC85ED /* DestinationsListView.swift in Sources */,
 				E98962DC2BA0EAD5005A84BA /* AuthenticationClientMiddleware.swift in Sources */,
 				E9EC1C182C0DC7B600FC85ED /* SearchButtonView.swift in Sources */,
 				E936A63B2BD78FE700CB08F7 /* Carrier.swift in Sources */,
