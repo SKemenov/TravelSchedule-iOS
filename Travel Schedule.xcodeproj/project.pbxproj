@@ -46,6 +46,7 @@
 		E96F72282BD9BFAB00EE294E /* SetCustomNavBackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96F72272BD9BFAB00EE294E /* SetCustomNavBackButton.swift */; };
 		E96F722B2BD9CBC900EE294E /* SearchTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96F722A2BD9CBC900EE294E /* SearchTabView.swift */; };
 		E96F72302BD9D60100EE294E /* CheckboxToggleStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96F722F2BD9D60100EE294E /* CheckboxToggleStyle.swift */; };
+		E973DC892C0E1B6A003D5D31 /* CarrierContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E973DC882C0E1B6A003D5D31 /* CarrierContactView.swift */; };
 		E98962DC2BA0EAD5005A84BA /* AuthenticationClientMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98962DB2BA0EAD5005A84BA /* AuthenticationClientMiddleware.swift */; };
 		E98962E12BA0EE54005A84BA /* CopyrightService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98962E02BA0EE54005A84BA /* CopyrightService.swift */; };
 		E9950E0F2C0DE6F500EDC6D0 /* RouteCarrierView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9950E0E2C0DE6F500EDC6D0 /* RouteCarrierView.swift */; };
@@ -118,6 +119,7 @@
 		E96F72272BD9BFAB00EE294E /* SetCustomNavBackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetCustomNavBackButton.swift; sourceTree = "<group>"; };
 		E96F722A2BD9CBC900EE294E /* SearchTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTabView.swift; sourceTree = "<group>"; };
 		E96F722F2BD9D60100EE294E /* CheckboxToggleStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckboxToggleStyle.swift; sourceTree = "<group>"; };
+		E973DC882C0E1B6A003D5D31 /* CarrierContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarrierContactView.swift; sourceTree = "<group>"; };
 		E98962DB2BA0EAD5005A84BA /* AuthenticationClientMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationClientMiddleware.swift; sourceTree = "<group>"; };
 		E98962E02BA0EE54005A84BA /* CopyrightService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyrightService.swift; sourceTree = "<group>"; };
 		E9950E0E2C0DE6F500EDC6D0 /* RouteCarrierView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteCarrierView.swift; sourceTree = "<group>"; };
@@ -278,6 +280,7 @@
 				E9EC1C172C0DC7B600FC85ED /* SearchButtonView.swift */,
 				E9EC1C1A2C0DC91C00FC85ED /* SwapButtonView.swift */,
 				E9950E0E2C0DE6F500EDC6D0 /* RouteCarrierView.swift */,
+				E973DC882C0E1B6A003D5D31 /* CarrierContactView.swift */,
 			);
 			path = Elements;
 			sourceTree = "<group>";
@@ -499,6 +502,7 @@
 				E936A61A2BD5C16F00CB08F7 /* AgreementView.swift in Sources */,
 				E9EC1C1B2C0DC91C00FC85ED /* SwapButtonView.swift in Sources */,
 				E936A6152BD5BB7700CB08F7 /* RowSearchView.swift in Sources */,
+				E973DC892C0E1B6A003D5D31 /* CarrierContactView.swift in Sources */,
 				E9A49C2A2BD2A04800017734 /* Destination.swift in Sources */,
 				E936A61D2BD5C3A100CB08F7 /* ViewsRouter.swift in Sources */,
 				E9DCFF3B2BD8E40200C20F64 /* CarrierView.swift in Sources */,
