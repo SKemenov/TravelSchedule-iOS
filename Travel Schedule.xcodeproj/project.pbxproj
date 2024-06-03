@@ -15,6 +15,7 @@
 		E909C8532BA18EAB00D67B65 /* StationsListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E909C8522BA18EAB00D67B65 /* StationsListService.swift */; };
 		E9163A8E2BD29A2C0007D9CF /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9163A8D2BD29A2C0007D9CF /* NetworkService.swift */; };
 		E91BC4C22BD85410003FF64D /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91BC4C12BD85410003FF64D /* Filter.swift */; };
+		E924B51E2C0E04D9004130CB /* AppImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = E924B51D2C0E04D9004130CB /* AppImages.swift */; };
 		E936A6152BD5BB7700CB08F7 /* RowSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E936A6142BD5BB7700CB08F7 /* RowSearchView.swift */; };
 		E936A61A2BD5C16F00CB08F7 /* AgreementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E936A6192BD5C16F00CB08F7 /* AgreementView.swift */; };
 		E936A61D2BD5C3A100CB08F7 /* ViewsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E936A61C2BD5C3A100CB08F7 /* ViewsRouter.swift */; };
@@ -84,6 +85,7 @@
 		E909C8522BA18EAB00D67B65 /* StationsListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationsListService.swift; sourceTree = "<group>"; };
 		E9163A8D2BD29A2C0007D9CF /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		E91BC4C12BD85410003FF64D /* Filter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
+		E924B51D2C0E04D9004130CB /* AppImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppImages.swift; sourceTree = "<group>"; };
 		E936A6142BD5BB7700CB08F7 /* RowSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowSearchView.swift; sourceTree = "<group>"; };
 		E936A6192BD5C16F00CB08F7 /* AgreementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgreementView.swift; sourceTree = "<group>"; };
 		E936A61C2BD5C3A100CB08F7 /* ViewsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewsRouter.swift; sourceTree = "<group>"; };
@@ -335,6 +337,7 @@
 				E9F4908D2B9DBADB006FD055 /* Resources.swift */,
 				E9396E5A2BDA2FE2003D69DA /* LaunchScreen.storyboard */,
 				E9EC1BF72C0CB5D400FC85ED /* AppColors.swift */,
+				E924B51D2C0E04D9004130CB /* AppImages.swift */,
 				E9EC1BF92C0CB9F200FC85ED /* AppFonts.swift */,
 				E9EC1C0D2C0CFECA00FC85ED /* AppSizes.swift */,
 			);
@@ -468,6 +471,7 @@
 				E9A49C402BD2B83800017734 /* StationView.swift in Sources */,
 				E93E1C4D2C0DE8600063FA56 /* RouteTimeDetailsView.swift in Sources */,
 				E9A49C352BD2A38900017734 /* SettingsView.swift in Sources */,
+				E924B51E2C0E04D9004130CB /* AppImages.swift in Sources */,
 				E96F72252BD9BF2700EE294E /* SetCustomNavigationBar.swift in Sources */,
 				E9F4908B2B9DB76E006FD055 /* NearestStationsService.swift in Sources */,
 				E93E20F82B9D7DF100B43DA5 /* Travel_ScheduleApp.swift in Sources */,
