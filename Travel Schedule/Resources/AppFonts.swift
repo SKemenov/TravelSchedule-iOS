@@ -10,7 +10,7 @@ import SwiftUI
 /// Collection of app's fonts
 enum AppFonts {
     /// Different sizes for `Regular` weight
-    enum regular {
+    enum Regular {
         /// `Regular`, size `12`
         static let small = Font.system(size: 12, weight: .regular)
 

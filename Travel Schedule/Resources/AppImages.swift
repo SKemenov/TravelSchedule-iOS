@@ -26,7 +26,7 @@ enum AppImages {
     }
     /// App's Icons
     enum Icons {
-        static let cancel = Image(systemName: "xmark.circle.fill")
+        static let cancel = Image(systemName: "xmark.circle.fill").renderingMode(.template)
         static let arrow = Image(systemName: "arrow.forward")
         static let forward = Image(systemName: "chevron.forward")
         static let backward = Image(systemName: "chevron.backward")

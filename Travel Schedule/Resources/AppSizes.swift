@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// swiftlint:disable nesting
 /// Collection of app's sizes
 enum AppSizes {
     /// CGFloat values for `cornerRadius`
@@ -29,6 +30,8 @@ enum AppSizes {
             static let progressBar: CGFloat = 3.0
             /// CGFloat `10.0`
             static let searchBar: CGFloat = 10.0
+            /// CGFloat `40.0`
+            static let story: CGFloat = 40.0
         }
     }
 
@@ -46,6 +49,17 @@ enum AppSizes {
         static let xLarge: CGFloat = 20.0
         /// Spacer `24.0`
         static let xxLarge: CGFloat = 24.0
+        /// Specific  spacing
+        enum Custom {
+            /// CGFloat 6.0
+            static let progressBarElements: CGFloat = 6.0
+            /// CGFloat 35.0
+            static let progressBar: CGFloat = 35.0
+            /// CGFloat 40.0
+            static let story: CGFloat = 40.0
+            /// CGFloat 57.0
+            static let closeButton: CGFloat = 57.0
+        }
     }
 
     /// CGFloat values equal for both `width` and `height`
@@ -56,6 +70,8 @@ enum AppSizes {
         static let icon: CGFloat = 17.0
         /// CGFloat `24.0`
         static let toggle: CGFloat = 24.0
+        /// CGFloat `30.0`
+        static let button: CGFloat = 30.0
         /// CGFloat `36.0`
         static let swappingButton: CGFloat = 36.0
         /// CGFloat `38.0`
