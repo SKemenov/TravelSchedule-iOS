@@ -56,6 +56,7 @@
 		E98962DC2BA0EAD5005A84BA /* AuthenticationClientMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98962DB2BA0EAD5005A84BA /* AuthenticationClientMiddleware.swift */; };
 		E98962E12BA0EE54005A84BA /* CopyrightService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98962E02BA0EE54005A84BA /* CopyrightService.swift */; };
 		E9950E0F2C0DE6F500EDC6D0 /* RouteCarrierView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9950E0E2C0DE6F500EDC6D0 /* RouteCarrierView.swift */; };
+		E99D5D842C1221BE00ED5184 /* StoriesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99D5D832C1221BE00ED5184 /* StoriesList.swift */; };
 		E99D5D882C1223CB00ED5184 /* Double+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99D5D872C1223CB00ED5184 /* Double+Extensions.swift */; };
 		E99D97452C0E384B0096E31D /* SetCustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99D97442C0E384B0096E31D /* SetCustomButton.swift */; };
 		E9A49C252BD29D8100017734 /* RootTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A49C242BD29D8100017734 /* RootTabView.swift */; };
@@ -139,6 +140,7 @@
 		E98962DB2BA0EAD5005A84BA /* AuthenticationClientMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationClientMiddleware.swift; sourceTree = "<group>"; };
 		E98962E02BA0EE54005A84BA /* CopyrightService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyrightService.swift; sourceTree = "<group>"; };
 		E9950E0E2C0DE6F500EDC6D0 /* RouteCarrierView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteCarrierView.swift; sourceTree = "<group>"; };
+		E99D5D832C1221BE00ED5184 /* StoriesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesList.swift; sourceTree = "<group>"; };
 		E99D5D872C1223CB00ED5184 /* Double+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extensions.swift"; sourceTree = "<group>"; };
 		E99D97442C0E384B0096E31D /* SetCustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetCustomButton.swift; sourceTree = "<group>"; };
 		E9A49C242BD29D8100017734 /* RootTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabView.swift; sourceTree = "<group>"; };
@@ -281,6 +283,7 @@
 				E9A49C302BD2A1F700017734 /* Station.swift */,
 				E9A49C322BD2A21C00017734 /* Schedule.swift */,
 				E936A6292BD62FA300CB08F7 /* Story.swift */,
+				E99D5D832C1221BE00ED5184 /* StoriesList.swift */,
 				E936A6372BD78C4300CB08F7 /* Route.swift */,
 				E936A63A2BD78FE700CB08F7 /* Carrier.swift */,
 				E91BC4C12BD85410003FF64D /* Filter.swift */,
@@ -548,6 +551,7 @@
 				E9EC1C1B2C0DC91C00FC85ED /* SwapButtonView.swift in Sources */,
 				E936A6152BD5BB7700CB08F7 /* RowSearchView.swift in Sources */,
 				E94ABCBB2C0EE3560091B28B /* ProgressBarView.swift in Sources */,
+				E99D5D842C1221BE00ED5184 /* StoriesList.swift in Sources */,
 				E973DC892C0E1B6A003D5D31 /* CarrierContactView.swift in Sources */,
 				E9A49C2A2BD2A04800017734 /* Destination.swift in Sources */,
 				E936A61D2BD5C3A100CB08F7 /* ViewsRouter.swift in Sources */,

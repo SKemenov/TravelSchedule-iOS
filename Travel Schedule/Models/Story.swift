@@ -7,79 +7,53 @@
 
 import Foundation
 
-struct Story: Hashable, Identifiable {
-    let id = UUID()
-    let previewImageName: String
-    let pageImageNames: [String]
-    let title: String
-    let text: String
-    let isRead: Bool
+// MARK: - Model structure
+struct Story: Identifiable {
+    var id = UUID()
+    var imageName: String
+    var title: String
+    var description: String
 }
 
+// MARK: - Model mock data
 extension Story {
-    static let sampleData = [
-        Story(
-            previewImageName: "preview1",
-            pageImageNames: ["big1-1", "big1-2"],
-            title: "Text Text",
-            text: "Text Text Text Text Text Text Text Text",
-            isRead: false
-        ),
-        Story(
-            previewImageName: "preview2",
-            pageImageNames: ["big2-1", "big2-2"],
-            title: "Text Text",
-            text: "Text Text Text Text Text Text Text Text",
-            isRead: false
-        ),
-        Story(
-            previewImageName: "preview3",
-            pageImageNames: ["big1-1", "big1-2"],
-            title: "Text Text",
-            text: "Text Text Text Text Text Text Text Text",
-            isRead: true
-        ),
-        Story(
-            previewImageName: "preview4",
-            pageImageNames: ["big2-1", "big2-2"],
-            title: "Text Text",
-            text: "Text Text Text Text Text Text Text Text",
-            isRead: true
-        ),
-        Story(
-            previewImageName: "preview5",
-            pageImageNames: ["big1-1", "big1-2"],
-            title: "Text Text",
-            text: "Text Text Text Text Text Text Text Text",
-            isRead: true
-        ),
-        Story(
-            previewImageName: "preview6",
-            pageImageNames: ["big2-1", "big2-2"],
-            title: "Text Text",
-            text: "Text Text Text Text Text Text Text Text",
-            isRead: true
-        ),
-        Story(
-            previewImageName: "preview7",
-            pageImageNames: ["big1-1", "big1-2"],
-            title: "Text Text",
-            text: "Text Text Text Text Text Text Text Text",
-            isRead: true
-        ),
-        Story(
-            previewImageName: "preview8",
-            pageImageNames: ["big2-1", "big2-2"],
-            title: "Text Text",
-            text: "Text Text Text Text Text Text Text Text",
-            isRead: true
-        ),
-        Story(
-            previewImageName: "preview9",
-            pageImageNames: ["big1-1", "big1-2"],
-            title: "Text Text",
-            text: "Text Text Text Text Text Text Text Text",
-            isRead: true
-        )
+    static let title = Array(repeating: "title", count: 7).joined(separator: " ").capitalized
+    static let description = Array(repeating: "text", count: 20).joined(separator: " ")
+
+    static let mockData1: [Story] = [
+        Story(imageName: "big1", title: title, description: description),
+        Story(imageName: "big2", title: title, description: description)
+    ]
+    static let mockData2: [Story] = [
+        Story(imageName: "big3", title: title, description: description),
+        Story(imageName: "big4", title: title, description: description)
+    ]
+    static let mockData3: [Story] = [
+        Story(imageName: "big5", title: title, description: description),
+        Story(imageName: "big6", title: title, description: description)
+    ]
+    static let mockData4: [Story] = [
+        Story(imageName: "big7", title: title, description: description),
+        Story(imageName: "big8", title: title, description: description)
+    ]
+    static let mockData5: [Story] = [
+        Story(imageName: "big9", title: title, description: description),
+        Story(imageName: "big10", title: title, description: description)
+    ]
+    static let mockData6: [Story] = [
+        Story(imageName: "big11", title: title, description: description),
+        Story(imageName: "big12", title: title, description: description)
+    ]
+    static let mockData7: [Story] = [
+        Story(imageName: "big13", title: title, description: description),
+        Story(imageName: "big14", title: title, description: description)
+    ]
+    static let mockData8: [Story] = [
+        Story(imageName: "big15", title: title, description: description),
+        Story(imageName: "big16", title: title, description: description)
+    ]
+    static let mockData9: [Story] = [
+        Story(imageName: "big17", title: title, description: description),
+        Story(imageName: "big18", title: title, description: description)
     ]
 }
