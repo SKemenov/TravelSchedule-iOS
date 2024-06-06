@@ -13,7 +13,7 @@ struct ErrorView: View {
     var body: some View {
         Image(errorType.imageName)
         Text(errorType.description)
-            .font(.boldMedium)
+            .font(AppFonts.Bold.medium)
     }
 }
 

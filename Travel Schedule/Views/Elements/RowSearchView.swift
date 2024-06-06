@@ -13,7 +13,7 @@ struct RowSearchView: View {
     var body: some View {
         HStack(spacing: 0) {
             Text(rowString)
-                .font(.regMedium)
+                .font(AppFonts.Regular.medium)
             Spacer()
             Image(systemName: "chevron.forward")
                 .imageScale(.large)

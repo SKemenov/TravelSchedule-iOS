@@ -23,17 +23,17 @@ struct RouteCarrierView: View {
             HStack(spacing: .zero) {
                 VStack(alignment: .leading) {
                     Text(carrier.title)
-                        .font(.regMedium)
+                        .font(AppFonts.Regular.medium)
                         .foregroundStyle(AppColors.Universal.black)
                     if !route.isDirect {
                         Text(connectionInValue)
-                            .font(.regSmall)
+                            .font(AppFonts.Regular.small)
                             .foregroundStyle(AppColors.Universal.red)
                     }
                 }
                 Spacer()
                 Text(route.date)
-                    .font(.regSmall)
+                    .font(AppFonts.Regular.small)
                     .foregroundStyle(AppColors.Universal.black)
             }
         }

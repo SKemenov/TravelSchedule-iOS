@@ -28,8 +28,8 @@ struct SettingsView: View {
                 Text("Приложение использует API «Яндекс.Расписания»")
                 Text("Версия \(Bundle.main.appVersionLong).\(Bundle.main.appBuild)")
             }
-            .font(.regSmall)
             .frame(minHeight: 44)
+            .font(AppFonts.Regular.small)
         }
         .padding(.vertical, .spacerXXL)
         .foregroundColor(.ypBlackDuo)
