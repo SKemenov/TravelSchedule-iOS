@@ -19,11 +19,11 @@ struct RootTabView: View {
             TabView {
                 SearchTabView(stories: $stories, schedule: $schedule, navPath: $navPath, direction: $direction)
                     .tabItem {
-                        Image.iconTabSearch
+                        AppImages.Tabs.schedule
                     }
                 SettingsView(darkMode: $darkMode)
                     .tabItem {
-                        Image.iconTabSettings
+                        AppImages.Tabs.settings
                     }
             }
             .accentColor(.ypBlackDuo)

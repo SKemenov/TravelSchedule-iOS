@@ -15,7 +15,7 @@ struct RowSearchView: View {
             Text(rowString)
                 .font(AppFonts.Regular.medium)
             Spacer()
-            Image(systemName: "chevron.forward")
+            AppImages.Icons.forward
                 .imageScale(.large)
         }
     }

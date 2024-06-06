@@ -18,8 +18,8 @@ struct SwapButtonView: View {
             Button {
                 swapDestinations()
             } label: {
-                Image.iconSearchSwap
                     .foregroundColor(.ypBlue)
+                AppImages.Icons.swap
             }
         }
     }

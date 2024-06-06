@@ -12,7 +12,7 @@ struct RadioButtonToggleStyle: ToggleStyle {
         HStack(spacing: 0) {
             configuration.label
             Spacer()
-            (configuration.isOn ? Image.iconRadioOn : Image.iconRadioOff)
+            (configuration.isOn ? AppImages.RadioButton.on : AppImages.RadioButton.off)
                 .resizable()
                 .frame(width: 24, height: 24)
                 .onTapGesture { configuration.isOn.toggle() }

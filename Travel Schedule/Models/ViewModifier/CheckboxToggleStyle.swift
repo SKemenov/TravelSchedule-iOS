@@ -12,7 +12,7 @@ struct CheckboxToggleStyle: ToggleStyle {
         HStack(spacing: 0) {
             configuration.label
             Spacer()
-            (configuration.isOn ? Image.iconCheckboxOn : Image.iconCheckboxOff)
+            (configuration.isOn ? AppImages.Checkbox.on : AppImages.Checkbox.off)
                 .resizable()
                 .frame(width: 24, height: 24)
                 .onTapGesture { configuration.isOn.toggle() }
