@@ -22,13 +22,8 @@ struct SearchButtonView: View {
     var body: some View {
         if isDepartureReady && isArrivalReady {
             NavigationLink(value: route) {
-                Text(searchButtonTitle)
-                    .font(.boldSmall)
-                    .foregroundStyle(AppColors.Universal.white)
-                    .frame(width: AppSizes.Width.searchButton, height: AppSizes.Height.searchButton)
-                    .background(.ypBlue)
-                    .clipShape(RoundedRectangle(cornerRadius: AppSizes.CornerRadius.large))
-                    .padding(AppSizes.Spacing.large)
+                ButtonTitleView(title: searchButtonTitle)
+                    .setCustomButton(width: AppSizes.Width.searchButton, padding: .all)
             }
         }
     }
