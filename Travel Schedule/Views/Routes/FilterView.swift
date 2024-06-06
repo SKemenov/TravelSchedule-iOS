@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct FilterView: View {
+    private let buttonTitle = "Применить"
+
     @Binding var filter: Filter
 
     @State var currentFilter = Filter()
@@ -15,40 +17,10 @@ struct FilterView: View {
     @Environment(\.presentationMode) var presentationMode
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 0) {
-            Text("Время отправления")
-                .font(.boldMedium)
-                .padding(.spacerL)
+        VStack(alignment: .leading, spacing: .zero) {
+            FilterTimeSectionView(currentFilter: $currentFilter)
 
-            Toggle("Утро 06:00 - 12:00", isOn: $currentFilter.isMorning)
-                .setRowElement()
-                .toggleStyle(.checkBox)
-
-            Toggle("День 12:00 - 18:00", isOn: $currentFilter.isAfternoon)
-                .setRowElement()
-                .toggleStyle(.checkBox)
-
-            Toggle("Вечер 18:00 - 00:00", isOn: $currentFilter.isEvening)
-                .setRowElement()
-                .toggleStyle(.checkBox)
-
-            Toggle("Ночь 00:00 - 06:00", isOn: $currentFilter.isAtNight)
-                .setRowElement()
-                .toggleStyle(.checkBox)
-
-            Text("Показывать варианты с пересадками")
-                .font(.boldMedium)
-                .padding(.spacerL)
-
-            VStack(spacing: 0) {
-                Toggle("Да", isOn: $currentFilter.isWithTransfers)
-                    .setRowElement()
-                .toggleStyle(RadioButtonToggleStyle())
-
-                Toggle("Нет", isOn: $currentFilter.isWithTransfers.not)
-                    .setRowElement()
-                    .toggleStyle(.radioButton)
-            }
+            FilterConnectionSectionView(currentFilter: $currentFilter)
 
             Spacer()
 
@@ -57,14 +29,9 @@ struct FilterView: View {
                     filter = currentFilter
                     self.presentationMode.wrappedValue.dismiss()
                 } label: {
-                    Text("Применить")
-                        .font(.boldSmall)
+                    ButtonTitleView(title: buttonTitle)
                 }
-                .frame(maxWidth: .infinity, maxHeight: 60)
-                .background(.ypBlue)
-                .foregroundStyle(.ypWhite)
-                .clipShape(RoundedRectangle(cornerRadius: 16))
-                .padding(.horizontal, .spacerL)
+                .setCustomButton(padding: .horizontal)
             }
         }
         .setCustomNavigationBar()
