@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct SetCustomNavBackButton: ViewModifier {
-    // swiftlint:disable:next attributes
     @Environment(\.dismiss) var dismiss
 
     @ViewBuilder

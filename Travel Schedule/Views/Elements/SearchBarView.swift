@@ -10,7 +10,6 @@ import SwiftUI
 struct SearchBarView: View {
     @Binding var searchText: String
 
-    // swiftlint:disable:next attributes
     @Environment(\.colorScheme) var colorScheme
 
     var placeholder = "Введите запрос"

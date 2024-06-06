@@ -18,7 +18,6 @@ struct CarrierContactView: View {
     let carrier: Carrier
     let type: ContactType
 
-    // swiftlint:disable:next attributes
     @Environment(\.openURL) private var openURL
 
     private var carrierEmail: String { "\(carrier.email)" }

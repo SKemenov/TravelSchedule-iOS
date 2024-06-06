@@ -12,7 +12,6 @@ struct FilterView: View {
 
     @State var currentFilter = Filter()
 
-    // swiftlint:disable:next attributes
     @Environment(\.presentationMode) var presentationMode
 
     var body: some View {
