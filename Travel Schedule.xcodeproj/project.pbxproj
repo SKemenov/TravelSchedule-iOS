@@ -73,6 +73,8 @@
 		E9B4EE222C0E265B00E275C8 /* ButtonTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B4EE212C0E265B00E275C8 /* ButtonTitleView.swift */; };
 		E9DCFF382BD8E3DB00C20F64 /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DCFF372BD8E3DB00C20F64 /* FilterView.swift */; };
 		E9DCFF3B2BD8E40200C20F64 /* CarrierView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DCFF3A2BD8E40200C20F64 /* CarrierView.swift */; };
+		E9E3515D2C0EE7D60052F0B2 /* SingleStoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E3515C2C0EE7D60052F0B2 /* SingleStoryView.swift */; };
+		E9E351602C0EE92E0052F0B2 /* StoriesTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E3515F2C0EE92E0052F0B2 /* StoriesTabView.swift */; };
 		E9E351632C0EE95F0052F0B2 /* StoriesProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E351622C0EE95F0052F0B2 /* StoriesProgressBarView.swift */; };
 		E9EC1BF82C0CB5D400FC85ED /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EC1BF72C0CB5D400FC85ED /* AppColors.swift */; };
 		E9EC1BFA2C0CB9F200FC85ED /* AppFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EC1BF92C0CB9F200FC85ED /* AppFonts.swift */; };
@@ -158,6 +160,8 @@
 		E9B4EE212C0E265B00E275C8 /* ButtonTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonTitleView.swift; sourceTree = "<group>"; };
 		E9DCFF372BD8E3DB00C20F64 /* FilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterView.swift; sourceTree = "<group>"; };
 		E9DCFF3A2BD8E40200C20F64 /* CarrierView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarrierView.swift; sourceTree = "<group>"; };
+		E9E3515C2C0EE7D60052F0B2 /* SingleStoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleStoryView.swift; sourceTree = "<group>"; };
+		E9E3515F2C0EE92E0052F0B2 /* StoriesTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesTabView.swift; sourceTree = "<group>"; };
 		E9E351622C0EE95F0052F0B2 /* StoriesProgressBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesProgressBarView.swift; sourceTree = "<group>"; };
 		E9EC1BF72C0CB5D400FC85ED /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
 		E9EC1BF92C0CB9F200FC85ED /* AppFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFonts.swift; sourceTree = "<group>"; };
@@ -245,6 +249,7 @@
 			children = (
 				E9E3516B2C0EEABF0052F0B2 /* Elements */,
 				E936A6312BD78B0400CB08F7 /* PreviewStoriesView.swift */,
+				E9E3515F2C0EE92E0052F0B2 /* StoriesTabView.swift */,
 				E9E351622C0EE95F0052F0B2 /* StoriesProgressBarView.swift */,
 			);
 			path = Stories;
@@ -324,6 +329,7 @@
 				E979C04B2C0E34A400A7B75E /* FilterTimeSectionView.swift */,
 				E98703722C0E3690006495B8 /* FilterConnectionSectionView.swift */,
 				E94ABCBA2C0EE3560091B28B /* ProgressBarView.swift */,
+				E9E3515C2C0EE7D60052F0B2 /* SingleStoryView.swift */,
 			);
 			path = Elements;
 			sourceTree = "<group>";
@@ -531,6 +537,7 @@
 				E96F72252BD9BF2700EE294E /* SetCustomNavigationBar.swift in Sources */,
 				E9F4908B2B9DB76E006FD055 /* NearestStationsService.swift in Sources */,
 				E93E20F82B9D7DF100B43DA5 /* Travel_ScheduleApp.swift in Sources */,
+				E9E351602C0EE92E0052F0B2 /* StoriesTabView.swift in Sources */,
 				E96F72102BD995EA00EE294E /* SearchBarView.swift in Sources */,
 				E936A6242BD62EDA00CB08F7 /* Font+Extensions.swift in Sources */,
 				E909C84A2BA1734300D67B65 /* ThreadService.swift in Sources */,
@@ -552,6 +559,7 @@
 				E909C8442BA1098C00D67B65 /* SchedulesService.swift in Sources */,
 				E909C84D2BA1795F00D67B65 /* NearestSettlementService.swift in Sources */,
 				E91BC4C22BD85410003FF64D /* Filter.swift in Sources */,
+				E9E3515D2C0EE7D60052F0B2 /* SingleStoryView.swift in Sources */,
 				E909C8532BA18EAB00D67B65 /* StationsListService.swift in Sources */,
 				E9163A8E2BD29A2C0007D9CF /* NetworkService.swift in Sources */,
 				E96F720D2BD9939100EE294E /* Int+Extensions.swift in Sources */,
