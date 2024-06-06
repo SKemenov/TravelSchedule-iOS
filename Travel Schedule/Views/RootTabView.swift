@@ -12,12 +12,12 @@ struct RootTabView: View {
     @Binding var darkMode: Bool
     @State var navPath: [ViewsRouter] = []
     @State var direction: Int = .departure
-    @State var stories: [Story] = Story.sampleData
+    @State var storiesList: [StoriesList] = StoriesList.mockData
 
     var body: some View {
         NavigationStack(path: $navPath) {
             TabView {
-                SearchTabView(stories: $stories, schedule: $schedule, navPath: $navPath, direction: $direction)
+                SearchTabView(storiesList: $storiesList, schedule: $schedule, navPath: $navPath, direction: $direction)
                     .tabItem {
                         AppImages.Tabs.schedule
                     }
@@ -26,7 +26,7 @@ struct RootTabView: View {
                         AppImages.Tabs.settings
                     }
             }
-            .accentColor(.ypBlackDuo)
+            .accentColor(AppColors.LightDark.black)
             .toolbar(.visible, for: .tabBar)
             .navigationDestination(for: ViewsRouter.self) { pathValue in
                 switch pathValue {
