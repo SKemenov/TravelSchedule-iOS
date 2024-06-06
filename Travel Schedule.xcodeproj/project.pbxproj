@@ -26,7 +26,7 @@
 		E936A6282BD62F2D00CB08F7 /* ErrorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E936A6272BD62F2D00CB08F7 /* ErrorType.swift */; };
 		E936A62A2BD62FA300CB08F7 /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = E936A6292BD62FA300CB08F7 /* Story.swift */; };
 		E936A62F2BD78A8C00CB08F7 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E936A62E2BD78A8C00CB08F7 /* ErrorView.swift */; };
-		E936A6322BD78B0400CB08F7 /* StoriesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E936A6312BD78B0400CB08F7 /* StoriesListView.swift */; };
+		E936A6322BD78B0400CB08F7 /* PreviewStoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E936A6312BD78B0400CB08F7 /* PreviewStoriesView.swift */; };
 		E936A6352BD78BC900CB08F7 /* RoutesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E936A6342BD78BC900CB08F7 /* RoutesListView.swift */; };
 		E936A6382BD78C4300CB08F7 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = E936A6372BD78C4300CB08F7 /* Route.swift */; };
 		E936A63B2BD78FE700CB08F7 /* Carrier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E936A63A2BD78FE700CB08F7 /* Carrier.swift */; };
@@ -57,6 +57,7 @@
 		E98962E12BA0EE54005A84BA /* CopyrightService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98962E02BA0EE54005A84BA /* CopyrightService.swift */; };
 		E9950E0F2C0DE6F500EDC6D0 /* RouteCarrierView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9950E0E2C0DE6F500EDC6D0 /* RouteCarrierView.swift */; };
 		E99D5D842C1221BE00ED5184 /* StoriesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99D5D832C1221BE00ED5184 /* StoriesList.swift */; };
+		E99D5D862C12239800ED5184 /* SinglePreviewStoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99D5D852C12239800ED5184 /* SinglePreviewStoryView.swift */; };
 		E99D5D882C1223CB00ED5184 /* Double+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99D5D872C1223CB00ED5184 /* Double+Extensions.swift */; };
 		E99D97452C0E384B0096E31D /* SetCustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99D97442C0E384B0096E31D /* SetCustomButton.swift */; };
 		E9A49C252BD29D8100017734 /* RootTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A49C242BD29D8100017734 /* RootTabView.swift */; };
@@ -108,7 +109,7 @@
 		E936A6272BD62F2D00CB08F7 /* ErrorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorType.swift; sourceTree = "<group>"; };
 		E936A6292BD62FA300CB08F7 /* Story.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Story.swift; sourceTree = "<group>"; };
 		E936A62E2BD78A8C00CB08F7 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
-		E936A6312BD78B0400CB08F7 /* StoriesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesListView.swift; sourceTree = "<group>"; };
+		E936A6312BD78B0400CB08F7 /* PreviewStoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewStoriesView.swift; sourceTree = "<group>"; };
 		E936A6342BD78BC900CB08F7 /* RoutesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutesListView.swift; sourceTree = "<group>"; };
 		E936A6372BD78C4300CB08F7 /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
 		E936A63A2BD78FE700CB08F7 /* Carrier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Carrier.swift; sourceTree = "<group>"; };
@@ -141,6 +142,7 @@
 		E98962E02BA0EE54005A84BA /* CopyrightService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyrightService.swift; sourceTree = "<group>"; };
 		E9950E0E2C0DE6F500EDC6D0 /* RouteCarrierView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteCarrierView.swift; sourceTree = "<group>"; };
 		E99D5D832C1221BE00ED5184 /* StoriesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesList.swift; sourceTree = "<group>"; };
+		E99D5D852C12239800ED5184 /* SinglePreviewStoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinglePreviewStoryView.swift; sourceTree = "<group>"; };
 		E99D5D872C1223CB00ED5184 /* Double+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extensions.swift"; sourceTree = "<group>"; };
 		E99D97442C0E384B0096E31D /* SetCustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetCustomButton.swift; sourceTree = "<group>"; };
 		E9A49C242BD29D8100017734 /* RootTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabView.swift; sourceTree = "<group>"; };
@@ -242,6 +244,7 @@
 			isa = PBXGroup;
 			children = (
 				E9E3516B2C0EEABF0052F0B2 /* Elements */,
+				E936A6312BD78B0400CB08F7 /* PreviewStoriesView.swift */,
 				E9E351622C0EE95F0052F0B2 /* StoriesProgressBarView.swift */,
 			);
 			path = Stories;
@@ -269,7 +272,6 @@
 				E9E30FA32BD98A510061546C /* Routes */,
 				E9E30F9B2BD989E40061546C /* Elements */,
 				E936A62E2BD78A8C00CB08F7 /* ErrorView.swift */,
-				E936A6312BD78B0400CB08F7 /* StoriesListView.swift */,
 				E94ABCB72C0EE3080091B28B /* Stories */,
 			);
 			path = Views;
@@ -355,6 +357,14 @@
 				E9DCFF3A2BD8E40200C20F64 /* CarrierView.swift */,
 			);
 			path = Routes;
+			sourceTree = "<group>";
+		};
+		E9E3516B2C0EEABF0052F0B2 /* Elements */ = {
+			isa = PBXGroup;
+			children = (
+				E99D5D852C12239800ED5184 /* SinglePreviewStoryView.swift */,
+			);
+			path = Elements;
 			sourceTree = "<group>";
 		};
 		E9F490902BA0407D006FD055 /* Services */ = {
@@ -526,9 +536,10 @@
 				E909C84A2BA1734300D67B65 /* ThreadService.swift in Sources */,
 				E909C8472BA1186A00D67B65 /* SearchService.swift in Sources */,
 				E936A6352BD78BC900CB08F7 /* RoutesListView.swift in Sources */,
+				E99D5D862C12239800ED5184 /* SinglePreviewStoryView.swift in Sources */,
 				E9F9EBC52C0DE7A900A7AECB /* RouteTimeView.swift in Sources */,
 				E9A49C2F2BD2A1CC00017734 /* City.swift in Sources */,
-				E936A6322BD78B0400CB08F7 /* StoriesListView.swift in Sources */,
+				E936A6322BD78B0400CB08F7 /* PreviewStoriesView.swift in Sources */,
 				E98608302C0E24BC00B75782 /* MarkerView.swift in Sources */,
 				E9396E602BDA3477003D69DA /* WebView.swift in Sources */,
 				E99D97452C0E384B0096E31D /* SetCustomButton.swift in Sources */,
