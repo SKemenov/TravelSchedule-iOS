@@ -11,7 +11,7 @@ struct RowSearchView: View {
     @State var rowString: String
 
     var body: some View {
-        HStack(spacing: 0) {
+        HStack(spacing: .zero) {
             Text(rowString)
                 .font(AppFonts.Regular.medium)
             Spacer()

@@ -9,12 +9,12 @@ import SwiftUI
 
 struct RadioButtonToggleStyle: ToggleStyle {
     func makeBody(configuration: Configuration) -> some View {
-        HStack(spacing: 0) {
+        HStack(spacing: .zero) {
             configuration.label
             Spacer()
             (configuration.isOn ? AppImages.RadioButton.on : AppImages.RadioButton.off)
                 .resizable()
-                .frame(width: 24, height: 24)
+                .frame(width: AppSizes.Size.toggle, height: AppSizes.Size.toggle)
                 .onTapGesture { configuration.isOn.toggle() }
         }
     }

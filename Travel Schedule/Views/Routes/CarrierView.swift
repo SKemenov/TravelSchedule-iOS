@@ -13,7 +13,7 @@ struct CarrierView: View {
     @Environment(\.openURL) private var openURL
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 0) {
+        VStack(alignment: .leading, spacing: .zero) {
             Image(carrier.logoName)
                 .resizable()
                 .scaledToFit()
@@ -54,8 +54,8 @@ struct CarrierView: View {
             .frame(height: 60)
             Spacer()
         }
-        .padding(.horizontal, .spacerL)
         .setCustomNavigationBar(title: "ИНформация о перевозчике")
+        .padding(.horizontal, AppSizes.Spacing.large)
     }
 }
 

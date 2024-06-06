@@ -21,7 +21,7 @@ struct CityView: View {
     }
 
     var body: some View {
-        VStack(spacing: 0) {
+        VStack(spacing: .zero) {
             SearchBarView(searchText: $searchString)
             if searchingResults.isEmpty {
                 SearchNothingView(notification: "Город не найден")
@@ -35,10 +35,10 @@ struct CityView: View {
                             schedule.destinations[direction].cityTitle = city.title
                         })
                         .setRowElement()
-                        .padding(.vertical, .spacerL)
+                        .padding(.vertical, AppSizes.Spacing.large)
                     }
                 }
-                .padding(.vertical, .spacerL)
+                .padding(.vertical, AppSizes.Spacing.large)
             }
             Spacer()
         }
