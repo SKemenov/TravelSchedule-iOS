@@ -8,24 +8,17 @@
 import SwiftUI
 
 struct RouteTimeDetailsView: View {
+    private let duration = "часов"
     enum FieldPosition {
         case left, center, right
     }
     let route: Route
     let currentField: FieldPosition
 
-    private let duration = "часов"
 
     private var title: String
     private var font: Font
     private var edge: Edge.Set
-
-    var body: some View {
-        Text(title)
-            .font(font)
-            .padding(edge, AppSizes.Spacing.xSmall)
-            .background(AppColors.Universal.lightGray)
-    }
 
     init(field currentField: FieldPosition, route: Route) {
         self.route = route
@@ -45,9 +38,23 @@ struct RouteTimeDetailsView: View {
             self.title = route.arrivalTime
         }
     }
+
+    var body: some View {
+        Text(title)
+            .font(font)
+            .padding(edge, AppSizes.Spacing.xSmall)
+            .background(AppColors.Universal.lightGray)
+    }
 }
 
 #Preview {
-    RouteTimeDetailsView(field: .center, route: Route.sampleData[0])
-        .background(AppColors.Universal.lightGray)
+    HStack {
+        RouteTimeDetailsView(field: .left, route: Route.sampleData[0])
+        Spacer()
+        RouteTimeDetailsView(field: .center, route: Route.sampleData[0])
+        Spacer()
+        RouteTimeDetailsView(field: .right, route: Route.sampleData[0])
+    }
+    .background(AppColors.Universal.lightGray)
+    .padding()
 }

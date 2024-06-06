@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct RoutesListView: View {
+    private let notification = "Вариантов нет"
+    private let buttonTitle = "Уточнить время"
+
     @Binding var schedule: Schedule
     @State var currentFilter = Filter()
 
@@ -39,12 +42,12 @@ struct RoutesListView: View {
     }
 
     var body: some View {
-        VStack(spacing: 0) {
-            (Text(departure) + Text(Image.iconArrow).baselineOffset(-1) + Text(arrival))
-                .font(.boldMedium)
+        VStack(spacing: .zero) {
+            (Text(departure) + Text(AppImages.Icons.arrow).baselineOffset(-1) + Text(arrival))
+                .font(AppFonts.Bold.medium)
 
             if filteredRoutes.isEmpty {
-                SearchNothingView(notification: "Вариантов нет")
+                SearchResultEmptyView(notification: notification)
             } else {
                 ScrollView(.vertical) {
                     ForEach(filteredRoutes) { route in
@@ -65,19 +68,11 @@ struct RoutesListView: View {
             NavigationLink {
                 FilterView(filter: $currentFilter)
             } label: {
-                HStack(alignment: .center, spacing: 4) {
-                    Text("Уточнить время")
-                        .font(.boldSmall)
-                    Image(systemName: "circle.fill")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 8, height: 8)
-                        .foregroundColor(currentFilter == Filter.fullSearch ? .clear : .ypRed)
+                HStack(alignment: .center, spacing: AppSizes.Spacing.xSmall) {
+                    ButtonTitleView(title: buttonTitle)
+                    MarkerView(currentFilter: currentFilter)
                 }
-                .frame(maxWidth: .infinity, maxHeight: 60)
-                .background(.ypBlue)
-                .foregroundStyle(.ypWhite)
-                .clipShape(RoundedRectangle(cornerRadius: 16))
+                .setCustomButton(padding: .top)
             }
         }
         .padding(.horizontal, AppSizes.Spacing.large)
