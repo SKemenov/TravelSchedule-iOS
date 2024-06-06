@@ -22,7 +22,7 @@ struct SetCustomNavBackButton: ViewModifier {
                     } label: {
                         AppImages.Icons.backward
                             .imageScale(.large)
-                            .foregroundColor(.ypBlackDuo)
+                            .foregroundStyle(AppColors.LightDark.black)
                     }
                 }
             }

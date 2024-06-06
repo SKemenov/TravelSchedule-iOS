@@ -14,7 +14,7 @@ struct SettingsView: View {
         VStack(spacing: 0) {
             Toggle("Тёмная тема", isOn: $darkMode)
                 .setRowElement()
-                .tint(.ypBlue)
+                .tint(AppColors.Universal.blue)
             NavigationLink {
                 AgreementView()
             } label: {
@@ -31,8 +31,8 @@ struct SettingsView: View {
             .font(AppFonts.Regular.small)
             .frame(minHeight: AppSizes.Height.about)
         }
-        .foregroundColor(.ypBlackDuo)
         .padding(.vertical, AppSizes.Spacing.xxLarge)
+        .foregroundStyle(AppColors.LightDark.black)
     }
 }
 

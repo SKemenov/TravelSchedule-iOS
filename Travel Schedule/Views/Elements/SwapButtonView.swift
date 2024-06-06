@@ -13,13 +13,13 @@ struct SwapButtonView: View {
     var body: some View {
         ZStack {
             Circle()
-                .foregroundStyle(.ypWhite)
+                .foregroundStyle(AppColors.Universal.white)
                 .frame(width: AppSizes.Size.swappingButton)
             Button {
                 swapDestinations()
             } label: {
-                    .foregroundColor(.ypBlue)
                 AppImages.Icons.swap
+                    .foregroundStyle(AppColors.Universal.blue)
             }
         }
     }

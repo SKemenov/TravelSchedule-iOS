@@ -43,7 +43,7 @@ struct CityView: View {
             Spacer()
         }
         .setCustomNavigationBar(title: "Выбор города")
-        .foregroundStyle(.ypBlackDuo)
+        .foregroundStyle(AppColors.LightDark.black)
         .onAppear {
             searchString = String()
         }

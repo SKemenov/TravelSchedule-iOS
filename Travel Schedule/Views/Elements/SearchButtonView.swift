@@ -41,4 +41,5 @@ struct SearchButtonView: View {
 
 #Preview {
     SearchButtonView(for: Destination.sampleData, showView: ViewsRouter.cityView)
+        .background(AppColors.Universal.red.opacity(0.5))
 }

@@ -43,7 +43,7 @@ struct StationView: View {
             Spacer()
         }
         .setCustomNavigationBar(title: "Выбор станции")
-        .foregroundStyle(.ypBlackDuo)
+        .foregroundStyle(AppColors.LightDark.black)
         .onAppear {
             searchString = String()
         }

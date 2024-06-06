@@ -36,7 +36,7 @@ struct DestinationsListView: View {
                 })
             }
         }
-        .background(.ypWhite)
+        .background(AppColors.Universal.white)
         .clipShape(RoundedRectangle(cornerRadius: AppSizes.CornerRadius.xLarge))
     }
 }
