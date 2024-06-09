@@ -10,7 +10,7 @@ import Combine
 
 struct StoriesProgressBarView: View {
     // MARK: - Constants
-    let storiesCount: Int
+    let pagesCount: Int
     let timerConfiguration: TimerConfiguration
 
     // MARK: - Properties
@@ -20,7 +20,7 @@ struct StoriesProgressBarView: View {
 
     // MARK: - View
     var body: some View {
-        ProgressBarView(numberOfSections: storiesCount, progress: progress)
+        ProgressBarView(numberOfSections: pagesCount, progress: progress)
             .padding(.top, AppSizes.Spacing.Custom.progressBar)
             .padding(.horizontal, AppSizes.Spacing.small)
             .onAppear {
@@ -38,8 +38,8 @@ struct StoriesProgressBarView: View {
     }
 
     // MARK: - Inits
-    init(storiesCount: Int, timerConfiguration: TimerConfiguration, progress: Binding<CGFloat>) {
-        self.storiesCount = storiesCount
+    init(pagesCount: Int, timerConfiguration: TimerConfiguration, progress: Binding<CGFloat>) {
+        self.pagesCount = pagesCount
         self.timerConfiguration = timerConfiguration
         self._progress = progress
         self.timer = Self.createTimer(configuration: timerConfiguration)
@@ -55,7 +55,7 @@ private extension StoriesProgressBarView {
 
 #Preview {
     StoriesProgressBarView(
-        storiesCount: 3,
+        pagesCount: 3,
         timerConfiguration: TimerConfiguration(storiesCount: 3),
         progress: .constant(0.5)
     )

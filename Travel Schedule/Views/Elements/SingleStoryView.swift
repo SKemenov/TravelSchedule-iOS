@@ -15,7 +15,7 @@ struct SingleStoryView: View {
     }
 
     // MARK: - Properties
-    var model: Story
+    var model: StoryPage
 
     // MARK: - View
     var body: some View {
@@ -51,5 +51,5 @@ struct SingleStoryView: View {
 }
 
 #Preview {
-    SingleStoryView(model: Story.mockData1[0])
+    SingleStoryView(model: StoryPage.mockData1[0])
 }

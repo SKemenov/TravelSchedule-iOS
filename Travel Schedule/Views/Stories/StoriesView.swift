@@ -34,7 +34,7 @@ struct StoriesView: View {
         ZStack(alignment: .topTrailing) {
             StoriesTabView(storiesList: $storiesList, initialIndex: $initialIndex, currentPage: $currentPage)
                 .onChange(of: currentPage) { [currentPage] newValue in
-                    didChangeIndex(oldIndex: currentPage, newIndex: newValue)
+                    didChangePage(oldPage: currentPage, newPage: newValue)
                 }
 
             StoriesProgressBarView(storiesCount: stories.count, timerConfiguration: timer, progress: $currentProgress)
@@ -56,9 +56,9 @@ struct StoriesView: View {
 
 // MARK: - Private methods
 private extension StoriesView {
-    func didChangeIndex(oldIndex: Int, newIndex: Int) {
-        let progress = timer.progress(for: newIndex)
-        guard oldIndex != newIndex, abs(progress - currentProgress) >= almostZero else { return }
+    func didChangePage(oldPage: Int, newPage: Int) {
+        let progress = timer.progress(for: newPage)
+        guard oldPage != newPage, abs(progress - currentProgress) >= almostZero else { return }
         currentProgress = progress
     }
 
@@ -74,7 +74,7 @@ private extension StoriesView {
         }
     }
 
-    func didTapStory(at location: CGPoint) {
+    func didTapStoryPage(at location: CGPoint) {
         let halfScreen = UIScreen.main.bounds.width / 2
         switch (currentPage, location.x) {
         case (firstPage, ...halfScreen):
