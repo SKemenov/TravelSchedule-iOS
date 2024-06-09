@@ -30,15 +30,15 @@ struct RootTabView: View {
             .toolbar(.visible, for: .tabBar)
             .navigationDestination(for: ViewsRouter.self) { pathValue in
                 switch pathValue {
-                case .cityView:
-                    CityView(schedule: $schedule, navPath: $navPath, direction: $direction)
-                        .toolbar(.hidden, for: .tabBar)
-                case .stationView:
-                    StationView(schedule: $schedule, navPath: $navPath, direction: $direction)
-                        .toolbar(.hidden, for: .tabBar)
-                case .routeView:
-                    RoutesListView(schedule: $schedule)
-                        .toolbar(.hidden, for: .tabBar)
+                    case .cityView:
+                        CityView(schedule: $schedule, navPath: $navPath, direction: $direction)
+                            .toolbar(.hidden, for: .tabBar)
+                    case .stationView:
+                        StationView(schedule: $schedule, navPath: $navPath, direction: $direction)
+                            .toolbar(.hidden, for: .tabBar)
+                    case .routeView:
+                        RoutesListView(schedule: $schedule)
+                            .toolbar(.hidden, for: .tabBar)
                 }
             }
         }
