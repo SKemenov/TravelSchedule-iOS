@@ -28,7 +28,7 @@ struct PreviewStoriesView: View {
                             initialIndex = index
                         }
                         .fullScreenCover(isPresented: $isStoriesShowing, onDismiss: didDismiss) {
-                            StoriesFlowView(storiesList: $storiesList, initialIndex: $initialIndex)
+                            StoriesView(storiesList: $storiesList, storyIndex: $storyIndex)
                         }
                 }
             }

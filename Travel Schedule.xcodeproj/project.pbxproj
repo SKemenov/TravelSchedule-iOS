@@ -75,7 +75,6 @@
 		E9E351602C0EE92E0052F0B2 /* StoriesTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E3515F2C0EE92E0052F0B2 /* StoriesTabView.swift */; };
 		E9E351632C0EE95F0052F0B2 /* StoriesProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E351622C0EE95F0052F0B2 /* StoriesProgressBarView.swift */; };
 		E9E351662C0EE98F0052F0B2 /* StoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E351652C0EE98F0052F0B2 /* StoriesView.swift */; };
-		E9E351692C0EEA6C0052F0B2 /* StoriesFlowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E351682C0EEA6C0052F0B2 /* StoriesFlowView.swift */; };
 		E9EC1BF82C0CB5D400FC85ED /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EC1BF72C0CB5D400FC85ED /* AppColors.swift */; };
 		E9EC1BFA2C0CB9F200FC85ED /* AppFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EC1BF92C0CB9F200FC85ED /* AppFonts.swift */; };
 		E9EC1C0E2C0CFECA00FC85ED /* AppSizes.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EC1C0D2C0CFECA00FC85ED /* AppSizes.swift */; };
@@ -162,7 +161,6 @@
 		E9E3515F2C0EE92E0052F0B2 /* StoriesTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesTabView.swift; sourceTree = "<group>"; };
 		E9E351622C0EE95F0052F0B2 /* StoriesProgressBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesProgressBarView.swift; sourceTree = "<group>"; };
 		E9E351652C0EE98F0052F0B2 /* StoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesView.swift; sourceTree = "<group>"; };
-		E9E351682C0EEA6C0052F0B2 /* StoriesFlowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesFlowView.swift; sourceTree = "<group>"; };
 		E9EC1BF72C0CB5D400FC85ED /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
 		E9EC1BF92C0CB9F200FC85ED /* AppFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFonts.swift; sourceTree = "<group>"; };
 		E9EC1C0D2C0CFECA00FC85ED /* AppSizes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSizes.swift; sourceTree = "<group>"; };
@@ -246,7 +244,6 @@
 			children = (
 				E9E3516B2C0EEABF0052F0B2 /* Elements */,
 				E936A6312BD78B0400CB08F7 /* PreviewStoriesView.swift */,
-				E9E351682C0EEA6C0052F0B2 /* StoriesFlowView.swift */,
 				E9E351652C0EE98F0052F0B2 /* StoriesView.swift */,
 				E9E3515F2C0EE92E0052F0B2 /* StoriesTabView.swift */,
 				E9E351622C0EE95F0052F0B2 /* StoriesProgressBarView.swift */,
@@ -510,7 +507,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E9E351692C0EEA6C0052F0B2 /* StoriesFlowView.swift in Sources */,
 				E9A49C252BD29D8100017734 /* RootTabView.swift in Sources */,
 				E9396E632BDA393F003D69DA /* RadioButtonToggleStyle.swift in Sources */,
 				E9A49C432BD2CC0300017734 /* RouteView.swift in Sources */,
