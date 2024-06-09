@@ -251,6 +251,86 @@
 			path = Stories;
 			sourceTree = "<group>";
 		};
+		E95B33482C1605EA0029D145 /* Stories */ = {
+			isa = PBXGroup;
+			children = (
+				E936A6292BD62FA300CB08F7 /* StoryPage.swift */,
+				E99D5D832C1221BE00ED5184 /* Story.swift */,
+			);
+			path = Stories;
+			sourceTree = "<group>";
+		};
+		E95B33492C1606260029D145 /* Elements */ = {
+			isa = PBXGroup;
+			children = (
+				E9F9EBC42C0DE7A900A7AECB /* RouteTimeView.swift */,
+				E93E1C4C2C0DE8600063FA56 /* RouteTimeDetailsView.swift */,
+				E9950E0E2C0DE6F500EDC6D0 /* RouteCarrierView.swift */,
+				E9A49C422BD2CC0300017734 /* RouteView.swift */,
+				E986082F2C0E24BC00B75782 /* MarkerView.swift */,
+			);
+			path = Elements;
+			sourceTree = "<group>";
+		};
+		E95B33502C1606EB0029D145 /* Elements */ = {
+			isa = PBXGroup;
+			children = (
+				E96F721D2BD9A56C00EE294E /* SearchResultEmptyView.swift */,
+				E9EC1C172C0DC7B600FC85ED /* SearchButtonView.swift */,
+				E9EC1C1A2C0DC91C00FC85ED /* SwapButtonView.swift */,
+				E9EC1C1D2C0DE3A300FC85ED /* DestinationsListView.swift */,
+				E9A49C262BD29EA000017734 /* MainSearchView.swift */,
+			);
+			path = Elements;
+			sourceTree = "<group>";
+		};
+		E95B33562C1607B60029D145 /* Carriers */ = {
+			isa = PBXGroup;
+			children = (
+				E95B33592C1607C70029D145 /* Elements */,
+				E9DCFF3A2BD8E40200C20F64 /* CarrierView.swift */,
+			);
+			path = Carriers;
+			sourceTree = "<group>";
+		};
+		E95B33592C1607C70029D145 /* Elements */ = {
+			isa = PBXGroup;
+			children = (
+				E973DC882C0E1B6A003D5D31 /* CarrierContactView.swift */,
+			);
+			path = Elements;
+			sourceTree = "<group>";
+		};
+		E95B335D2C1607DC0029D145 /* Filters */ = {
+			isa = PBXGroup;
+			children = (
+				E95B335F2C1607E50029D145 /* Elements */,
+				E9DCFF372BD8E3DB00C20F64 /* FilterView.swift */,
+			);
+			path = Filters;
+			sourceTree = "<group>";
+		};
+		E95B335F2C1607E50029D145 /* Elements */ = {
+			isa = PBXGroup;
+			children = (
+				E911F5582C0E2A5C003409F2 /* CheckboxView.swift */,
+				E979C04B2C0E34A400A7B75E /* FilterTimeSectionView.swift */,
+				E98703722C0E3690006495B8 /* FilterConnectionSectionView.swift */,
+			);
+			path = Elements;
+			sourceTree = "<group>";
+		};
+		E95B33622C1608C20029D145 /* General */ = {
+			isa = PBXGroup;
+			children = (
+				E9E30F9B2BD989E40061546C /* Elements */,
+				E9396E5F2BDA3477003D69DA /* WebView.swift */,
+				E96F720F2BD995EA00EE294E /* SearchBarView.swift */,
+				E936A62E2BD78A8C00CB08F7 /* ErrorView.swift */,
+			);
+			path = General;
+			sourceTree = "<group>";
+		};
 		E96F72172BD99D9F00EE294E /* ViewModifier */ = {
 			isa = PBXGroup;
 			children = (
@@ -268,11 +348,12 @@
 			isa = PBXGroup;
 			children = (
 				E9A49C242BD29D8100017734 /* RootTabView.swift */,
+				E95B33622C1608C20029D145 /* General */,
 				E9E30FA02BD98A3C0061546C /* Settings */,
 				E9E30F9E2BD98A250061546C /* Searching */,
 				E9E30FA32BD98A510061546C /* Routes */,
-				E9E30F9B2BD989E40061546C /* Elements */,
-				E936A62E2BD78A8C00CB08F7 /* ErrorView.swift */,
+				E95B335D2C1607DC0029D145 /* Filters */,
+				E95B33562C1607B60029D145 /* Carriers */,
 				E94ABCB72C0EE3080091B28B /* Stories */,
 			);
 			path = Views;
@@ -281,12 +362,11 @@
 		E9A49C2C2BD2A04E00017734 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				E95B33482C1605EA0029D145 /* Stories */,
 				E9A49C292BD2A04800017734 /* Destination.swift */,
 				E9A49C2E2BD2A1CC00017734 /* City.swift */,
 				E9A49C302BD2A1F700017734 /* Station.swift */,
 				E9A49C322BD2A21C00017734 /* Schedule.swift */,
-				E936A6292BD62FA300CB08F7 /* StoryPage.swift */,
-				E99D5D832C1221BE00ED5184 /* Story.swift */,
 				E936A6372BD78C4300CB08F7 /* Route.swift */,
 				E936A63A2BD78FE700CB08F7 /* Carrier.swift */,
 				E91BC4C12BD85410003FF64D /* Filter.swift */,
@@ -308,25 +388,8 @@
 		E9E30F9B2BD989E40061546C /* Elements */ = {
 			isa = PBXGroup;
 			children = (
-				E96F720F2BD995EA00EE294E /* SearchBarView.swift */,
 				E936A6142BD5BB7700CB08F7 /* RowSearchView.swift */,
-				E9A49C422BD2CC0300017734 /* RouteView.swift */,
-				E9950E0E2C0DE6F500EDC6D0 /* RouteCarrierView.swift */,
-				E9F9EBC42C0DE7A900A7AECB /* RouteTimeView.swift */,
-				E93E1C4C2C0DE8600063FA56 /* RouteTimeDetailsView.swift */,
-				E96F721D2BD9A56C00EE294E /* SearchResultEmptyView.swift */,
-				E9396E5F2BDA3477003D69DA /* WebView.swift */,
-				E9EC1C172C0DC7B600FC85ED /* SearchButtonView.swift */,
-				E9EC1C1A2C0DC91C00FC85ED /* SwapButtonView.swift */,
-				E973DC882C0E1B6A003D5D31 /* CarrierContactView.swift */,
-				E986082F2C0E24BC00B75782 /* MarkerView.swift */,
 				E9B4EE212C0E265B00E275C8 /* ButtonTitleView.swift */,
-				E911F5582C0E2A5C003409F2 /* CheckboxView.swift */,
-				E979C04B2C0E34A400A7B75E /* FilterTimeSectionView.swift */,
-				E98703722C0E3690006495B8 /* FilterConnectionSectionView.swift */,
-				E94ABCBA2C0EE3560091B28B /* ProgressBarView.swift */,
-				E94ABCBD2C0EE4580091B28B /* CloseButtonView.swift */,
-				E9E3515C2C0EE7D60052F0B2 /* StoryPageView.swift */,
 			);
 			path = Elements;
 			sourceTree = "<group>";
@@ -334,11 +397,10 @@
 		E9E30F9E2BD98A250061546C /* Searching */ = {
 			isa = PBXGroup;
 			children = (
+				E95B33502C1606EB0029D145 /* Elements */,
 				E96F722A2BD9CBC900EE294E /* SearchTabView.swift */,
-				E9A49C262BD29EA000017734 /* MainSearchView.swift */,
 				E9A49C3B2BD2B5D200017734 /* CityView.swift */,
 				E9A49C3F2BD2B83800017734 /* StationView.swift */,
-				E9EC1C1D2C0DE3A300FC85ED /* DestinationsListView.swift */,
 			);
 			path = Searching;
 			sourceTree = "<group>";
@@ -355,9 +417,8 @@
 		E9E30FA32BD98A510061546C /* Routes */ = {
 			isa = PBXGroup;
 			children = (
+				E95B33492C1606260029D145 /* Elements */,
 				E936A6342BD78BC900CB08F7 /* RoutesListView.swift */,
-				E9DCFF372BD8E3DB00C20F64 /* FilterView.swift */,
-				E9DCFF3A2BD8E40200C20F64 /* CarrierView.swift */,
 			);
 			path = Routes;
 			sourceTree = "<group>";
@@ -365,6 +426,9 @@
 		E9E3516B2C0EEABF0052F0B2 /* Elements */ = {
 			isa = PBXGroup;
 			children = (
+				E94ABCBA2C0EE3560091B28B /* ProgressBarView.swift */,
+				E94ABCBD2C0EE4580091B28B /* CloseButtonView.swift */,
+				E9E3515C2C0EE7D60052F0B2 /* StoryPageView.swift */,
 				E99D5D852C12239800ED5184 /* StoryPreviewView.swift */,
 			);
 			path = Elements;
