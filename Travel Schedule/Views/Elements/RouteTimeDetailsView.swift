@@ -24,18 +24,18 @@ struct RouteTimeDetailsView: View {
         self.route = route
         self.currentField = currentField
         switch currentField {
-        case .left:
-            self.font = AppFonts.Regular.medium
-            self.edge = .trailing
-            self.title = route.departureTime
-        case .center:
-            self.font = AppFonts.Regular.small
-            self.edge = .horizontal
-            self.title = "\(route.durationTime) " + duration
-        case .right:
-            self.font = AppFonts.Regular.medium
-            self.edge = .leading
-            self.title = route.arrivalTime
+            case .left:
+                self.font = AppFonts.Regular.medium
+                self.edge = .trailing
+                self.title = route.departureTime
+            case .center:
+                self.font = AppFonts.Regular.small
+                self.edge = .horizontal
+                self.title = "\(route.durationTime) " + duration
+            case .right:
+                self.font = AppFonts.Regular.medium
+                self.edge = .leading
+                self.title = route.arrivalTime
         }
     }
 

@@ -18,14 +18,14 @@ struct AgreementView: View {
     var body: some View {
         VStack {
             switch Bool.random() {
-            case true:
-                if let url = URL(string: urlString) {
-                    WebView(url: url)
-                        .ignoresSafeArea(.all, edges: .bottom)
-                        .setCustomNavigationBar(title: title)
-                }
-            case false:
-                ErrorView(errorType: Bool.random() ? .connectionError : .serverError)
+                case true:
+                    if let url = URL(string: urlString) {
+                        WebView(url: url)
+                            .ignoresSafeArea(.all, edges: .bottom)
+                            .setCustomNavigationBar(title: title)
+                    }
+                case false:
+                    ErrorView(errorType: Bool.random() ? .connectionError : .serverError)
             }
         }
     }

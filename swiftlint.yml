@@ -25,7 +25,7 @@ analyzer_rules:
 
 opt_in_rules:
   - array_init
-#  - attributes
+  - attributes
   - closure_end_indentation
   - closure_spacing
   - collection_alignment
@@ -95,6 +95,7 @@ attributes:
     - "@IBAction"
     - "@NSManaged"
     - "@objc"
+    - "@Environment"
   always_on_line_above:
     - "@ConfigurationElement"
     - "@OptionGroup"
@@ -163,3 +164,6 @@ return_arrow_whitespace:
 
 unneeded_break_in_switch:
   error
+
+switch_case_alignment:
+  indented_cases: true

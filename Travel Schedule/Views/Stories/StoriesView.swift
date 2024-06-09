@@ -77,23 +77,23 @@ private extension StoriesView {
     func didTapStoryPage(at location: CGPoint) {
         let halfScreen = UIScreen.main.bounds.width / 2
         switch (currentPage, location.x) {
-        case (firstPage, ...halfScreen):
-            showPrevious()
-        case (lastPage, halfScreen...):
-            showNext()
-        default:
-            withAnimation {
-                currentPage = location.x < halfScreen
-                ? max(currentPage - 1, 0)
-                : min(currentPage + 1, stories.count - 1)
-            }
+            case (firstPage, ...halfScreen):
+                showPrevious()
+            case (lastPage, halfScreen...):
+                showNext()
+            default:
+                withAnimation {
+                    currentPage = location.x < halfScreen
+                    ? max(currentPage - 1, 0)
+                    : min(currentPage + 1, pagesCount - 1)
+                }
         }
     }
 
     func didSwipeDown(gesture: DragGesture.Value) {
         switch (gesture.translation.width, gesture.translation.height) {
-        case (-30...30, 0...): handleDismiss()
-        default: break
+            case (-30...30, 0...): handleDismiss()
+            default: break
         }
     }
 
