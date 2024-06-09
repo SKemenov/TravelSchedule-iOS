@@ -1,5 +1,5 @@
 //
-//  SinglePreviewStoryView.swift
+//  StoryPreviewView.swift
 //  Travel Schedule
 //
 //  Created by Sergey Kemenov on 06.06.2024.
@@ -7,24 +7,24 @@
 
 import SwiftUI
 
-struct SinglePreviewStoryView: View {
+struct StoryPreviewView: View {
     // MARK: - Constants
     private let titleLineLimit = 3
 
     // MARK: - Properties
-    var previewStory: StoriesList
+    var storyPreview: Story
 
     // MARK: - View
     var body: some View {
         ZStack(alignment: .bottomLeading) {
-            Image(previewStory.previewImageName)
+            Image(storyPreview.imageName)
                 .resizable()
                 .scaledToFill()
                 .frame(width: AppSizes.Width.storyPreview, height: AppSizes.Height.storyPreview)
                 .clipShape(RoundedRectangle(cornerRadius: AppSizes.CornerRadius.large))
-                .opacity(previewStory.isShowed ? .halfOpacity : .fullOpacity)
+                .opacity(storyPreview.isShowed ? .halfOpacity : .fullOpacity)
 
-            Text(previewStory.title)
+            Text(storyPreview.title)
                 .foregroundColor(AppColors.Universal.white)
                 .font(AppFonts.Regular.small)
                 .padding(.horizontal, AppSizes.Spacing.small)
@@ -34,7 +34,7 @@ struct SinglePreviewStoryView: View {
             RoundedRectangle(cornerRadius: AppSizes.CornerRadius.large)
                 .strokeBorder(
                     AppColors.Universal.blue,
-                    lineWidth: previewStory.isShowed ? .zero : AppSizes.Line.large
+                    lineWidth: storyPreview.isShowed ? .zero : AppSizes.Line.large
                 )
         }
         .padding(.zero)
@@ -44,5 +44,11 @@ struct SinglePreviewStoryView: View {
 }
 
 #Preview {
-    SinglePreviewStoryView(previewStory: StoriesList.mockData[0])
+    let newStory = Story.mockData[0]
+    var showedStory = Story.mockData[0]
+    showedStory.isShowed = true
+    return HStack {
+        StoryPreviewView(storyPreview: newStory)
+        StoryPreviewView(storyPreview: showedStory)
+    }
 }

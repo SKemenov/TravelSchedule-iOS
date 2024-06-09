@@ -21,8 +21,8 @@ struct PreviewStoriesView: View {
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             LazyHGrid(rows: rows, alignment: .center, spacing: AppSizes.Spacing.medium) {
-                    SinglePreviewStoryView(previewStory: story)
                 ForEach(Array(stories.enumerated()), id: \.offset) { index, story in
+                    StoryPreviewView(storyPreview: story)
                         .onTapGesture {
                             isStoriesShowing = true
                             storyIndex = index
