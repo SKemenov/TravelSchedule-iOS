@@ -12,45 +12,62 @@ struct StoriesView: View {
     // MARK: - Constants
     private let almostZero = 0.01
     private let full = 1.0
-    private let firstIndex = 0
+    private let firstStoryIndex = 0
     private let firstPage = 0
 
     // MARK: - Properties
-    private var lastIndex: Int { storiesList.count - 1 }
-    private var timer: TimerConfiguration { .init(storiesCount: stories.count) }
-    private var stories: [Story] { storiesList[initialIndex].stories }
-    private var lastPage: Int { stories.count - 1 }
+    private var lastStoryIndex: Int { stories.count - 1 }
+    private var timer: TimerConfiguration { .init(storiesCount: pagesCount) }
+    private var pagesCount: Int { stories[storyIndex].storyPages.count }
+    private var lastPage: Int { pagesCount - 1 }
 
     @State var currentPage: Int = 0
     @State var currentProgress: CGFloat = 0
 
-    @Binding var storiesList: [StoriesList]
-    @Binding var initialIndex: Int
+    @Binding var stories: [Story]
+    @Binding var storyIndex: Int
 
     @Environment(\.dismiss) var dismiss
 
     // MARK: - View
     var body: some View {
-        ZStack(alignment: .topTrailing) {
-            StoriesTabView(storiesList: $storiesList, initialIndex: $initialIndex, currentPage: $currentPage)
+        AppColors.Universal.black
+            .ignoresSafeArea()
+            .overlay {
+                ZStack(alignment: .topTrailing) {
+                    StoriesTabView(stories: $stories, storyIndex: $storyIndex, currentPage: $currentPage)
+
+                    StoriesProgressBarView(
+                        pagesCount: pagesCount,
+                        timerConfiguration: timer,
+                        progress: $currentProgress
+                    )
+
+                    CloseButtonView {
+                        handleDismiss()
+                    }
+                    .padding(.top, AppSizes.Spacing.Custom.closeButton)
+                    .padding(.trailing, AppSizes.Spacing.small)
+                }
+                .onChange(of: storyIndex) { [storyIndex] newValue in
+                    didChangeStory(oldStory: storyIndex, newStory: newValue)
+                }
                 .onChange(of: currentPage) { [currentPage] newValue in
                     didChangePage(oldPage: currentPage, newPage: newValue)
                 }
-
-            StoriesProgressBarView(storiesCount: stories.count, timerConfiguration: timer, progress: $currentProgress)
                 .onChange(of: currentProgress) { newValue in
                     didChangeProgress(newProgress: newValue)
                 }
-        }
-        .onTapGesture { location in
-            didTapStory(at: location)
-        }
-        .gesture(
-            DragGesture()
-                .onEnded { gesture in
-                    didSwipeDown(gesture: gesture)
+                .onTapGesture { location in
+                    didTapStoryPage(at: location)
                 }
-        )
+                .gesture(
+                    DragGesture()
+                        .onEnded { gesture in
+                            didSwipeDown(gesture: gesture)
+                        }
+                )
+            }
     }
 }
 
@@ -60,6 +77,14 @@ private extension StoriesView {
         let progress = timer.progress(for: newPage)
         guard oldPage != newPage, abs(progress - currentProgress) >= almostZero else { return }
         currentProgress = progress
+    }
+
+    func didChangeStory(oldStory: Int, newStory: Int) {
+        switch newStory {
+            case ...oldStory: currentPage = lastPage
+            case oldStory...: currentPage = firstPage
+            default: break
+        }
     }
 
     func didChangeProgress(newProgress: CGFloat) {
@@ -102,26 +127,30 @@ private extension StoriesView {
     }
 
     func showNext() {
-        storiesList[initialIndex].isShowed = true
-        if initialIndex == lastIndex && currentPage == lastPage {
+        stories[storyIndex].isShowed = true
+        if storyIndex == lastStoryIndex && currentPage == lastPage {
             handleDismiss()
         } else {
-            currentProgress = 0
-            initialIndex += 1
+            withAnimation {
+                storyIndex += 1
+            }
         }
     }
 
     func showPrevious() {
         if currentPage > firstPage {
-            currentPage -= 1
+            withAnimation {
+                currentPage -= 1
+            }
         }
-        if initialIndex > firstIndex {
-            initialIndex -= 1
-            currentPage = lastPage
+        if storyIndex > firstStoryIndex {
+            withAnimation {
+                storyIndex -= 1
+            }
         }
     }
 }
 
 #Preview {
-    StoriesView(storiesList: .constant(StoriesList.mockData), initialIndex: .constant(2))
+    StoriesView(stories: .constant(Story.mockData), storyIndex: .constant(2))
 }
