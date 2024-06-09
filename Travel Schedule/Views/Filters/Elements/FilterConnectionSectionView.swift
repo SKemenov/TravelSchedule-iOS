@@ -8,23 +8,17 @@
 import SwiftUI
 
 struct FilterConnectionSectionView: View {
+    // MARK: - Constants
     private let title = "Показывать варианты с пересадками"
+
+    // MARK: - Properties
     @Binding var currentFilter: Filter
 
+    // MARK: - View
     var body: some View {
-        Text(title)
-            .font(AppFonts.Bold.medium)
-            .padding(AppSizes.Spacing.large)
+        SectionTitleView(title: title)
 
-        VStack(spacing: .zero) {
-            Toggle("Да", isOn: $currentFilter.isWithTransfers)
-                .setRowElement()
-                .toggleStyle(.radioButton)
-
-            Toggle("Нет", isOn: $currentFilter.isWithTransfers.not)
-                .setRowElement()
-                .toggleStyle(.radioButton)
-        }
+        RadioButtonView(isOn: $currentFilter.isWithTransfers)
     }
 }
 

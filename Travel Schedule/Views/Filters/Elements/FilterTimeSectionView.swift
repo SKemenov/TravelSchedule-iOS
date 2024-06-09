@@ -8,18 +8,20 @@
 import SwiftUI
 
 struct FilterTimeSectionView: View {
+    // MARK: - Constants
     private let title = "Время отправления"
+
+    // MARK: - Properties
     @Binding var currentFilter: Filter
 
+    // MARK: - View
     var body: some View {
-        Text(title)
-            .font(AppFonts.Bold.medium)
-            .padding(AppSizes.Spacing.large)
+        SectionTitleView(title: title)
 
-        CheckboxView(type: .morning, filter: $currentFilter.isMorning)
-        CheckboxView(type: .afternoon, filter: $currentFilter.isAfternoon)
-        CheckboxView(type: .evening, filter: $currentFilter.isEvening)
-        CheckboxView(type: .night, filter: $currentFilter.isAtNight)
+        CheckboxView(type: .morning, isOn: $currentFilter.isMorning)
+        CheckboxView(type: .afternoon, isOn: $currentFilter.isAfternoon)
+        CheckboxView(type: .evening, isOn: $currentFilter.isEvening)
+        CheckboxView(type: .night, isOn: $currentFilter.isAtNight)
     }
 }
 

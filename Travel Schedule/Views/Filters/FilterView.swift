@@ -8,8 +8,10 @@
 import SwiftUI
 
 struct FilterView: View {
+    // MARK: - Constants
     private let buttonTitle = "Применить"
 
+    // MARK: - Properties
     @Binding var filter: Filter
 
     @State var currentFilter = Filter()
@@ -44,14 +46,5 @@ struct FilterView: View {
 #Preview {
     NavigationStack {
         FilterView(filter: .constant(Filter.fullSearch))
-    }
-}
-
-extension Binding where Value == Bool {
-    var not: Binding<Value> {
-        Binding<Value>(
-            get: { !self.wrappedValue },
-            set: { self.wrappedValue = !$0 }
-        )
     }
 }
