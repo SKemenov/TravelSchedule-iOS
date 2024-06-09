@@ -1,5 +1,5 @@
 //
-//  SingleStoryView.swift
+//  StoryPageView.swift
 //  Travel Schedule
 //
 //  Created by Sergey Kemenov on 04.06.2024.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct SingleStoryView: View {
+struct StoryPageView: View {
     // MARK: - Constants
     private enum LineLimits {
         static let title = 2
@@ -51,5 +51,5 @@ struct SingleStoryView: View {
 }
 
 #Preview {
-    SingleStoryView(model: StoryPage.mockData1[0])
+    StoryPageView(model: StoryPage.mockData1[0])
 }

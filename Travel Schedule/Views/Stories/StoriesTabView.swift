@@ -19,7 +19,7 @@ struct StoriesTabView: View {
             ForEach(Array(stories.enumerated()), id: \.offset) { storyIndex, story in
                 TabView(selection: $currentPage) {
                     ForEach(Array(story.storyPages.enumerated()), id: \.offset) { pageIndex, page in
-                        SingleStoryView(model: page)
+                        StoryPageView(model: page)
                             .tag(pageIndex)
                     }
                 }
