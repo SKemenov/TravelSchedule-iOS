@@ -12,23 +12,23 @@ struct PreviewStoriesView: View {
     private let rows = [GridItem(.flexible())]
 
     // MARK: - Properties
-    @Binding var storiesList: [StoriesList]
+    @Binding var stories: [Story]
 
     @State var isStoriesShowing = false
-    @State var initialIndex = 0
+    @State var storyIndex = 0
 
     // MARK: - View
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             LazyHGrid(rows: rows, alignment: .center, spacing: AppSizes.Spacing.medium) {
-                ForEach(Array(storiesList.enumerated()), id: \.offset) { index, story in
                     SinglePreviewStoryView(previewStory: story)
+                ForEach(Array(stories.enumerated()), id: \.offset) { index, story in
                         .onTapGesture {
                             isStoriesShowing = true
-                            initialIndex = index
+                            storyIndex = index
                         }
                         .fullScreenCover(isPresented: $isStoriesShowing, onDismiss: didDismiss) {
-                            StoriesView(storiesList: $storiesList, storyIndex: $storyIndex)
+                            StoriesView(stories: $stories, storyIndex: $storyIndex)
                         }
                 }
             }
@@ -46,5 +46,5 @@ private extension PreviewStoriesView {
 }
 
 #Preview {
-    PreviewStoriesView(storiesList: .constant(StoriesList.mockData))
+    PreviewStoriesView(stories: .constant(Story.mockData))
 }

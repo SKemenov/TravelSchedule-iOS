@@ -8,14 +8,14 @@
 import SwiftUI
 
 struct SearchTabView: View {
-    @Binding var storiesList: [StoriesList]
+    @Binding var stories: [Story]
     @Binding var schedule: Schedule
     @Binding var navPath: [ViewsRouter]
     @Binding var direction: Int
 
     var body: some View {
         VStack(spacing: .zero) {
-            PreviewStoriesView(storiesList: $storiesList)
+            PreviewStoriesView(stories: $stories)
             MainSearchView(schedule: $schedule, navPath: $navPath, directionId: $direction)
             Spacer()
         }
@@ -25,7 +25,7 @@ struct SearchTabView: View {
 #Preview {
     NavigationStack {
         SearchTabView(
-            storiesList: .constant(StoriesList.mockData),
+            stories: .constant(Story.mockData),
             schedule: .constant(Schedule.sampleData),
             navPath: .constant([]),
             direction: .constant(0)

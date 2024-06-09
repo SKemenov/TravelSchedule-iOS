@@ -1,5 +1,5 @@
 //
-//  Story.swift
+//  StoryPage.swift
 //  Travel Schedule
 //
 //  Created by Sergey Kemenov on 22.04.2024.

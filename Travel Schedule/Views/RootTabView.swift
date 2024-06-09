@@ -12,12 +12,12 @@ struct RootTabView: View {
     @Binding var darkMode: Bool
     @State var navPath: [ViewsRouter] = []
     @State var direction: Int = .departure
-    @State var storiesList: [StoriesList] = StoriesList.mockData
+    @State var stories: [Story] = Story.mockData
 
     var body: some View {
         NavigationStack(path: $navPath) {
             TabView {
-                SearchTabView(storiesList: $storiesList, schedule: $schedule, navPath: $navPath, direction: $direction)
+                SearchTabView(stories: $stories, schedule: $schedule, navPath: $navPath, direction: $direction)
                     .tabItem {
                         AppImages.Tabs.schedule
                     }
