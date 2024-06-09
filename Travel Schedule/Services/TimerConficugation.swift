@@ -9,28 +9,28 @@ import Foundation
 
 struct TimerConfiguration {
     // MARK: - Constants
-    let storiesCount: Int
+    let pagesCount: Int
     let timerTickInternal: TimeInterval
     let progressPerTick: CGFloat
 
     // MARK: - Inits
     init(
-        storiesCount: Int,
+        pagesCount: Int,
         secondsPerStory: TimeInterval = 5,
         timerTickInternal: TimeInterval = 0.25
     ) {
-        self.storiesCount = storiesCount
+        self.pagesCount = pagesCount
         self.timerTickInternal = timerTickInternal
-        self.progressPerTick = 1.0 / CGFloat(storiesCount) / secondsPerStory * timerTickInternal
+        self.progressPerTick = 1.0 / CGFloat(pagesCount) / secondsPerStory * timerTickInternal
     }
 
     // MARK: - Methods
     func progress(for storyIndex: Int) -> CGFloat {
-        min(CGFloat(storyIndex) / CGFloat(storiesCount), 1)
+        min(CGFloat(storyIndex) / CGFloat(pagesCount), 1)
     }
 
     func index(for progress: CGFloat) -> Int {
-        min(Int(progress * CGFloat(storiesCount)), storiesCount - 1)
+        min(Int(progress * CGFloat(pagesCount)), pagesCount - 1)
     }
 
     func nextProgress(progress: CGFloat) -> CGFloat {

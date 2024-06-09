@@ -17,7 +17,7 @@ struct StoriesView: View {
 
     // MARK: - Properties
     private var lastStoryIndex: Int { stories.count - 1 }
-    private var timer: TimerConfiguration { .init(storiesCount: pagesCount) }
+    private var timer: TimerConfiguration { .init(pagesCount: pagesCount) }
     private var pagesCount: Int { stories[storyIndex].storyPages.count }
     private var lastPage: Int { pagesCount - 1 }
 

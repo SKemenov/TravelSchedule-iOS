@@ -56,7 +56,7 @@ private extension StoriesProgressBarView {
 #Preview {
     StoriesProgressBarView(
         pagesCount: 3,
-        timerConfiguration: TimerConfiguration(storiesCount: 3),
+        timerConfiguration: TimerConfiguration(pagesCount: 3),
         progress: .constant(0.5)
     )
     .background(
