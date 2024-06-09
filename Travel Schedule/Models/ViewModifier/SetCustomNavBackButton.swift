@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct SetCustomNavBackButton: ViewModifier {
-    // swiftlint:disable:next attributes
     @Environment(\.dismiss) var dismiss
 
     @ViewBuilder
@@ -21,9 +20,9 @@ struct SetCustomNavBackButton: ViewModifier {
                     Button {
                         dismiss()
                     } label: {
-                        Image(systemName: "chevron.backward")
+                        AppImages.Icons.backward
                             .imageScale(.large)
-                            .foregroundColor(.ypBlackDuo)
+                            .foregroundStyle(AppColors.LightDark.black)
                     }
                 }
             }

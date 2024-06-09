@@ -17,6 +17,7 @@ disabled_rules:
   - blanket_disable_command
   - todo # delete before release
   - type_name
+  - type_contents_order
 
 analyzer_rules:
   - unused_import
@@ -41,7 +42,7 @@ opt_in_rules:
   - enum_case_associated_values_count
   - fatal_error_message
   - file_name_no_space
-  - file_types_order
+#  - file_types_order
   - first_where
   - flatmap_over_map_reduce
   - force_unwrapping
@@ -62,10 +63,8 @@ opt_in_rules:
   - redundant_nil_coalescing
   - redundant_type_annotation
   - strict_fileprivate
-#  - todo
   - toggle_bool
   - trailing_closure
-  - type_contents_order
   - unused_enumerated
   - number_separator
   - unused_closure_parameter
@@ -96,6 +95,7 @@ attributes:
     - "@IBAction"
     - "@NSManaged"
     - "@objc"
+    - "@Environment"
   always_on_line_above:
     - "@ConfigurationElement"
     - "@OptionGroup"
@@ -119,6 +119,7 @@ identifier_name:
     - id
     - vc
     - to
+    - on
 
 indentation_width:
   indentation_width: 4
@@ -163,3 +164,6 @@ return_arrow_whitespace:
 
 unneeded_break_in_switch:
   error
+
+switch_case_alignment:
+  indented_cases: true

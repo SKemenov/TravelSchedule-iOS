@@ -9,23 +9,23 @@ import SwiftUI
 
 
 struct AgreementView: View {
-    @State private var isPresentWebView = false
-    private let urlString = Bool.random()
-        ? "https://developer.apple.com/documentation/technologies"
-        : "https://yandex.ru/legal/practicum_offer"
+    private let title = "Пользовательское соглашение"
+    private let urlString = "https://developer.apple.com/documentation/technologies"
+    // private let urlString = "https://yandex.ru/legal/practicum_offer" // this url doesn't support dark mode
 
+    @State private var isPresentWebView = false
 
     var body: some View {
         VStack {
             switch Bool.random() {
-            case true:
-                if let url = URL(string: urlString) {
-                    WebView(url: url)
-                        .ignoresSafeArea(.all, edges: .bottom)
-                        .setCustomNavigationBar(title: "Пользовательское соглашение")
-                }
-            case false:
-                ErrorView(errorType: Bool.random() ? .connectionError : .serverError)
+                case true:
+                    if let url = URL(string: urlString) {
+                        WebView(url: url)
+                            .ignoresSafeArea(.all, edges: .bottom)
+                            .setCustomNavigationBar(title: title)
+                    }
+                case false:
+                    ErrorView(errorType: Bool.random() ? .connectionError : .serverError)
             }
         }
     }
